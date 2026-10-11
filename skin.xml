@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <WasabiXML version="1.36">
   <skininfo>
-    <name>iTunes Miniplayer v1.60</name>
-    <version>1.60</version>
+    <name>iTunes Miniplayer v1.63</name>
+    <version>1.63</version>
     <author>Custom skin created with Codex</author>
     <comment>A refined classic iTunes Miniplayer, with native right-edge resizing and a controls-only collapsed view.</comment>
     <screenshot>screenshot.png</screenshot>
@@ -199,34 +199,34 @@
     <bitmap id="mini.volume-normal.4x" file="assets/4x/volume-normal.png" />
   </elements>
   <groupdef id="track.title.viewport">
-    <text id="track.title" x="0" y="0" w="1" h="10" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
-    <text id="track.title.repeat" x="0" y="0" w="1" h="10" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.title" x="0" y="-1" w="1" h="12" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.title.repeat" x="0" y="-1" w="1" h="12" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="track.title.viewport.2x">
-    <text id="track.title" x="0" y="0" w="2" h="20" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="22" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
-    <text id="track.title.repeat" x="0" y="0" w="2" h="20" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="22" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.title" x="0" y="-2" w="2" h="24" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="22" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.title.repeat" x="0" y="-2" w="2" h="24" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="22" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="track.title.viewport.4x">
-    <text id="track.title" x="0" y="0" w="4" h="40" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="44" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
-    <text id="track.title.repeat" x="0" y="0" w="4" h="40" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="44" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.title" x="0" y="-4" w="4" h="48" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="44" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.title.repeat" x="0" y="-4" w="4" h="48" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="44" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="track.detail.viewport">
-    <text id="track.detail" x="0" y="0" w="1" h="10" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
-    <text id="track.detail.repeat" x="0" y="0" w="1" h="10" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.detail" x="0" y="-1" w="1" h="12" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.detail.repeat" x="0" y="-1" w="1" h="12" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="track.detail.viewport.2x">
-    <text id="track.detail" x="0" y="0" w="2" h="20" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="22" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
-    <text id="track.detail.repeat" x="0" y="0" w="2" h="20" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="22" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.detail" x="0" y="-2" w="2" h="24" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="22" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.detail.repeat" x="0" y="-2" w="2" h="24" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="22" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="track.detail.viewport.4x">
-    <text id="track.detail" x="0" y="0" w="4" h="40" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="44" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
-    <text id="track.detail.repeat" x="0" y="0" w="4" h="40" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="44" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.detail" x="0" y="-4" w="4" h="48" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="44" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.detail.repeat" x="0" y="-4" w="4" h="48" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="44" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="mini.lcd">
     <layer id="lcd.background" x="0" y="0" w="-4" h="40" relatw="1" image="mini.lcd-background" tile="1" ghost="1" />
     <layer id="lcd.right" x="-4" y="0" relatx="1" image="mini.lcd-right" ghost="1" />
-    <group id="track.title.viewport" x="9" y="5" w="-18" h="10" relatw="1" rectrgn="1" move="1" visible="0" />
-    <group id="track.detail.viewport" x="9" y="16" w="-18" h="10" relatw="1" rectrgn="1" move="1" visible="0" />
+    <group id="track.title.viewport" x="9" y="4" w="-18" h="11" relatw="1" rectrgn="1" move="1" visible="0" />
+    <group id="track.detail.viewport" x="9" y="15" w="-18" h="11" relatw="1" rectrgn="1" move="1" visible="0" />
     <text id="time.elapsed" x="18" y="26" w="24" h="10" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="92,92,90" align="right" default="" ghost="1" move="1" visible="0" />
     <text id="time.remaining" x="-42" y="26" w="27" h="10" relatx="1" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="92,92,90" align="left" default="" ghost="1" move="1" visible="0" />
     <layer id="seek.track" x="48" y="28" w="-96" h="6" relatw="1" image="mini.seek-track" ghost="1" visible="0" />
@@ -238,8 +238,8 @@
   <groupdef id="mini.lcd.2x">
     <layer id="lcd.background" x="0" y="0" w="-8" h="80" relatw="1" image="mini.lcd-background.2x" tile="1" ghost="1" />
     <layer id="lcd.right" x="-8" y="0" relatx="1" image="mini.lcd-right.2x" ghost="1" />
-    <group id="track.title.viewport.2x" x="18" y="10" w="-36" h="20" relatw="1" rectrgn="1" move="1" visible="0" />
-    <group id="track.detail.viewport.2x" x="18" y="32" w="-36" h="20" relatw="1" rectrgn="1" move="1" visible="0" />
+    <group id="track.title.viewport.2x" x="18" y="8" w="-36" h="22" relatw="1" rectrgn="1" move="1" visible="0" />
+    <group id="track.detail.viewport.2x" x="18" y="30" w="-36" h="22" relatw="1" rectrgn="1" move="1" visible="0" />
     <text id="time.elapsed" x="36" y="52" w="48" h="20" font="Lucida Grande" altfont="Tahoma" fontsize="20" antialias="1" color="92,92,90" align="right" default="" ghost="1" move="1" visible="0" />
     <text id="time.remaining" x="-84" y="52" w="54" h="20" relatx="1" font="Lucida Grande" altfont="Tahoma" fontsize="20" antialias="1" color="92,92,90" align="left" default="" ghost="1" move="1" visible="0" />
     <layer id="seek.track" x="96" y="56" w="-192" h="12" relatw="1" image="mini.seek-track.2x" ghost="1" visible="0" />
@@ -251,8 +251,8 @@
   <groupdef id="mini.lcd.4x">
     <layer id="lcd.background" x="0" y="0" w="-16" h="160" relatw="1" image="mini.lcd-background.4x" tile="1" ghost="1" />
     <layer id="lcd.right" x="-16" y="0" relatx="1" image="mini.lcd-right.4x" ghost="1" />
-    <group id="track.title.viewport.4x" x="36" y="20" w="-72" h="40" relatw="1" rectrgn="1" move="1" visible="0" />
-    <group id="track.detail.viewport.4x" x="36" y="64" w="-72" h="40" relatw="1" rectrgn="1" move="1" visible="0" />
+    <group id="track.title.viewport.4x" x="36" y="16" w="-72" h="44" relatw="1" rectrgn="1" move="1" visible="0" />
+    <group id="track.detail.viewport.4x" x="36" y="60" w="-72" h="44" relatw="1" rectrgn="1" move="1" visible="0" />
     <text id="time.elapsed" x="72" y="104" w="96" h="40" font="Lucida Grande" altfont="Tahoma" fontsize="40" antialias="1" color="92,92,90" align="right" default="" ghost="1" move="1" visible="0" />
     <text id="time.remaining" x="-168" y="104" w="108" h="40" relatx="1" font="Lucida Grande" altfont="Tahoma" fontsize="40" antialias="1" color="92,92,90" align="left" default="" ghost="1" move="1" visible="0" />
     <layer id="seek.track" x="192" y="112" w="-384" h="24" relatw="1" image="mini.seek-track.4x" ghost="1" visible="0" />
@@ -277,7 +277,7 @@
     <layer id="resize.bottom" x="8" y="-8" w="-16" h="8" relatw="1" relaty="1" resize="bottom" rectrgn="1" />
     <script file="scripts/standardframe.maki" param="8,8,-16,-16,0,0,1,1" />
   </groupdef>
-  <container id="main" default_visible="1" default_x="100" default_y="100" name="iTunes Miniplayer v1.60">
+  <container id="main" default_visible="1" default_x="100" default_y="100" name="iTunes Miniplayer v1.63">
     <layout id="native.1x" w="312" h="58" minimum_w="112" maximum_w="400" minimum_h="58" maximum_h="58" desktopalpha="1" droptarget="pldr">
       <layer id="chrome.background" x="0" y="0" w="-5" h="58" relatw="1" image="mini.chrome-background" tile="1" ghost="1" sysregion="1" />
       <layer id="chrome.right" x="-5" y="0" relatx="1" image="mini.chrome-right" ghost="1" sysregion="1" />
