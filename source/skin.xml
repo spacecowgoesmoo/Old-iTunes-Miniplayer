@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <WasabiXML version="1.36">
   <skininfo>
-    <name>iTunes MiniPlayer v1.36</name>
-    <version>1.36</version>
+    <name>iTunes MiniPlayer v1.39</name>
+    <version>1.39</version>
     <author>Custom skin created with Codex</author>
     <comment>A refined classic iTunes MiniPlayer, with native right-edge resizing and a controls-only collapsed view.</comment>
     <screenshot>screenshot.png</screenshot>
   </skininfo>
   <elements>
+    <bitmap id="mini.apple-logo" file="assets/apple-logo.png" />
     <bitmap id="mini.aux-eq-track" file="assets/aux-eq-track.png" />
     <bitmap id="mini.aux-frame-bottom" file="assets/aux-frame-bottom.png" />
     <bitmap id="mini.aux-frame-bottomleft" file="assets/aux-frame-bottomleft.png" />
@@ -119,27 +120,28 @@
     <color id="wasabi.tree.selected" value="184,200,156" />
   </elements>
   <groupdef id="track.title.viewport">
-    <text id="track.title" x="0" y="0" w="1" h="10" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="iTunes MiniPlayer" dblclickaction="trackinfo" move="1" />
-    <text id="track.title.repeat" x="0" y="0" w="1" h="10" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="iTunes MiniPlayer" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.title" x="0" y="0" w="1" h="10" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.title.repeat" x="0" y="0" w="1" h="10" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="track.detail.viewport">
-    <text id="track.detail" x="0" y="0" w="1" h="10" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="Drop music here to begin" dblclickaction="trackinfo" move="1" />
-    <text id="track.detail.repeat" x="0" y="0" w="1" h="10" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="Drop music here to begin" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.detail" x="0" y="0" w="1" h="10" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.detail.repeat" x="0" y="0" w="1" h="10" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="mini.lcd">
     <layer id="lcd.left" x="0" y="0" image="mini.lcd-left" ghost="1" />
     <layer id="lcd.center" x="4" y="0" w="-8" h="40" relatw="1" image="mini.lcd-center" ghost="1" />
     <layer id="lcd.right" x="-4" y="0" relatx="1" image="mini.lcd-right" ghost="1" />
-    <group id="track.title.viewport" x="9" y="5" w="-18" h="10" relatw="1" rectrgn="1" move="1" />
-    <group id="track.detail.viewport" x="9" y="15" w="-18" h="10" relatw="1" rectrgn="1" move="1" />
-    <text id="time.elapsed" x="18" y="26" w="24" h="10" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="92,92,90" align="right" default="0:00" ghost="1" move="1" />
-    <text id="time.remaining" x="-42" y="26" w="27" h="10" relatx="1" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="92,92,90" align="left" default="-0:00" ghost="1" move="1" />
-    <layer id="seek.track" x="48" y="28" w="-96" h="6" relatw="1" image="mini.seek-track" ghost="1" />
+    <group id="track.title.viewport" x="9" y="5" w="-18" h="10" relatw="1" rectrgn="1" move="1" visible="0" />
+    <group id="track.detail.viewport" x="9" y="15" w="-18" h="10" relatw="1" rectrgn="1" move="1" visible="0" />
+    <text id="time.elapsed" x="18" y="26" w="24" h="10" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="92,92,90" align="right" default="" ghost="1" move="1" visible="0" />
+    <text id="time.remaining" x="-42" y="26" w="27" h="10" relatx="1" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="92,92,90" align="left" default="" ghost="1" move="1" visible="0" />
+    <layer id="seek.track" x="48" y="28" w="-96" h="6" relatw="1" image="mini.seek-track" ghost="1" visible="0" />
     <layer id="seek.fill.cap" x="48" y="28" w="2" h="6" image="mini.seek-fill-cap" ghost="1" visible="0" />
-    <layer id="seek.fill" x="50" y="28" w="0" h="6" image="mini.seek-fill" ghost="1" />
-    <slider id="seek" action="SEEK" x="48" y="28" w="-97" h="6" relatw="1" thumb="mini.seek-normal" hoverThumb="mini.seek-hover" downThumb="mini.seek-down" tooltip="Seek" />
+    <layer id="seek.fill" x="50" y="28" w="0" h="6" image="mini.seek-fill" ghost="1" visible="0" />
+    <slider id="seek" action="SEEK" x="48" y="28" w="-97" h="6" relatw="1" thumb="mini.seek-normal" hoverThumb="mini.seek-hover" downThumb="mini.seek-down" tooltip="Seek" visible="0" />
+    <layer id="lcd.empty.logo" x="85" y="7" w="19" h="22" image="mini.apple-logo" ghost="1" />
   </groupdef>
-  <container id="main" name="iTunes MiniPlayer v1.36" default_visible="1" default_x="100" default_y="100">
+  <container id="main" name="iTunes MiniPlayer v1.39" default_visible="1" default_x="100" default_y="100">
     <layout id="normal" w="312" h="58" minimum_w="112" maximum_w="400" minimum_h="58" maximum_h="58" desktopalpha="1" droptarget="pldr">
       <layer id="chrome.left" x="0" y="0" image="mini.chrome-left" ghost="1" sysregion="1" />
       <layer id="chrome.center" x="106" y="0" w="-112" h="58" relatw="1" image="mini.chrome-center" ghost="1" sysregion="1" />

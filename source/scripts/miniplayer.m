@@ -9,7 +9,8 @@ Global Button menuShuffle;
 Global ConfigAttribute repeatMode;
 Global GuiObject muteButton, dragArea;
 Global Group lcdGroup;
-Global GuiObject seekTrack, seeker;
+Global GuiObject seekTrack, seeker, emptyLogo;
+Global Int lcdHasTrack;
 Global Int adjustingSize, settledWidth, resizeAnchorWidth;
 Global Text titleText, detailText, elapsedText, remainingText;
 Global Layer seekFill, seekFillCap;
@@ -26,6 +27,7 @@ Function updateTrack();
 Function updateDisplay(Int width);
 Function setDisplayWidth(Int width);
 Function updateTime();
+Function updateLcdState();
 Function String formatClock(Int milliseconds);
 Function togglePlayback();
 Function showMenu();
@@ -62,6 +64,8 @@ System.onScriptLoaded() {
  lcdGroup = root.findObject("mini.lcd");
  seekTrack = root.findObject("seek.track");
  seeker = root.findObject("seek");
+ emptyLogo = root.findObject("lcd.empty.logo");
+ lcdHasTrack = -1;
  titleRepeat = root.findObject("track.title.repeat");
  detailRepeat = root.findObject("track.detail.repeat");
  titleViewport = root.findObject("track.title.viewport");
@@ -81,7 +85,7 @@ System.onScriptLoaded() {
 System.onScriptUnloading() { clockTimer.stop(); delete clockTimer; scrollTimer.stop(); delete scrollTimer; }
 System.onTitleChange(String newTitle) { updateTrack(); updateTime(); }
 System.onPlay() { updateTrack(); updateTime(); }
-System.onStop() { updateTime(); }
+System.onStop() { updateTrack(); updateTime(); }
 System.onPause() { updateTime(); }
 System.onResume() { updateTime(); }
 System.onSeek(int newpos) { updateTime(); }
@@ -124,21 +128,39 @@ updateTrack() {
  String artistName = getPlayItemMetaDataString("artist");
  String albumName = getPlayItemMetaDataString("album");
  if (trackName == "") trackName = getPlayItemDisplayTitle();
- if (trackName == "") trackName = "iTunes MiniPlayer";
+ if (getPlayItemString() == "") trackName = "";
  titleText.setText(trackName); titleRepeat.setText(trackName);
  String detail = artistName;
  if (albumName != "") {
   if (detail != "") detail = detail + " - ";
   detail = detail + albumName;
  }
- if (detail == "") {
-  if (getPlayItemString() == "") detail = "Drop music here to begin";
-  else detail = "Winamp";
- }
+ if (getPlayItemString() == "") detail = "";
  detailText.setText(detail); detailRepeat.setText(detail);
  resetScroll();
 }
+updateLcdState() {
+ // An empty playlist differs from a loaded track that is merely stopped.
+ Int hasTrack = (getPlayItemString() != "");
+ if (hasTrack == lcdHasTrack) return;
+ lcdHasTrack = hasTrack;
+ if (hasTrack) {
+  emptyLogo.hide();
+  titleViewport.show(); detailViewport.show();
+  elapsedText.show(); remainingText.show();
+  seekTrack.show(); seeker.show();
+ } else {
+  titleViewport.hide(); detailViewport.hide();
+  elapsedText.hide(); remainingText.hide();
+  seekTrack.hide(); seeker.hide();
+  seekFill.hide(); seekFillCap.hide();
+  emptyLogo.show();
+ }
+ updateTrack();
+}
 updateTime() {
+ updateLcdState();
+ if (!lcdHasTrack) return;
  Int length = getPlayItemLength();
  Int position = getPosition();
  if (getStatus() == 0 || position < 0) position = 0;
@@ -157,10 +179,12 @@ updateTime() {
   if (width > available) width = available;
   if (width < 0) width = 0;
   seekFill.setXmlParam("w", integerToString(width));
+  seekFill.show();
   if (width > 0) seekFillCap.show(); else seekFillCap.hide();
  } else {
   remainingText.setText("");
   seekFill.setXmlParam("w", "0");
+  seekFill.hide();
   seekFillCap.hide();
  }
 }
@@ -227,7 +251,8 @@ updateDisplay(Int width) {
  settledWidth = width;
  if (width < 250) { lcdGroup.hide(); return; }
  lcdGroup.show();
- elapsedText.show(); remainingText.show();
+ Int logoX = (width - 122 - 19) / 2;
+ emptyLogo.setXmlParam("x", integerToString(logoX));
  titleViewport.setXmlParam("x", "14"); titleViewport.setXmlParam("w", "-28");
  detailViewport.setXmlParam("x", "14"); detailViewport.setXmlParam("w", "-28");
  seeker.setXmlParam("x", "48"); seeker.setXmlParam("w", "-97");

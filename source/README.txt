@@ -1,4 +1,4 @@
-iTunes MiniPlayer v1.36
+iTunes MiniPlayer v1.39
 ======================
 A refined Winamp Modern (.wal) skin based on the classic iTunes MiniPlayer.
 Default size: 312 x 58. Maximum width: 400. Collapsed size: 112 x 58.
@@ -13,13 +13,9 @@ alternate font. Fonts are provided by the operating system.
 Inactive traffic lights follow this window's focus.
 
 WHAT CHANGED
-- Headlong Flight screenshot now uses its 7:20 album duration: 2:10 elapsed,
-  -5:10 remaining, and a matching playhead position.
-- Special-window borders are now 8px on every side, matching the thin metal
-  sides of Playlist and Video. They share those windows' original frame PNGs
-  and rounded corners. Close special windows through NullPlayer's menu.
-- Both volume speaker icons moved outward by 1px; the mute hit area follows.
-- Existing Winamp subwindow layouts and headers are unchanged.
+- The second LCD text row stays blank when artist and album tags are absent.
+  Artist-only and album-only tags still display without a separator; both
+  display as Artist - Album. The first row retains the file-title fallback.
 
 COMPATIBILITY NOTES
 Skin-driven scrolling and progress updates request a 17ms interval (about
@@ -33,7 +29,8 @@ RESIZING
 Grab the rightmost six pixels of the frame and drag horizontally. Pull the
 edge right a little to restore the LCD. Double-click the silver frame to collapse
 or restore immediately. Below 250px, the entire LCD disappears and the
-player snaps to 112px. Every expanded width retains elapsed and remaining time labels.
+player snaps to 112px. With a track loaded, every expanded width retains
+elapsed and remaining time labels.
 
 CONTROLS
 Red light: close. Yellow light: minimize. Green light: extra Winamp windows, Shuffle, Repeat One, and Repeat All,
