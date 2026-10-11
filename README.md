@@ -1,4 +1,4 @@
-<img width="312" height="58" alt="screenshot" src="https://github.com/user-attachments/assets/4ca4cb65-76b8-4201-9e77-83795d5ade52" />
+<img width="400" height="198" alt="screenshot" src="https://github.com/user-attachments/assets/5ebed590-4e5a-4e82-a14c-c9e233683b5f" />
 
 .wal format skin for Winamp Modern
 
