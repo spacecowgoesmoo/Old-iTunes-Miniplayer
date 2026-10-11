@@ -1,0 +1,36 @@
+// Shared standard Winamp layout switching; never changes host UI scaling.
+Function Int readPlayerSize();
+Function Int layoutFactor(Layout target);
+Function switchWindowSize(Container owner, Int factor);
+
+Int readPlayerSize() {
+ Int percent = getPrivateInt("iTunes MiniPlayer", "player.layout.size", 100);
+ if (percent != 100 && percent != 200 && percent != 400) percent = 100;
+ return percent;
+}
+Int layoutFactor(Layout target) {
+ if (target.getId() == "native.2x") return 2;
+ if (target.getId() == "native.4x") return 4;
+ return 1;
+}
+switchWindowSize(Container owner, Int factor) {
+ if (owner == NULL) return;
+ // Winamp's switchToLayout shows its destination; do not open a hidden
+ // player while applying its remembered size.
+ Layout previous = owner.getCurLayout();
+ if (previous == NULL) return;
+ if (!previous.isVisible()) return;
+ String name = "native." + integerToString(factor) + "x";
+ if (previous.getId() == name) return;
+ Int oldFactor = layoutFactor(previous);
+ Int x = previous.getLeft(), y = previous.getTop();
+ // Round only when a larger native pixel grid cannot be represented at 1x.
+ Int w = (previous.getWidth() * factor + oldFactor / 2) / oldFactor;
+ Int h = (previous.getHeight() * factor + oldFactor / 2) / oldFactor;
+ owner.switchToLayout(name);
+ // Query after switching: hosts may create the destination lazily.
+ Layout current = owner.getCurLayout();
+ if (current != NULL) {
+  if (current.getId() == name) current.resize(x, y, w, h);
+ }
+}
