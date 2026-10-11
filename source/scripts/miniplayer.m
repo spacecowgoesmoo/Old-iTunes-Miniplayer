@@ -1,20 +1,27 @@
 #include "std.mi"
+#include "config.mi"
 Global Group root;
 Global Layout mainLayout;
-Global Button playPause, libraryButton;
+Global Button playPause, libraryButton, closeButton, minimizeButton;
+Global Int lastWindowActive;
 Global Button menuPlaylist, menuLibrary, menuEqualizer, menuVideo, menuVisualization;
+Global Button menuShuffle;
+Global ConfigAttribute repeatMode;
 Global GuiObject muteButton, dragArea;
 Global Group lcdGroup;
 Global GuiObject seekTrack, seeker;
-Global Int adjustingSize;
+Global Int adjustingSize, settledWidth, resizeAnchorWidth;
 Global Text titleText, detailText, elapsedText, remainingText;
 Global Layer seekFill, seekFillCap;
 Global Timer clockTimer, scrollTimer;
 Global Text titleRepeat, detailRepeat;
 Global Group titleViewport, detailViewport;
 Global Double scrollPhase;
-Global Int scrollPauseTicks, scrollTitleWidth, scrollDetailWidth, scrollViewWidth;
+Global Int scrollRestMs, scrollLastTime, scrollTitleWidth, scrollDetailWidth, scrollViewWidth;
 Global Int savedVolume;
+Function initializeEqualizer();
+Function updateWindowFocus();
+Function setTrafficImages(Button control, String prefix);
 Function updateTrack();
 Function updateDisplay(Int width);
 Function setDisplayWidth(Int width);
@@ -29,6 +36,7 @@ Function renderScrollLine(Text primary, Text repeated, Group viewport, Double ph
 System.onScriptLoaded() {
  root = getScriptGroup();
  mainLayout = root.getParentLayout();
+ initializeEqualizer();
  playPause = root.findObject("playpause");
  muteButton = root.findObject("mute");
  titleText = root.findObject("track.title");
@@ -38,6 +46,13 @@ System.onScriptLoaded() {
  seekFill = root.findObject("seek.fill");
  seekFillCap = root.findObject("seek.fill.cap");
  libraryButton = root.findObject("library");
+ closeButton = root.findObject("close");
+ minimizeButton = root.findObject("minimize");
+ lastWindowActive = -1;
+ updateWindowFocus();
+ menuShuffle = root.findObject("menu.shuffle");
+ ConfigItem playbackOptions = Config.getItemByGuid("{45F3F7C1-A6F3-4EE6-A15E-125E92FC3F8D}");
+ repeatMode = playbackOptions.getAttribute("Repeat");
  menuPlaylist = root.findObject("menu.open.pl");
  menuLibrary = root.findObject("menu.open.ml");
  menuEqualizer = root.findObject("menu.open.eq");
@@ -51,16 +66,16 @@ System.onScriptLoaded() {
  detailRepeat = root.findObject("track.detail.repeat");
  titleViewport = root.findObject("track.title.viewport");
  detailViewport = root.findObject("track.detail.viewport");
- scrollPhase = 0; scrollPauseTicks = 40;
+ scrollPhase = 0; scrollRestMs = 2000; scrollLastTime = getTimeOfDay();
  scrollTimer = new Timer;
- scrollTimer.setDelay(50);
+ scrollTimer.setDelay(17);
  scrollTimer.start();
  adjustingSize = 0;
  savedVolume = 180;
  clockTimer = new Timer;
- clockTimer.setDelay(250);
+ clockTimer.setDelay(17);
  clockTimer.start();
- updateDisplay(mainLayout.getWidth());
+ setDisplayWidth(mainLayout.getWidth());
  updateTrack(); updateTime();
 }
 System.onScriptUnloading() { clockTimer.stop(); delete clockTimer; scrollTimer.stop(); delete scrollTimer; }
@@ -70,7 +85,39 @@ System.onStop() { updateTime(); }
 System.onPause() { updateTime(); }
 System.onResume() { updateTime(); }
 System.onSeek(int newpos) { updateTime(); }
-clockTimer.onTimer() { updateTime(); }
+clockTimer.onTimer() { updateTime(); updateWindowFocus(); }
+initializeEqualizer() {
+ // Start this version flat once, then retain the listener's later adjustments.
+ if (getPrivateInt("iTunes MiniPlayer", "eq.flat.initialized", 0)) return;
+ setEqPreamp(0);
+ for (Int band = 0; band < 10; band++) setEqBand(band, 0);
+ setPrivateInt("iTunes MiniPlayer", "eq.flat.initialized", 1);
+}
+updateWindowFocus() {
+ Int active = mainLayout.isActive();
+ if (active == lastWindowActive) return;
+ lastWindowActive = active;
+ if (active) {
+  setTrafficImages(closeButton, "mini.close");
+  setTrafficImages(minimizeButton, "mini.minimize");
+  setTrafficImages(libraryButton, "mini.library");
+ } else {
+  setTrafficImages(closeButton, "");
+  setTrafficImages(minimizeButton, "");
+  setTrafficImages(libraryButton, "");
+ }
+}
+setTrafficImages(Button control, String prefix) {
+ if (prefix == "") {
+  control.setXmlParam("image", "mini.close-inactive");
+  control.setXmlParam("hoverImage", "mini.close-inactive");
+  control.setXmlParam("downImage", "mini.close-inactive");
+ } else {
+  control.setXmlParam("image", prefix + "-normal");
+  control.setXmlParam("hoverImage", prefix + "-hover");
+  control.setXmlParam("downImage", prefix + "-down");
+ }
+}
 
 updateTrack() {
  String trackName = getPlayItemMetaDataString("title");
@@ -101,13 +148,12 @@ updateTime() {
   Int remaining = length - position;
   if (remaining < 0) remaining = 0;
   remainingText.setText("-" + formatClock(remaining));
-  Int available = mainLayout.getWidth() - 122;
-  if (available >= 128) available = available - 100;
-  else available = available - 42;
+  Int available = mainLayout.getWidth() - 222;
   if (available < 0) available = 0;
   Double fraction = position;
   fraction = fraction / length;
-  Int width = fraction * (available + 4) - 2;
+  // Align the filled section with the inset native diamond center.
+  Int width = fraction * (available - 3) + 1;
   if (width > available) width = available;
   if (width < 0) width = 0;
   seekFill.setXmlParam("w", integerToString(width));
@@ -133,53 +179,77 @@ dragArea.onLeftButtonDblClk(int x, int y) {
  else setDisplayWidth(112);
 }
 setDisplayWidth(Int width) {
+ if (width > 112 && width < 250) width = 112;
+ // Explicit restores and startup set a fresh baseline, outside drag snapping.
+ adjustingSize = 1;
+ resizeAnchorWidth = width;
  mainLayout.resize(mainLayout.getLeft(), mainLayout.getTop(), width, 58);
+ adjustingSize = 0;
  updateDisplay(width);
 }
 mainLayout.onResize(int x, int y, int w, int h) {
  if (adjustingSize) return;
- // Native resizing keeps mouse capture after the display snaps out of view.
- if (w > 112 && w < 198) {
-  adjustingSize = 1;
-  mainLayout.resize(x, y, 112, 58);
-  adjustingSize = 0;
-  w = 112;
+ Int target = w;
+ // Track raw native drag widths separately from the snapped window width.
+ // The host retains the original mouse anchor throughout the drag.
+ if (w <= 112) {
+  target = 112; resizeAnchorWidth = 112;
+ } else if (w < 250) {
+  if (settledWidth <= 112) {
+   if (w < resizeAnchorWidth) resizeAnchorWidth = w;
+   if (w >= resizeAnchorWidth + 6) {
+    target = 250; resizeAnchorWidth = w;
+   } else target = 112;
+  } else {
+   if (resizeAnchorWidth >= 250) {
+    target = 112; resizeAnchorWidth = w;
+   } else {
+    // After an early reveal, keep the LCD visible as the pointer catches up.
+    if (w > resizeAnchorWidth) resizeAnchorWidth = w;
+    if (w <= resizeAnchorWidth - 6) {
+     target = 112; resizeAnchorWidth = w;
+    } else target = 250;
+   }
+  }
+ } else {
+  resizeAnchorWidth = w;
+  // A small magnetic target around the standard width, escapable both ways.
+  if (w >= 302 && w <= 322) target = 312;
  }
- updateDisplay(w);
+ if (target != w) {
+  adjustingSize = 1;
+  mainLayout.resize(x, y, target, 58);
+  adjustingSize = 0;
+ }
+ updateDisplay(target);
 }
 updateDisplay(Int width) {
- if (width <= 112) { lcdGroup.hide(); return; }
+ settledWidth = width;
+ if (width < 250) { lcdGroup.hide(); return; }
  lcdGroup.show();
- Int lcdWidth = width - 122;
- if (lcdWidth < 128) {
-  elapsedText.hide(); remainingText.hide();
-  titleViewport.setXmlParam("x", "5"); titleViewport.setXmlParam("w", "-10");
-  detailViewport.setXmlParam("x", "5"); detailViewport.setXmlParam("w", "-10");
-  seeker.setXmlParam("x", "16"); seeker.setXmlParam("w", "-32");
-  seekTrack.setXmlParam("x", "19"); seekTrack.setXmlParam("w", "-38");
-  seekFill.setXmlParam("x", "21");
-  seekFillCap.setXmlParam("x", "19");
- } else {
-  elapsedText.show(); remainingText.show();
-  titleViewport.setXmlParam("x", "14"); titleViewport.setXmlParam("w", "-28");
-  detailViewport.setXmlParam("x", "14"); detailViewport.setXmlParam("w", "-28");
-  seeker.setXmlParam("x", "45"); seeker.setXmlParam("w", "-90");
-  seekTrack.setXmlParam("x", "48"); seekTrack.setXmlParam("w", "-96");
-  seekFill.setXmlParam("x", "50");
-  seekFillCap.setXmlParam("x", "48");
- }
+ elapsedText.show(); remainingText.show();
+ titleViewport.setXmlParam("x", "14"); titleViewport.setXmlParam("w", "-28");
+ detailViewport.setXmlParam("x", "14"); detailViewport.setXmlParam("w", "-28");
+ seeker.setXmlParam("x", "48"); seeker.setXmlParam("w", "-97");
+ seekTrack.setXmlParam("x", "48"); seekTrack.setXmlParam("w", "-96");
+ seekFill.setXmlParam("x", "50");
+ seekFillCap.setXmlParam("x", "48");
  resetScroll();
  updateTime();
 }
 showMenu() {
+ // Winamp's real repeat setting: 0 = off, 1 = all, -1 = one.
+ Int repeat = stringToInteger(repeatMode.getData());
  PopupMenu popup = new PopupMenu;
- popup.addCommand("Playlist Editor", 1, isNamedWindowVisible("guid:pl"), 0);
+ popup.addCommand("Playlist", 1, isNamedWindowVisible("guid:pl"), 0);
  popup.addCommand("Media Library", 2, isNamedWindowVisible("guid:ml"), 0);
  popup.addCommand("Equalizer", 3, isNamedWindowVisible("guid:eq"), 0);
  popup.addCommand("Video", 4, isNamedWindowVisible("guid:vid"), 0);
  popup.addCommand("Visualization", 5, isNamedWindowVisible("guid:avs"), 0);
  popup.addSeparator();
- popup.addCommand("Restore Standard Width", 41, 0, 0);
+ popup.addCommand("Shuffle", 21, menuShuffle.getActivated(), 0);
+ popup.addCommand("Repeat One", 23, repeat == -1, 0);
+ popup.addCommand("Repeat All", 22, repeat == 1, 0);
  Int command = popup.popAtMouse();
  delete popup;
  if (command == 1) menuPlaylist.leftClick();
@@ -187,7 +257,18 @@ showMenu() {
  if (command == 3) menuEqualizer.leftClick();
  if (command == 4) menuVideo.leftClick();
  if (command == 5) menuVisualization.leftClick();
- if (command == 41) setDisplayWidth(312);
+ if (command == 21) menuShuffle.leftClick();
+ // Selecting the checked mode turns repeat off. Read again after the popup
+ // closes so a host-side change during menu tracking is respected.
+ repeat = stringToInteger(repeatMode.getData());
+ if (command == 22) {
+  if (repeat == 1) repeatMode.setData("0");
+  else repeatMode.setData("1");
+ }
+ if (command == 23) {
+  if (repeat == -1) repeatMode.setData("0");
+  else repeatMode.setData("-1");
+ }
 }
 
 // Reconstructed synchronized marquee: 15 px/s, one pass per row, then wait.
@@ -195,7 +276,8 @@ showMenu() {
 scrollTimer.onTimer() { scrollTick(); }
 resetScroll() {
  scrollPhase = 0;
- scrollPauseTicks = 40;
+ scrollRestMs = 2000;
+ scrollLastTime = getTimeOfDay();
  scrollTitleWidth = titleText.getTextWidth();
  scrollDetailWidth = detailText.getTextWidth();
  scrollViewWidth = titleViewport.getWidth();
@@ -203,25 +285,32 @@ resetScroll() {
  renderScrollLine(detailText, detailRepeat, detailViewport, 0);
 }
 scrollTick() {
+ Int now = getTimeOfDay();
+ Int delta = now - scrollLastTime;
+ scrollLastTime = now;
+ // Ignore clock jumps, midnight rollover and long stalls rather than jumping
+ // the text. Ordinary timer jitter still advances at exactly 15 pixels/s.
+ if (delta < 0 || delta > 250) delta = 0;
  if (mainLayout.getWidth() <= 112) return;
  if (titleText.getTextWidth() != scrollTitleWidth || detailText.getTextWidth() != scrollDetailWidth || titleViewport.getWidth() != scrollViewWidth) {
   resetScroll();
   return;
  }
- renderScrollLine(titleText, titleRepeat, titleViewport, scrollPhase);
- renderScrollLine(detailText, detailRepeat, detailViewport, scrollPhase);
- if (scrollPauseTicks > 0) { scrollPauseTicks = scrollPauseTicks - 1; return; }
+ if (scrollRestMs > 0) {
+  if (delta <= scrollRestMs) { scrollRestMs = scrollRestMs - delta; delta = 0; }
+  else { delta = delta - scrollRestMs; scrollRestMs = 0; }
+ }
  Int longestCycle = 0;
  if (scrollTitleWidth > scrollViewWidth) longestCycle = scrollTitleWidth + 40;
  if (scrollDetailWidth > scrollViewWidth && scrollDetailWidth + 40 > longestCycle) longestCycle = scrollDetailWidth + 40;
- if (longestCycle == 0) { scrollPhase = 0; return; }
- scrollPhase = scrollPhase + 0.75;
- if (scrollPhase >= longestCycle) {
+ if (longestCycle == 0) scrollPhase = 0;
+ else scrollPhase = scrollPhase + delta * 0.015;
+ if (longestCycle > 0 && scrollPhase >= longestCycle) {
   scrollPhase = 0;
-  scrollPauseTicks = 40;
-  renderScrollLine(titleText, titleRepeat, titleViewport, 0);
-  renderScrollLine(detailText, detailRepeat, detailViewport, 0);
+  scrollRestMs = 2000;
  }
+ renderScrollLine(titleText, titleRepeat, titleViewport, scrollPhase);
+ renderScrollLine(detailText, detailRepeat, detailViewport, scrollPhase);
 }
 renderScrollLine(Text primary, Text repeated, Group viewport, Double phase) {
  Int textWidth = primary.getTextWidth();
