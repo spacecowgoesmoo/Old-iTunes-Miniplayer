@@ -2,6 +2,6 @@
 
 .wal format skin for Winamp Modern
 
-Tested on [nullplayer](https://github.com/ad-repo/nullplayer)
+Tested on [nullplayer](https://github.com/ad-repo/nullplayer), but should be usable in any app that supports .wal. If something looks broken in other apps, please report it here
 
 Created with GPT 6.1 Sol
