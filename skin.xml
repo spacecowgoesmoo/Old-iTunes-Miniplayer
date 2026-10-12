@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <WasabiXML version="1.36">
   <skininfo>
-    <name>iTunes Miniplayer v1.63</name>
-    <version>1.63</version>
+    <name>iTunes Miniplayer v1.64</name>
+    <version>1.64</version>
     <author>Custom skin created with Codex</author>
     <comment>A refined classic iTunes Miniplayer, with native right-edge resizing and a controls-only collapsed view.</comment>
     <screenshot>screenshot.png</screenshot>
@@ -277,7 +277,7 @@
     <layer id="resize.bottom" x="8" y="-8" w="-16" h="8" relatw="1" relaty="1" resize="bottom" rectrgn="1" />
     <script file="scripts/standardframe.maki" param="8,8,-16,-16,0,0,1,1" />
   </groupdef>
-  <container id="main" default_visible="1" default_x="100" default_y="100" name="iTunes Miniplayer v1.63">
+  <container id="main" default_visible="1" default_x="100" default_y="100" name="iTunes Miniplayer v1.64">
     <layout id="native.1x" w="312" h="58" minimum_w="112" maximum_w="400" minimum_h="58" maximum_h="58" desktopalpha="1" droptarget="pldr">
       <layer id="chrome.background" x="0" y="0" w="-5" h="58" relatw="1" image="mini.chrome-background" tile="1" ghost="1" sysregion="1" />
       <layer id="chrome.right" x="-5" y="0" relatx="1" image="mini.chrome-right" ghost="1" sysregion="1" />

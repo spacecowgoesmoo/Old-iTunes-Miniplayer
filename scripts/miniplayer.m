@@ -255,19 +255,25 @@ updateTime() {
  Int position = getPosition();
  if (getStatus() == 0 || position < 0) position = 0;
  if (length > 0 && position > length) position = length;
+ // Quantize the shared playback sample once. Independently truncating
+ // length-position makes the remaining clock tick between elapsed ticks.
  Int elapsedSecond = position / 1000;
- if (elapsedSecond != lastElapsedSecond) {
-  elapsedText.setText(formatClock(position));
-  lastElapsedSecond = elapsedSecond;
- }
  Int remainingSecond = -1;
+ if (length > 0) {
+  Int durationSecond = length / 1000;
+  remainingSecond = durationSecond - elapsedSecond;
+  if (remainingSecond < 0) remainingSecond = 0;
+ }
+ // Publish a pair on the same callback, including duration/stream changes.
+ if (elapsedSecond != lastElapsedSecond || remainingSecond != lastRemainingSecond) {
+  elapsedText.setText(formatClock(elapsedSecond * 1000));
+  if (remainingSecond >= 0) remainingText.setText("-" + formatClock(remainingSecond * 1000));
+  else remainingText.setText("");
+  lastElapsedSecond = elapsedSecond; lastRemainingSecond = remainingSecond;
+ }
  Int width = 0;
  Int fillVisible = (length > 0);
  if (length > 0) {
-  Int remaining = length - position;
-  if (remaining < 0) remaining = 0;
-  remainingSecond = remaining / 1000;
-  if (remainingSecond != lastRemainingSecond) remainingText.setText("-" + formatClock(remaining));
   Int available = mainLayout.getWidth() - px(222);
   if (available < 0) available = 0;
   Double fraction = position;
@@ -276,8 +282,7 @@ updateTime() {
   width = fraction * (available - px(3)) + px(1);
   if (width > available) width = available;
   if (width < 0) width = 0;
- } else if (remainingSecond != lastRemainingSecond) remainingText.setText("");
- lastRemainingSecond = remainingSecond;
+ }
  if (width != lastSeekWidth) {
   seekFill.setXmlParam("w", integerToString(width));
   lastSeekWidth = width;
