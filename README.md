@@ -4,4 +4,4 @@
 
 Tested on [nullplayer](https://github.com/ad-repo/nullplayer), but should be usable in any app that supports .wal. If something looks broken in other apps, please report it here
 
-Created with ChatGPT 6.1 Sol
+Created with GPT-6.1 Sol
