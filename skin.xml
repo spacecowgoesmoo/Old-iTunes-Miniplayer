@@ -1,58 +1,83 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <WasabiXML version="1.36">
   <skininfo>
-    <name>iTunes Miniplayer v1.64</name>
-    <version>1.64</version>
+    <name>iTunes Miniplayer v1.139</name>
+    <version>1.139</version>
     <author>Custom skin created with Codex</author>
     <comment>A refined classic iTunes Miniplayer, with native right-edge resizing and a controls-only collapsed view.</comment>
-    <screenshot>screenshot.png</screenshot>
+    <screenshot>Screenshot 1.png</screenshot>
   </skininfo>
   <elements>
-    <color id="wasabi.window.background" value="184,188,194" />
-    <color id="wasabi.window.text" value="85,89,94" />
-    <color id="wasabi.list.background" value="224,232,207" />
-    <color id="wasabi.list.background.alternate" value="218,227,199" />
-    <color id="wasabi.list.text" value="88,91,79" />
-    <color id="wasabi.list.text.alternate" value="88,91,79" />
-    <color id="wasabi.list.text.current" value="64,82,53" />
-    <color id="wasabi.list.text.selected" value="53,65,43" />
-    <color id="wasabi.list.text.selected.background" value="184,200,156" />
-    <color id="wasabi.list.text.selected.inactive" value="87,94,76" />
-    <color id="wasabi.list.text.selected.background.inactive" value="204,216,183" />
-    <color id="studio.list.item.selected" value="184,200,156" />
-    <color id="studio.list.item.focused" value="184,200,156" />
-    <color id="wasabi.list.column.background" value="194,199,205" />
-    <color id="wasabi.list.column.text" value="81,87,94" />
-    <color id="wasabi.list.column.frame.top" value="229,233,237" />
-    <color id="wasabi.list.column.frame.middle" value="176,182,190" />
-    <color id="wasabi.list.column.frame.bottom" value="134,142,151" />
-    <color id="wasabi.list.column.empty" value="194,199,205" />
-    <color id="wasabi.button.text" value="85,89,94" />
-    <color id="wasabi.button.hiliteText" value="64,70,77" />
-    <color id="wasabi.button.dimmedText" value="128,134,140" />
-    <color id="wasabi.border.sunken" value="111,119,125" />
-    <color id="wasabi.scrollbar.foreground" value="170,178,187" />
-    <color id="wasabi.scrollbar.background" value="215,225,196" />
-    <color id="wasabi.scrollbar.foreground.inverted" value="215,225,196" />
-    <color id="wasabi.scrollbar.background.inverted" value="170,178,187" />
-    <color id="pledit.text" value="88,91,79" />
-    <color id="pledit.current" value="64,82,53" />
-    <color id="pledit.selected" value="184,200,156" />
-    <color id="pledit.background" value="224,232,207" />
     <truetypefont id="Lucida Grande" />
     <truetypefont id="mini.font.dejavu.regular" file="fonts/DejaVuSans.ttf" />
     <truetypefont id="mini.font.dejavu.bold" file="fonts/DejaVuSans-Bold.ttf" />
     <alias id="pledit.font" target="Lucida Grande" />
     <alias id="wasabi.list.font" target="Lucida Grande" />
     <alias id="studio.list.font" target="Lucida Grande" />
-    <color id="wasabi.edit.background" value="231,237,217" />
-    <color id="wasabi.edit.text" value="88,91,79" />
-    <color id="wasabi.tree.background" value="224,232,207" />
-    <color id="wasabi.tree.text" value="88,91,79" />
-    <color id="wasabi.tree.selected" value="184,200,156" />
+    <color id="wasabi.window.background" value="189,189,189" />
+    <color id="wasabi.window.text" value="89,89,89" />
+    <color id="mini.window.title.inactive" value="143,143,143" />
+    <color id="wasabi.list.background" value="212,218,230" />
+    <color id="wasabi.list.background.alternate" value="212,218,230" />
+    <color id="wasabi.list.text" value="0,0,0" />
+    <color id="wasabi.list.text.alternate" value="0,0,0" />
+    <color id="wasabi.list.text.current" value="99,125,159" />
+    <color id="wasabi.list.text.selected" value="255,255,255" />
+    <color id="wasabi.list.text.selected.background" value="52,136,234" />
+    <color id="wasabi.list.text.selected.inactive" value="0,0,0" />
+    <color id="wasabi.list.text.selected.background.inactive" value="192,192,192" />
+    <color id="studio.list.item.selected" value="52,136,234" />
+    <color id="studio.list.item.focused" value="52,136,234" />
+    <color id="wasabi.list.column.background" value="198,198,198" />
+    <color id="wasabi.list.column.text" value="89,89,89" />
+    <color id="wasabi.list.column.frame.top" value="237,237,237" />
+    <color id="wasabi.list.column.frame.middle" value="180,180,180" />
+    <color id="wasabi.list.column.frame.bottom" value="143,143,143" />
+    <color id="wasabi.list.column.empty" value="198,198,198" />
+    <color id="wasabi.button.text" value="89,89,89" />
+    <color id="wasabi.button.hiliteText" value="255,255,255" />
+    <color id="wasabi.button.dimmedText" value="133,133,133" />
+    <color id="wasabi.border.sunken" value="122,122,122" />
+    <color id="wasabi.scrollbar.foreground" value="52,136,234" />
+    <color id="wasabi.scrollbar.background" value="212,218,230" />
+    <color id="wasabi.scrollbar.foreground.inverted" value="212,218,230" />
+    <color id="wasabi.scrollbar.background.inverted" value="52,136,234" />
+    <color id="wasabi.edit.background" value="212,218,230" />
+    <color id="wasabi.edit.text" value="0,0,0" />
+    <color id="wasabi.tree.background" value="212,218,230" />
+    <color id="wasabi.tree.text" value="0,0,0" />
+    <color id="wasabi.tree.selected" value="52,136,234" />
+    <color id="pledit.text" value="0,0,0" />
+    <color id="pledit.current" value="99,125,159" />
+    <color id="pledit.selected" value="52,136,234" />
+    <color id="pledit.background" value="212,218,230" />
+    <color id="wasabi.text.color" value="0,0,0" />
+    <color id="wasabi.text.color.inverse" value="255,255,255" />
+    <color id="wasabi.tree.hiliteddrop" value="52,136,234" />
+    <color id="wasabi.list.column.separator" value="180,180,180" />
+    <color id="wasabi.itemlist.outline.current" value="99,125,159" />
+    <color id="wasabi.itemlist.outline.focus" value="52,136,234" />
+    <color id="wasabi.itemlist.selborder" value="52,136,234" />
+    <color id="wasabi.popup.text" value="0,0,0" />
+    <color id="wasabi.popup.hiliteText" value="255,255,255" />
+    <color id="wasabi.popup.dimmedText" value="133,133,133" />
+    <color id="wasabi.panel.outerrect" value="143,143,143" />
+    <color id="wasabi.panel.upperleft" value="237,237,237" />
+    <color id="wasabi.panel.lowerright" value="143,143,143" />
+    <color id="wasabi.objectframe.upperleft" value="122,122,122" />
+    <color id="wasabi.objectframe.lowerright" value="237,237,237" />
+    <color id="wasabi.objectframe.inside" value="212,218,230" />
+    <color id="wasabi.window.embedded.upperleft" value="122,122,122" />
+    <color id="wasabi.window.embedded.lowerright" value="237,237,237" />
+    <color id="wasabi.window.embedded.inside" value="212,218,230" />
     <bitmap id="mini.apple-logo" file="assets/1x/apple-logo.png" />
     <bitmap id="mini.apple-logo.2x" file="assets/2x/apple-logo.png" />
+    <bitmap id="mini.apple-logo.3x" file="assets/3x/apple-logo.png" />
     <bitmap id="mini.apple-logo.4x" file="assets/4x/apple-logo.png" />
+    <bitmap id="mini.aux-eq-presets-down" file="assets/1x/aux-eq-presets-down.png" />
+    <bitmap id="mini.aux-eq-presets-normal" file="assets/1x/aux-eq-presets-normal.png" />
+    <bitmap id="mini.aux-eq-reset-down" file="assets/1x/aux-eq-reset-down.png" />
+    <bitmap id="mini.aux-eq-reset-normal" file="assets/1x/aux-eq-reset-normal.png" />
     <bitmap id="mini.aux-eq-track" file="assets/1x/aux-eq-track.png" />
     <bitmap id="mini.aux-frame-bottom" file="assets/1x/aux-frame-bottom.png" />
     <bitmap id="mini.aux-frame-bottomleft" file="assets/1x/aux-frame-bottomleft.png" />
@@ -79,156 +104,214 @@
     <bitmap id="mini.aux-resize" file="assets/1x/aux-resize.png" />
     <bitmap id="mini.chrome-background" file="assets/1x/chrome-background.png" x="0" y="0" w="395" h="58" />
     <bitmap id="mini.chrome-background.2x" file="assets/2x/chrome-background.png" x="0" y="0" w="790" h="116" />
+    <bitmap id="mini.chrome-background.3x" file="assets/3x/chrome-background.png" x="0" y="0" w="1185" h="174" />
     <bitmap id="mini.chrome-background.4x" file="assets/4x/chrome-background.png" x="0" y="0" w="1580" h="232" />
     <bitmap id="mini.chrome-right" file="assets/1x/chrome-background.png" x="395" y="0" w="5" h="58" />
     <bitmap id="mini.chrome-right.2x" file="assets/2x/chrome-background.png" x="790" y="0" w="10" h="116" />
+    <bitmap id="mini.chrome-right.3x" file="assets/3x/chrome-background.png" x="1185" y="0" w="15" h="174" />
     <bitmap id="mini.chrome-right.4x" file="assets/4x/chrome-background.png" x="1580" y="0" w="20" h="232" />
     <bitmap id="mini.close-down" file="assets/1x/close-down.png" />
     <bitmap id="mini.close-down.2x" file="assets/2x/close-down.png" />
+    <bitmap id="mini.close-down.3x" file="assets/3x/close-down.png" />
     <bitmap id="mini.close-down.4x" file="assets/4x/close-down.png" />
     <bitmap id="mini.close-hover" file="assets/1x/close-hover.png" />
     <bitmap id="mini.close-hover.2x" file="assets/2x/close-hover.png" />
+    <bitmap id="mini.close-hover.3x" file="assets/3x/close-hover.png" />
     <bitmap id="mini.close-hover.4x" file="assets/4x/close-hover.png" />
     <bitmap id="mini.close-inactive" file="assets/1x/close-inactive.png" />
     <bitmap id="mini.close-inactive.2x" file="assets/2x/close-inactive.png" />
+    <bitmap id="mini.close-inactive.3x" file="assets/3x/close-inactive.png" />
     <bitmap id="mini.close-inactive.4x" file="assets/4x/close-inactive.png" />
     <bitmap id="mini.close-normal" file="assets/1x/close-normal.png" />
     <bitmap id="mini.close-normal.2x" file="assets/2x/close-normal.png" />
+    <bitmap id="mini.close-normal.3x" file="assets/3x/close-normal.png" />
     <bitmap id="mini.close-normal.4x" file="assets/4x/close-normal.png" />
     <bitmap id="mini.glyph-pause" file="assets/1x/glyph-pause.png" />
     <bitmap id="mini.glyph-pause.2x" file="assets/2x/glyph-pause.png" />
+    <bitmap id="mini.glyph-pause.3x" file="assets/3x/glyph-pause.png" />
     <bitmap id="mini.glyph-pause.4x" file="assets/4x/glyph-pause.png" />
     <bitmap id="mini.glyph-play" file="assets/1x/glyph-play.png" />
     <bitmap id="mini.glyph-play.2x" file="assets/2x/glyph-play.png" />
+    <bitmap id="mini.glyph-play.3x" file="assets/3x/glyph-play.png" />
     <bitmap id="mini.glyph-play.4x" file="assets/4x/glyph-play.png" />
     <bitmap id="mini.lcd-background" file="assets/1x/lcd-background.png" x="0" y="0" w="274" h="40" />
     <bitmap id="mini.lcd-background.2x" file="assets/2x/lcd-background.png" x="0" y="0" w="548" h="80" />
+    <bitmap id="mini.lcd-background.3x" file="assets/3x/lcd-background.png" x="0" y="0" w="822" h="120" />
     <bitmap id="mini.lcd-background.4x" file="assets/4x/lcd-background.png" x="0" y="0" w="1096" h="160" />
     <bitmap id="mini.lcd-right" file="assets/1x/lcd-background.png" x="274" y="0" w="4" h="40" />
     <bitmap id="mini.lcd-right.2x" file="assets/2x/lcd-background.png" x="548" y="0" w="8" h="80" />
+    <bitmap id="mini.lcd-right.3x" file="assets/3x/lcd-background.png" x="822" y="0" w="12" h="120" />
     <bitmap id="mini.lcd-right.4x" file="assets/4x/lcd-background.png" x="1096" y="0" w="16" h="160" />
     <bitmap id="mini.library-down" file="assets/1x/library-down.png" />
     <bitmap id="mini.library-down.2x" file="assets/2x/library-down.png" />
+    <bitmap id="mini.library-down.3x" file="assets/3x/library-down.png" />
     <bitmap id="mini.library-down.4x" file="assets/4x/library-down.png" />
     <bitmap id="mini.library-hover" file="assets/1x/library-hover.png" />
     <bitmap id="mini.library-hover.2x" file="assets/2x/library-hover.png" />
+    <bitmap id="mini.library-hover.3x" file="assets/3x/library-hover.png" />
     <bitmap id="mini.library-hover.4x" file="assets/4x/library-hover.png" />
     <bitmap id="mini.library-normal" file="assets/1x/library-normal.png" />
     <bitmap id="mini.library-normal.2x" file="assets/2x/library-normal.png" />
+    <bitmap id="mini.library-normal.3x" file="assets/3x/library-normal.png" />
     <bitmap id="mini.library-normal.4x" file="assets/4x/library-normal.png" />
-    <bitmap id="mini.menu-down" file="assets/1x/menu-down.png" />
-    <bitmap id="mini.menu-down.2x" file="assets/2x/menu-down.png" />
-    <bitmap id="mini.menu-down.4x" file="assets/4x/menu-down.png" />
-    <bitmap id="mini.menu-hover" file="assets/1x/menu-hover.png" />
-    <bitmap id="mini.menu-hover.2x" file="assets/2x/menu-hover.png" />
-    <bitmap id="mini.menu-hover.4x" file="assets/4x/menu-hover.png" />
-    <bitmap id="mini.menu-normal" file="assets/1x/menu-normal.png" />
-    <bitmap id="mini.menu-normal.2x" file="assets/2x/menu-normal.png" />
-    <bitmap id="mini.menu-normal.4x" file="assets/4x/menu-normal.png" />
     <bitmap id="mini.minimize-down" file="assets/1x/minimize-down.png" />
     <bitmap id="mini.minimize-down.2x" file="assets/2x/minimize-down.png" />
+    <bitmap id="mini.minimize-down.3x" file="assets/3x/minimize-down.png" />
     <bitmap id="mini.minimize-down.4x" file="assets/4x/minimize-down.png" />
     <bitmap id="mini.minimize-hover" file="assets/1x/minimize-hover.png" />
     <bitmap id="mini.minimize-hover.2x" file="assets/2x/minimize-hover.png" />
+    <bitmap id="mini.minimize-hover.3x" file="assets/3x/minimize-hover.png" />
     <bitmap id="mini.minimize-hover.4x" file="assets/4x/minimize-hover.png" />
     <bitmap id="mini.minimize-normal" file="assets/1x/minimize-normal.png" />
     <bitmap id="mini.minimize-normal.2x" file="assets/2x/minimize-normal.png" />
+    <bitmap id="mini.minimize-normal.3x" file="assets/3x/minimize-normal.png" />
     <bitmap id="mini.minimize-normal.4x" file="assets/4x/minimize-normal.png" />
     <bitmap id="mini.next-down" file="assets/1x/next-down.png" />
     <bitmap id="mini.next-down.2x" file="assets/2x/next-down.png" />
+    <bitmap id="mini.next-down.3x" file="assets/3x/next-down.png" />
     <bitmap id="mini.next-down.4x" file="assets/4x/next-down.png" />
     <bitmap id="mini.next-hover" file="assets/1x/next-hover.png" />
     <bitmap id="mini.next-hover.2x" file="assets/2x/next-hover.png" />
+    <bitmap id="mini.next-hover.3x" file="assets/3x/next-hover.png" />
     <bitmap id="mini.next-hover.4x" file="assets/4x/next-hover.png" />
     <bitmap id="mini.next-normal" file="assets/1x/next-normal.png" />
     <bitmap id="mini.next-normal.2x" file="assets/2x/next-normal.png" />
+    <bitmap id="mini.next-normal.3x" file="assets/3x/next-normal.png" />
     <bitmap id="mini.next-normal.4x" file="assets/4x/next-normal.png" />
     <bitmap id="mini.playlist-down" file="assets/1x/playlist-down.png" />
     <bitmap id="mini.playlist-down.2x" file="assets/2x/playlist-down.png" />
+    <bitmap id="mini.playlist-down.3x" file="assets/3x/playlist-down.png" />
     <bitmap id="mini.playlist-down.4x" file="assets/4x/playlist-down.png" />
     <bitmap id="mini.playlist-hover" file="assets/1x/playlist-hover.png" />
     <bitmap id="mini.playlist-hover.2x" file="assets/2x/playlist-hover.png" />
+    <bitmap id="mini.playlist-hover.3x" file="assets/3x/playlist-hover.png" />
     <bitmap id="mini.playlist-hover.4x" file="assets/4x/playlist-hover.png" />
     <bitmap id="mini.playlist-normal" file="assets/1x/playlist-normal.png" />
     <bitmap id="mini.playlist-normal.2x" file="assets/2x/playlist-normal.png" />
+    <bitmap id="mini.playlist-normal.3x" file="assets/3x/playlist-normal.png" />
     <bitmap id="mini.playlist-normal.4x" file="assets/4x/playlist-normal.png" />
     <bitmap id="mini.playpause-down" file="assets/1x/playpause-down.png" />
     <bitmap id="mini.playpause-down.2x" file="assets/2x/playpause-down.png" />
+    <bitmap id="mini.playpause-down.3x" file="assets/3x/playpause-down.png" />
     <bitmap id="mini.playpause-down.4x" file="assets/4x/playpause-down.png" />
     <bitmap id="mini.playpause-hover" file="assets/1x/playpause-hover.png" />
     <bitmap id="mini.playpause-hover.2x" file="assets/2x/playpause-hover.png" />
+    <bitmap id="mini.playpause-hover.3x" file="assets/3x/playpause-hover.png" />
     <bitmap id="mini.playpause-hover.4x" file="assets/4x/playpause-hover.png" />
     <bitmap id="mini.playpause-normal" file="assets/1x/playpause-normal.png" />
     <bitmap id="mini.playpause-normal.2x" file="assets/2x/playpause-normal.png" />
+    <bitmap id="mini.playpause-normal.3x" file="assets/3x/playpause-normal.png" />
     <bitmap id="mini.playpause-normal.4x" file="assets/4x/playpause-normal.png" />
     <bitmap id="mini.previous-down" file="assets/1x/previous-down.png" />
     <bitmap id="mini.previous-down.2x" file="assets/2x/previous-down.png" />
+    <bitmap id="mini.previous-down.3x" file="assets/3x/previous-down.png" />
     <bitmap id="mini.previous-down.4x" file="assets/4x/previous-down.png" />
     <bitmap id="mini.previous-hover" file="assets/1x/previous-hover.png" />
     <bitmap id="mini.previous-hover.2x" file="assets/2x/previous-hover.png" />
+    <bitmap id="mini.previous-hover.3x" file="assets/3x/previous-hover.png" />
     <bitmap id="mini.previous-hover.4x" file="assets/4x/previous-hover.png" />
     <bitmap id="mini.previous-normal" file="assets/1x/previous-normal.png" />
     <bitmap id="mini.previous-normal.2x" file="assets/2x/previous-normal.png" />
+    <bitmap id="mini.previous-normal.3x" file="assets/3x/previous-normal.png" />
     <bitmap id="mini.previous-normal.4x" file="assets/4x/previous-normal.png" />
     <bitmap id="mini.seek-down" file="assets/1x/seek-down.png" />
     <bitmap id="mini.seek-down.2x" file="assets/2x/seek-down.png" />
+    <bitmap id="mini.seek-down.3x" file="assets/3x/seek-down.png" />
     <bitmap id="mini.seek-down.4x" file="assets/4x/seek-down.png" />
     <bitmap id="mini.seek-fill-cap" file="assets/1x/seek-fill-cap.png" />
     <bitmap id="mini.seek-fill-cap.2x" file="assets/2x/seek-fill-cap.png" />
+    <bitmap id="mini.seek-fill-cap.3x" file="assets/3x/seek-fill-cap.png" />
     <bitmap id="mini.seek-fill-cap.4x" file="assets/4x/seek-fill-cap.png" />
     <bitmap id="mini.seek-fill" file="assets/1x/seek-fill.png" />
     <bitmap id="mini.seek-fill.2x" file="assets/2x/seek-fill.png" />
+    <bitmap id="mini.seek-fill.3x" file="assets/3x/seek-fill.png" />
     <bitmap id="mini.seek-fill.4x" file="assets/4x/seek-fill.png" />
     <bitmap id="mini.seek-hover" file="assets/1x/seek-hover.png" />
     <bitmap id="mini.seek-hover.2x" file="assets/2x/seek-hover.png" />
+    <bitmap id="mini.seek-hover.3x" file="assets/3x/seek-hover.png" />
     <bitmap id="mini.seek-hover.4x" file="assets/4x/seek-hover.png" />
     <bitmap id="mini.seek-normal" file="assets/1x/seek-normal.png" />
     <bitmap id="mini.seek-normal.2x" file="assets/2x/seek-normal.png" />
+    <bitmap id="mini.seek-normal.3x" file="assets/3x/seek-normal.png" />
     <bitmap id="mini.seek-normal.4x" file="assets/4x/seek-normal.png" />
     <bitmap id="mini.seek-track" file="assets/1x/seek-track.png" />
     <bitmap id="mini.seek-track.2x" file="assets/2x/seek-track.png" />
+    <bitmap id="mini.seek-track.3x" file="assets/3x/seek-track.png" />
     <bitmap id="mini.seek-track.4x" file="assets/4x/seek-track.png" />
     <bitmap id="mini.volume-down" file="assets/1x/volume-down.png" />
     <bitmap id="mini.volume-down.2x" file="assets/2x/volume-down.png" />
+    <bitmap id="mini.volume-down.3x" file="assets/3x/volume-down.png" />
     <bitmap id="mini.volume-down.4x" file="assets/4x/volume-down.png" />
     <bitmap id="mini.volume-hover" file="assets/1x/volume-hover.png" />
     <bitmap id="mini.volume-hover.2x" file="assets/2x/volume-hover.png" />
+    <bitmap id="mini.volume-hover.3x" file="assets/3x/volume-hover.png" />
     <bitmap id="mini.volume-hover.4x" file="assets/4x/volume-hover.png" />
     <bitmap id="mini.volume-normal" file="assets/1x/volume-normal.png" />
     <bitmap id="mini.volume-normal.2x" file="assets/2x/volume-normal.png" />
+    <bitmap id="mini.volume-normal.3x" file="assets/3x/volume-normal.png" />
     <bitmap id="mini.volume-normal.4x" file="assets/4x/volume-normal.png" />
+    <bitmap id="mini.aux-lcd-content-bottom" file="assets/1x/aux-lcd-content-bottom.png" />
+    <bitmap id="mini.aux-lcd-content-bottomleft" file="assets/1x/aux-lcd-content-bottomleft.png" />
+    <bitmap id="mini.aux-lcd-content-bottomright" file="assets/1x/aux-lcd-content-bottomright.png" />
+    <bitmap id="mini.aux-lcd-content-left" file="assets/1x/aux-lcd-content-left.png" />
+    <bitmap id="mini.aux-lcd-content-middle" file="assets/1x/aux-lcd-content-middle.png" />
+    <bitmap id="mini.aux-lcd-content-right" file="assets/1x/aux-lcd-content-right.png" />
+    <bitmap id="mini.aux-lcd-content-top" file="assets/1x/aux-lcd-content-top.png" />
+    <bitmap id="mini.aux-lcd-content-topleft" file="assets/1x/aux-lcd-content-topleft.png" />
+    <bitmap id="mini.aux-lcd-content-topright" file="assets/1x/aux-lcd-content-topright.png" />
+    <bitmap id="mini.aux-frame-region-topleft" file="assets/1x/aux-frame-region-topleft.png" />
+    <bitmap id="mini.aux-frame-region-top" file="assets/1x/aux-frame-region-top.png" />
+    <bitmap id="mini.aux-frame-region-topright" file="assets/1x/aux-frame-region-topright.png" />
+    <bitmap id="mini.aux-frame-region-left" file="assets/1x/aux-frame-region-left.png" />
+    <bitmap id="mini.aux-frame-region-middle" file="assets/1x/aux-frame-region-middle.png" />
+    <bitmap id="mini.aux-frame-region-right" file="assets/1x/aux-frame-region-right.png" />
+    <bitmap id="mini.aux-frame-region-bottomleft" file="assets/1x/aux-frame-region-bottomleft.png" />
+    <bitmap id="mini.aux-frame-region-bottom" file="assets/1x/aux-frame-region-bottom.png" />
+    <bitmap id="mini.aux-frame-region-bottomright" file="assets/1x/aux-frame-region-bottomright.png" />
+    <bitmap id="mini.aux-frame-region-cut-topleft" file="assets/1x/aux-frame-region-cut-topleft.png" />
+    <bitmap id="mini.aux-frame-region-cut-topright" file="assets/1x/aux-frame-region-cut-topright.png" />
+    <bitmap id="mini.aux-frame-region-cut-bottomleft" file="assets/1x/aux-frame-region-cut-bottomleft.png" />
+    <bitmap id="mini.aux-frame-region-cut-bottomright" file="assets/1x/aux-frame-region-cut-bottomright.png" />
   </elements>
   <groupdef id="track.title.viewport">
-    <text id="track.title" x="0" y="-1" w="1" h="12" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
-    <text id="track.title.repeat" x="0" y="-1" w="1" h="12" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.title" x="0" y="-1" w="1" h="12" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="12" bold="1" altbold="1" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.title.repeat" x="0" y="-1" w="1" h="12" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="12" bold="1" altbold="1" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="track.title.viewport.2x">
-    <text id="track.title" x="0" y="-2" w="2" h="24" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="22" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
-    <text id="track.title.repeat" x="0" y="-2" w="2" h="24" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="22" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.title" x="0" y="-2" w="2" h="24" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="24" bold="1" altbold="1" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.title.repeat" x="0" y="-2" w="2" h="24" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="24" bold="1" altbold="1" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+  </groupdef>
+  <groupdef id="track.title.viewport.3x">
+    <text id="track.title" x="0" y="-3" w="3" h="36" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="36" bold="1" altbold="1" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.title.repeat" x="0" y="-3" w="3" h="36" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="36" bold="1" altbold="1" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="track.title.viewport.4x">
-    <text id="track.title" x="0" y="-4" w="4" h="48" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="44" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
-    <text id="track.title.repeat" x="0" y="-4" w="4" h="48" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="44" bold="1" altbold="1" antialias="1" color="86,86,85" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.title" x="0" y="-4" w="4" h="48" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="48" bold="1" altbold="1" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.title.repeat" x="0" y="-4" w="4" h="48" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="48" bold="1" altbold="1" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="track.detail.viewport">
-    <text id="track.detail" x="0" y="-1" w="1" h="12" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
-    <text id="track.detail.repeat" x="0" y="-1" w="1" h="12" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.detail" x="0" y="-1" w="1" h="12" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="12" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.detail.repeat" x="0" y="-1" w="1" h="12" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="12" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="track.detail.viewport.2x">
-    <text id="track.detail" x="0" y="-2" w="2" h="24" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="22" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
-    <text id="track.detail.repeat" x="0" y="-2" w="2" h="24" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="22" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.detail" x="0" y="-2" w="2" h="24" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="24" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.detail.repeat" x="0" y="-2" w="2" h="24" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="24" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+  </groupdef>
+  <groupdef id="track.detail.viewport.3x">
+    <text id="track.detail" x="0" y="-3" w="3" h="36" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="36" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.detail.repeat" x="0" y="-3" w="3" h="36" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="36" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="track.detail.viewport.4x">
-    <text id="track.detail" x="0" y="-4" w="4" h="48" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="44" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
-    <text id="track.detail.repeat" x="0" y="-4" w="4" h="48" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="44" antialias="1" color="92,93,91" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
+    <text id="track.detail" x="0" y="-4" w="4" h="48" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="48" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" move="1" />
+    <text id="track.detail.repeat" x="0" y="-4" w="4" h="48" relatw="0" font="Lucida Grande" altfont="Tahoma" fontsize="48" antialias="1" color="89,89,89" align="left" valign="center" ticker="0" default="" dblclickaction="trackinfo" ghost="1" move="1" />
   </groupdef>
   <groupdef id="mini.lcd">
     <layer id="lcd.background" x="0" y="0" w="-4" h="40" relatw="1" image="mini.lcd-background" tile="1" ghost="1" />
     <layer id="lcd.right" x="-4" y="0" relatx="1" image="mini.lcd-right" ghost="1" />
     <group id="track.title.viewport" x="9" y="4" w="-18" h="11" relatw="1" rectrgn="1" move="1" visible="0" />
     <group id="track.detail.viewport" x="9" y="15" w="-18" h="11" relatw="1" rectrgn="1" move="1" visible="0" />
-    <text id="time.elapsed" x="18" y="26" w="24" h="10" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="92,92,90" align="right" default="" ghost="1" move="1" visible="0" />
-    <text id="time.remaining" x="-42" y="26" w="27" h="10" relatx="1" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="92,92,90" align="left" default="" ghost="1" move="1" visible="0" />
+    <text id="time.elapsed" x="15" y="26" w="27" h="10" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="right" default="" ghost="1" move="1" visible="0" />
+    <text id="time.remaining" x="-42" y="26" w="31" h="10" relatx="1" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="left" default="" ghost="1" move="1" visible="0" />
     <layer id="seek.track" x="48" y="28" w="-96" h="6" relatw="1" image="mini.seek-track" ghost="1" visible="0" />
     <layer id="seek.fill.cap" x="48" y="28" w="2" h="6" image="mini.seek-fill-cap" ghost="1" visible="0" />
     <layer id="seek.fill" x="50" y="28" w="0" h="6" image="mini.seek-fill" tile="1" ghost="1" visible="0" />
@@ -240,21 +323,34 @@
     <layer id="lcd.right" x="-8" y="0" relatx="1" image="mini.lcd-right.2x" ghost="1" />
     <group id="track.title.viewport.2x" x="18" y="8" w="-36" h="22" relatw="1" rectrgn="1" move="1" visible="0" />
     <group id="track.detail.viewport.2x" x="18" y="30" w="-36" h="22" relatw="1" rectrgn="1" move="1" visible="0" />
-    <text id="time.elapsed" x="36" y="52" w="48" h="20" font="Lucida Grande" altfont="Tahoma" fontsize="20" antialias="1" color="92,92,90" align="right" default="" ghost="1" move="1" visible="0" />
-    <text id="time.remaining" x="-84" y="52" w="54" h="20" relatx="1" font="Lucida Grande" altfont="Tahoma" fontsize="20" antialias="1" color="92,92,90" align="left" default="" ghost="1" move="1" visible="0" />
+    <text id="time.elapsed" x="30" y="52" w="54" h="20" font="Lucida Grande" altfont="Tahoma" fontsize="20" antialias="1" color="89,89,89" align="right" default="" ghost="1" move="1" visible="0" />
+    <text id="time.remaining" x="-84" y="52" w="62" h="20" relatx="1" font="Lucida Grande" altfont="Tahoma" fontsize="20" antialias="1" color="89,89,89" align="left" default="" ghost="1" move="1" visible="0" />
     <layer id="seek.track" x="96" y="56" w="-192" h="12" relatw="1" image="mini.seek-track.2x" ghost="1" visible="0" />
     <layer id="seek.fill.cap" x="96" y="56" w="4" h="12" image="mini.seek-fill-cap.2x" ghost="1" visible="0" />
     <layer id="seek.fill" x="100" y="56" w="0" h="12" image="mini.seek-fill.2x" tile="1" ghost="1" visible="0" />
     <slider id="seek" action="SEEK" x="96" y="56" w="-194" h="12" relatw="1" thumb="mini.seek-normal.2x" hoverThumb="mini.seek-hover.2x" downThumb="mini.seek-down.2x" tooltip="Seek" visible="0" />
     <layer id="lcd.empty.logo" x="170" y="14" w="38" h="44" image="mini.apple-logo.2x" ghost="1" />
   </groupdef>
+  <groupdef id="mini.lcd.3x">
+    <layer id="lcd.background" x="0" y="0" w="-12" h="120" relatw="1" image="mini.lcd-background.3x" tile="1" ghost="1" />
+    <layer id="lcd.right" x="-12" y="0" relatx="1" image="mini.lcd-right.3x" ghost="1" />
+    <group id="track.title.viewport.3x" x="27" y="12" w="-54" h="33" relatw="1" rectrgn="1" move="1" visible="0" />
+    <group id="track.detail.viewport.3x" x="27" y="45" w="-54" h="33" relatw="1" rectrgn="1" move="1" visible="0" />
+    <text id="time.elapsed" x="45" y="78" w="81" h="30" font="Lucida Grande" altfont="Tahoma" fontsize="30" antialias="1" color="89,89,89" align="right" default="" ghost="1" move="1" visible="0" />
+    <text id="time.remaining" x="-126" y="78" w="93" h="30" relatx="1" font="Lucida Grande" altfont="Tahoma" fontsize="30" antialias="1" color="89,89,89" align="left" default="" ghost="1" move="1" visible="0" />
+    <layer id="seek.track" x="144" y="84" w="-288" h="18" relatw="1" image="mini.seek-track.3x" ghost="1" visible="0" />
+    <layer id="seek.fill.cap" x="144" y="84" w="6" h="18" image="mini.seek-fill-cap.3x" ghost="1" visible="0" />
+    <layer id="seek.fill" x="150" y="84" w="0" h="18" image="mini.seek-fill.3x" tile="1" ghost="1" visible="0" />
+    <slider id="seek" action="SEEK" x="144" y="84" w="-291" h="18" relatw="1" thumb="mini.seek-normal.3x" hoverThumb="mini.seek-hover.3x" downThumb="mini.seek-down.3x" tooltip="Seek" visible="0" />
+    <layer id="lcd.empty.logo" x="255" y="21" w="57" h="66" image="mini.apple-logo.3x" ghost="1" />
+  </groupdef>
   <groupdef id="mini.lcd.4x">
     <layer id="lcd.background" x="0" y="0" w="-16" h="160" relatw="1" image="mini.lcd-background.4x" tile="1" ghost="1" />
     <layer id="lcd.right" x="-16" y="0" relatx="1" image="mini.lcd-right.4x" ghost="1" />
     <group id="track.title.viewport.4x" x="36" y="16" w="-72" h="44" relatw="1" rectrgn="1" move="1" visible="0" />
     <group id="track.detail.viewport.4x" x="36" y="60" w="-72" h="44" relatw="1" rectrgn="1" move="1" visible="0" />
-    <text id="time.elapsed" x="72" y="104" w="96" h="40" font="Lucida Grande" altfont="Tahoma" fontsize="40" antialias="1" color="92,92,90" align="right" default="" ghost="1" move="1" visible="0" />
-    <text id="time.remaining" x="-168" y="104" w="108" h="40" relatx="1" font="Lucida Grande" altfont="Tahoma" fontsize="40" antialias="1" color="92,92,90" align="left" default="" ghost="1" move="1" visible="0" />
+    <text id="time.elapsed" x="60" y="104" w="108" h="40" font="Lucida Grande" altfont="Tahoma" fontsize="40" antialias="1" color="89,89,89" align="right" default="" ghost="1" move="1" visible="0" />
+    <text id="time.remaining" x="-168" y="104" w="124" h="40" relatx="1" font="Lucida Grande" altfont="Tahoma" fontsize="40" antialias="1" color="89,89,89" align="left" default="" ghost="1" move="1" visible="0" />
     <layer id="seek.track" x="192" y="112" w="-384" h="24" relatw="1" image="mini.seek-track.4x" ghost="1" visible="0" />
     <layer id="seek.fill.cap" x="192" y="112" w="8" h="24" image="mini.seek-fill-cap.4x" ghost="1" visible="0" />
     <layer id="seek.fill" x="200" y="112" w="0" h="24" image="mini.seek-fill.4x" tile="1" ghost="1" visible="0" />
@@ -262,22 +358,31 @@
     <layer id="lcd.empty.logo" x="340" y="28" w="76" h="88" image="mini.apple-logo.4x" ghost="1" />
   </groupdef>
   <groupdef id="wasabi.standardframe.static" xuitag="Wasabi:StandardFrame:Static">
-    <layer id="chrome.topleft" image="mini.aux-frame-topleft" ghost="1" x="0" y="0" w="6" h="6" />
-    <layer id="chrome.top" image="mini.aux-frame-top" ghost="1" x="6" y="0" w="-12" h="6" relatw="1" />
-    <layer id="chrome.topright" image="mini.aux-frame-topright" ghost="1" x="-6" y="0" w="6" h="6" relatx="1" />
-    <layer id="chrome.left" image="mini.aux-frame-left" ghost="1" x="0" y="6" w="6" h="-12" relath="1" />
-    <layer id="chrome.middle" image="mini.aux-frame-middle" ghost="1" x="6" y="6" w="-12" h="-12" relatw="1" relath="1" />
-    <layer id="chrome.right" image="mini.aux-frame-right" ghost="1" x="-6" y="6" w="6" h="-12" relatx="1" relath="1" />
-    <layer id="chrome.bottomleft" image="mini.aux-frame-bottomleft" ghost="1" x="0" y="-6" w="6" h="6" relaty="1" />
-    <layer id="chrome.bottom" image="mini.aux-frame-bottom" ghost="1" x="6" y="-6" w="-12" h="6" relatw="1" relaty="1" />
-    <layer id="chrome.bottomright" image="mini.aux-frame-bottomright" ghost="1" x="-6" y="-6" w="6" h="6" relatx="1" relaty="1" />
-    <layer id="titlebar" x="0" y="0" w="0" h="8" relatw="1" move="1" rectrgn="1" />
-    <layer id="drag.left" x="0" y="8" w="8" h="-16" relath="1" move="1" rectrgn="1" />
-    <layer id="resize.right" x="-8" y="8" w="8" h="-16" relatx="1" relath="1" resize="right" rectrgn="1" />
-    <layer id="resize.bottom" x="8" y="-8" w="-16" h="8" relatw="1" relaty="1" resize="bottom" rectrgn="1" />
-    <script file="scripts/standardframe.maki" param="8,8,-16,-16,0,0,1,1" />
+    <layer id="chrome.topleft" image="mini.aux-frame-region-topleft" ghost="1" x="0" y="0" w="6" h="6" />
+    <layer id="chrome.top" image="mini.aux-frame-region-top" ghost="1" x="6" y="0" w="-12" h="6" relatw="1" />
+    <layer id="chrome.topright" image="mini.aux-frame-region-topright" ghost="1" x="-6" y="0" w="6" h="6" relatx="1" />
+    <layer id="chrome.left" image="mini.aux-frame-region-left" ghost="1" x="0" y="6" w="6" h="-12" relath="1" />
+    <layer id="chrome.middle" image="mini.aux-frame-region-middle" ghost="1" x="6" y="6" w="-12" h="-12" relatw="1" relath="1" />
+    <layer id="chrome.right" image="mini.aux-frame-region-right" ghost="1" x="-6" y="6" w="6" h="-12" relatx="1" relath="1" />
+    <layer id="chrome.bottomleft" image="mini.aux-frame-region-bottomleft" ghost="1" x="0" y="-6" w="6" h="6" relaty="1" />
+    <layer id="chrome.bottom" image="mini.aux-frame-region-bottom" ghost="1" x="6" y="-6" w="-12" h="6" relatw="1" relaty="1" />
+    <layer id="chrome.bottomright" image="mini.aux-frame-region-bottomright" ghost="1" x="-6" y="-6" w="6" h="6" relatx="1" relaty="1" />
+    <layer id="region.topleft" image="mini.aux-frame-region-cut-topleft" ghost="1" sysregion="-2" x="0" y="0" w="6" h="6" />
+    <layer id="region.topright" image="mini.aux-frame-region-cut-topright" ghost="1" sysregion="-2" x="-6" y="0" w="6" h="6" relatx="1" />
+    <layer id="region.bottomleft" image="mini.aux-frame-region-cut-bottomleft" ghost="1" sysregion="-2" x="0" y="-6" w="6" h="6" relaty="1" />
+    <layer id="region.bottomright" image="mini.aux-frame-region-cut-bottomright" ghost="1" sysregion="-2" x="-6" y="-6" w="6" h="6" relatx="1" relaty="1" />
+    <grid id="aux.screen" topleft="mini.aux-lcd-content-topleft" top="mini.aux-lcd-content-top" topright="mini.aux-lcd-content-topright" left="mini.aux-lcd-content-left" middle="mini.aux-lcd-content-middle" right="mini.aux-lcd-content-right" bottomleft="mini.aux-lcd-content-bottomleft" bottom="mini.aux-lcd-content-bottom" bottomright="mini.aux-lcd-content-bottomright" x="12" y="24" w="-24" h="-36" relatw="1" relath="1" ghost="1" />
+    <layer id="titlebar" x="0" y="0" w="0" h="24" relatw="1" move="1" rectrgn="1" />
+    <text id="title" x="30" y="1" w="-60" h="24" font="Lucida Grande" altfont="Tahoma" fontsize="16" antialias="1" color="0,0,0" align="center" valign="center" alpha="235" ghost="1" default="" relatw="1" />
+    <button id="window.close" x="6" y="6" image="mini.close-normal" hoverImage="mini.close-hover" downImage="mini.close-down" action="CLOSE" tooltip="Close window" />
+    <layer id="drag.left" x="0" y="24" w="12" h="-36" relath="1" move="1" rectrgn="1" />
+    <layer id="resize" x="-16" y="-16" relatx="1" relaty="1" image="mini.aux-resize" ghost="1" />
+    <layer id="resize.corner" x="-16" y="-16" w="16" h="16" relatx="1" relaty="1" resize="bottomright" rectrgn="1" tooltip="Resize window" />
+    <script file="scripts/standardframe.maki" param="13,25,-27,-39,0,0,1,1" />
+    <script file="scripts/fontchoice.maki" />
+    <script file="scripts/windowfocus.maki" />
   </groupdef>
-  <container id="main" default_visible="1" default_x="100" default_y="100" name="iTunes Miniplayer v1.64">
+  <container id="main" default_visible="1" default_x="100" default_y="100" name="iTunes Miniplayer v1.139">
     <layout id="native.1x" w="312" h="58" minimum_w="112" maximum_w="400" minimum_h="58" maximum_h="58" desktopalpha="1" droptarget="pldr">
       <layer id="chrome.background" x="0" y="0" w="-5" h="58" relatw="1" image="mini.chrome-background" tile="1" ghost="1" sysregion="1" />
       <layer id="chrome.right" x="-5" y="0" relatx="1" image="mini.chrome-right" ghost="1" sysregion="1" />
@@ -326,6 +431,30 @@
       <togglebutton id="menu.shuffle" x="0" y="0" w="0" h="0" visible="0" ghost="1" cfgattrib="{45F3F7C1-A6F3-4EE6-A15E-125E92FC3F8D};Shuffle" />
       <script file="scripts/fontchoice.maki" />
     </layout>
+    <layout id="native.3x" w="936" h="174" minimum_w="336" maximum_w="1200" minimum_h="174" maximum_h="174" desktopalpha="1" droptarget="pldr">
+      <layer id="chrome.background" x="0" y="0" w="-15" h="174" relatw="1" image="mini.chrome-background.3x" tile="1" ghost="1" sysregion="1" />
+      <layer id="chrome.right" x="-15" y="0" relatx="1" image="mini.chrome-right.3x" ghost="1" sysregion="1" />
+      <layer id="drag" x="0" y="0" w="0" h="174" relatw="1" move="1" rectrgn="1" tooltip="Drag to move; double-click to collapse or restore display" />
+      <button id="close" x="18" y="18" image="mini.close-normal.3x" hoverImage="mini.close-hover.3x" downImage="mini.close-down.3x" action="CLOSE" tooltip="Close Winamp" />
+      <button id="minimize" x="18" y="66" image="mini.minimize-normal.3x" hoverImage="mini.minimize-hover.3x" downImage="mini.minimize-down.3x" action="MINIMIZE" tooltip="Minimize" />
+      <button id="library" x="18" y="114" image="mini.library-normal.3x" hoverImage="mini.library-hover.3x" downImage="mini.library-down.3x" tooltip="MiniPlayer menu" />
+      <button id="previous" x="81" y="39" image="mini.previous-normal.3x" hoverImage="mini.previous-hover.3x" downImage="mini.previous-down.3x" action="PREV" tooltip="Previous track" />
+      <button id="playpause" x="153" y="24" image="mini.playpause-normal.3x" hoverImage="mini.playpause-hover.3x" downImage="mini.playpause-down.3x" tooltip="Play / pause" />
+      <button id="next" x="252" y="39" image="mini.next-normal.3x" hoverImage="mini.next-hover.3x" downImage="mini.next-down.3x" action="NEXT" tooltip="Next track" />
+      <layer id="transport.status" x="153" y="24" image="mini.glyph-play.3x" ghost="1" />
+      <slider id="volume" action="VOLUME" x="117" y="123" w="162" h="36" thumb="mini.volume-normal.3x" hoverThumb="mini.volume-hover.3x" downThumb="mini.volume-down.3x" tooltip="Volume" />
+      <layer id="mute" x="87" y="123" w="24" h="36" rectrgn="1" tooltip="Mute / restore volume" />
+      <group id="mini.lcd.3x" x="336" y="28" w="-366" h="120" relatw="1" move="1" rectrgn="1" />
+      <layer id="right.resize" x="-18" y="0" w="18" h="174" relatx="1" resize="right" rectrgn="1" tooltip="Drag to resize; drag left to collapse the display" />
+      <script file="scripts/miniplayer.maki" param="3" />
+      <button id="menu.open.pl" x="0" y="0" w="0" h="0" visible="0" ghost="1" action="TOGGLE" param="guid:pl" />
+      <button id="menu.open.ml" x="0" y="0" w="0" h="0" visible="0" ghost="1" action="TOGGLE" param="guid:ml" />
+      <button id="menu.open.eq" x="0" y="0" w="0" h="0" visible="0" ghost="1" action="TOGGLE" param="guid:eq" />
+      <button id="menu.open.vid" x="0" y="0" w="0" h="0" visible="0" ghost="1" action="TOGGLE" param="guid:vid" />
+      <button id="menu.open.avs" x="0" y="0" w="0" h="0" visible="0" ghost="1" action="TOGGLE" param="guid:avs" />
+      <togglebutton id="menu.shuffle" x="0" y="0" w="0" h="0" visible="0" ghost="1" cfgattrib="{45F3F7C1-A6F3-4EE6-A15E-125E92FC3F8D};Shuffle" />
+      <script file="scripts/fontchoice.maki" />
+    </layout>
     <layout id="native.4x" w="1248" h="232" minimum_w="448" maximum_w="1600" minimum_h="232" maximum_h="232" desktopalpha="1" droptarget="pldr">
       <layer id="chrome.background" x="0" y="0" w="-20" h="232" relatw="1" image="mini.chrome-background.4x" tile="1" ghost="1" sysregion="1" />
       <layer id="chrome.right" x="-20" y="0" relatx="1" image="mini.chrome-right.4x" ghost="1" sysregion="1" />
@@ -352,110 +481,127 @@
     </layout>
   </container>
   <container id="Pledit" name="Playlist" dynamic="1" component="guid:{45F3F7C1-A6F3-4ee6-A15E-125E92FC3F8D}" default_visible="0" default_x="100" default_y="170">
-    <layout id="fixed.1x" w="430" h="260" minimum_w="312" minimum_h="150" desktopalpha="1">
+    <layout id="fixed.1x" w="344" h="184" minimum_w="312" minimum_h="150" desktopalpha="1">
       <grid id="aux.chrome" topleft="mini.aux-frame-topleft" top="mini.aux-frame-top" topright="mini.aux-frame-topright" left="mini.aux-frame-left" middle="mini.aux-frame-middle" right="mini.aux-frame-right" bottomleft="mini.aux-frame-bottomleft" bottom="mini.aux-frame-bottom" bottomright="mini.aux-frame-bottomright" x="0" y="0" w="0" h="0" relatw="1" relath="1" ghost="1" />
-      <layer id="titlebar" x="0" y="0" w="0" h="28" relatw="1" move="1" rectrgn="1" />
-      <text id="title" x="30" y="2" w="-60" h="24" font="Lucida Grande" altfont="Tahoma" fontsize="18" antialias="1" color="85,89,94" align="center" valign="center" alpha="235" ghost="1" default="Playlist" relatw="1" />
-      <button id="window.close" x="7" y="7" image="mini.close-normal" hoverImage="mini.close-hover" downImage="mini.close-down" action="CLOSE" tooltip="Close Playlist" />
-      <grid id="aux.screen" topleft="mini.aux-lcd-topleft" top="mini.aux-lcd-top" topright="mini.aux-lcd-topright" left="mini.aux-lcd-left" middle="mini.aux-lcd-middle" right="mini.aux-lcd-right" bottomleft="mini.aux-lcd-bottomleft" bottom="mini.aux-lcd-bottom" bottomright="mini.aux-lcd-bottomright" x="8" y="30" w="-16" h="-40" relatw="1" relath="1" ghost="1" />
-      <component id="content" x="11" y="33" w="-22" h="-46" relatw="1" relath="1" autoopen="1" autoclose="1" noshowcmdbar="0" param="guid:{45F3F7C1-A6F3-4ee6-A15E-125E92FC3F8D}" font="Lucida Grande" fontsize="11" alpha="235" />
-      <layer id="resize" x="-18" y="-18" relatx="1" relaty="1" image="mini.aux-resize" ghost="1" />
-      <layer id="resize.right" x="-7" y="28" w="7" h="-35" relatx="1" relath="1" resize="right" rectrgn="1" tooltip="Resize width" />
-      <layer id="resize.bottom" x="8" y="-7" w="-15" h="7" relatw="1" relaty="1" resize="bottom" rectrgn="1" tooltip="Resize height" />
+      <layer id="titlebar" x="0" y="0" w="0" h="24" relatw="1" move="1" rectrgn="1" />
+      <text id="title" x="30" y="1" w="-60" h="24" font="Lucida Grande" altfont="Tahoma" fontsize="16" antialias="1" color="0,0,0" align="center" valign="center" alpha="235" ghost="1" default="Playlist" relatw="1" />
+      <button id="window.close" x="6" y="6" image="mini.close-normal" hoverImage="mini.close-hover" downImage="mini.close-down" action="CLOSE" tooltip="Close window" />
+      <grid id="aux.screen" topleft="mini.aux-lcd-content-topleft" top="mini.aux-lcd-content-top" topright="mini.aux-lcd-content-topright" left="mini.aux-lcd-content-left" middle="mini.aux-lcd-content-middle" right="mini.aux-lcd-content-right" bottomleft="mini.aux-lcd-content-bottomleft" bottom="mini.aux-lcd-content-bottom" bottomright="mini.aux-lcd-content-bottomright" x="12" y="24" w="-24" h="-36" relatw="1" relath="1" ghost="1" />
+      <component id="content" x="17" y="29" w="-34" h="-46" relatw="1" relath="1" autoopen="1" autoclose="1" noshowcmdbar="0" param="guid:{45F3F7C1-A6F3-4ee6-A15E-125E92FC3F8D}" font="Lucida Grande" fontsize="12" alpha="235" />
+      <layer id="resize" x="-16" y="-16" relatx="1" relaty="1" image="mini.aux-resize" ghost="1" />
+      <layer id="resize.corner" x="-16" y="-16" w="16" h="16" relatx="1" relaty="1" resize="bottomright" rectrgn="1" tooltip="Resize window" />
+      <script file="scripts/windowfocus.maki" />
       <script file="scripts/fontchoice.maki" />
     </layout>
   </container>
   <container id="MLibrary" name="Media Library" dynamic="1" component="guid:{6B0EDF80-C9A5-11D3-9F26-00C04F39FFC6}" default_visible="0" default_x="100" default_y="170">
     <layout id="fixed.1x" w="760" h="440" minimum_w="460" minimum_h="150" desktopalpha="1">
       <grid id="aux.chrome" topleft="mini.aux-frame-topleft" top="mini.aux-frame-top" topright="mini.aux-frame-topright" left="mini.aux-frame-left" middle="mini.aux-frame-middle" right="mini.aux-frame-right" bottomleft="mini.aux-frame-bottomleft" bottom="mini.aux-frame-bottom" bottomright="mini.aux-frame-bottomright" x="0" y="0" w="0" h="0" relatw="1" relath="1" ghost="1" />
-      <layer id="titlebar" x="0" y="0" w="0" h="28" relatw="1" move="1" rectrgn="1" />
-      <text id="title" x="30" y="2" w="-60" h="24" font="Lucida Grande" altfont="Tahoma" fontsize="18" antialias="1" color="85,89,94" align="center" valign="center" alpha="235" ghost="1" default="Media Library" relatw="1" />
-      <button id="window.close" x="7" y="7" image="mini.close-normal" hoverImage="mini.close-hover" downImage="mini.close-down" action="CLOSE" tooltip="Close Media Library" />
-      <grid id="aux.screen" topleft="mini.aux-lcd-topleft" top="mini.aux-lcd-top" topright="mini.aux-lcd-topright" left="mini.aux-lcd-left" middle="mini.aux-lcd-middle" right="mini.aux-lcd-right" bottomleft="mini.aux-lcd-bottomleft" bottom="mini.aux-lcd-bottom" bottomright="mini.aux-lcd-bottomright" x="8" y="30" w="-16" h="-40" relatw="1" relath="1" ghost="1" />
-      <component id="content" x="11" y="33" w="-22" h="-46" relatw="1" relath="1" autoopen="1" autoclose="1" noshowcmdbar="0" param="guid:{6B0EDF80-C9A5-11D3-9F26-00C04F39FFC6}" font="Lucida Grande" fontsize="11" alpha="235" />
-      <layer id="resize" x="-18" y="-18" relatx="1" relaty="1" image="mini.aux-resize" ghost="1" />
-      <layer id="resize.right" x="-7" y="28" w="7" h="-35" relatx="1" relath="1" resize="right" rectrgn="1" tooltip="Resize width" />
-      <layer id="resize.bottom" x="8" y="-7" w="-15" h="7" relatw="1" relaty="1" resize="bottom" rectrgn="1" tooltip="Resize height" />
+      <layer id="titlebar" x="0" y="0" w="0" h="24" relatw="1" move="1" rectrgn="1" />
+      <text id="title" x="30" y="1" w="-60" h="24" font="Lucida Grande" altfont="Tahoma" fontsize="16" antialias="1" color="0,0,0" align="center" valign="center" alpha="235" ghost="1" default="Media Library" relatw="1" />
+      <button id="window.close" x="6" y="6" image="mini.close-normal" hoverImage="mini.close-hover" downImage="mini.close-down" action="CLOSE" tooltip="Close window" />
+      <grid id="aux.screen" topleft="mini.aux-lcd-content-topleft" top="mini.aux-lcd-content-top" topright="mini.aux-lcd-content-topright" left="mini.aux-lcd-content-left" middle="mini.aux-lcd-content-middle" right="mini.aux-lcd-content-right" bottomleft="mini.aux-lcd-content-bottomleft" bottom="mini.aux-lcd-content-bottom" bottomright="mini.aux-lcd-content-bottomright" x="12" y="24" w="-24" h="-36" relatw="1" relath="1" ghost="1" />
+      <component id="content" x="17" y="29" w="-34" h="-45" relatw="1" relath="1" autoopen="1" autoclose="1" noshowcmdbar="0" param="guid:{6B0EDF80-C9A5-11D3-9F26-00C04F39FFC6}" font="Lucida Grande" fontsize="12" alpha="235" />
+      <layer id="resize" x="-16" y="-16" relatx="1" relaty="1" image="mini.aux-resize" ghost="1" />
+      <layer id="resize.corner" x="-16" y="-16" w="16" h="16" relatx="1" relaty="1" resize="bottomright" rectrgn="1" tooltip="Resize window" />
+      <script file="scripts/windowfocus.maki" />
       <script file="scripts/fontchoice.maki" />
     </layout>
   </container>
   <container id="Video" name="Video" dynamic="1" component="guid:{F0816D7B-FFFC-4343-80F2-E8199AA15CC3}" default_visible="0" default_x="100" default_y="170">
-    <layout id="fixed.1x" w="480" h="320" minimum_w="312" minimum_h="150" desktopalpha="1">
+    <layout id="fixed.1x" w="344" h="184" minimum_w="312" minimum_h="150" desktopalpha="1">
       <grid id="aux.chrome" topleft="mini.aux-frame-topleft" top="mini.aux-frame-top" topright="mini.aux-frame-topright" left="mini.aux-frame-left" middle="mini.aux-frame-middle" right="mini.aux-frame-right" bottomleft="mini.aux-frame-bottomleft" bottom="mini.aux-frame-bottom" bottomright="mini.aux-frame-bottomright" x="0" y="0" w="0" h="0" relatw="1" relath="1" ghost="1" />
-      <layer id="titlebar" x="0" y="0" w="0" h="28" relatw="1" move="1" rectrgn="1" />
-      <text id="title" x="30" y="2" w="-60" h="24" font="Lucida Grande" altfont="Tahoma" fontsize="18" antialias="1" color="85,89,94" align="center" valign="center" alpha="235" ghost="1" default="Video" relatw="1" />
-      <button id="window.close" x="7" y="7" image="mini.close-normal" hoverImage="mini.close-hover" downImage="mini.close-down" action="CLOSE" tooltip="Close Video" />
-      <grid id="aux.screen" topleft="mini.aux-lcd-topleft" top="mini.aux-lcd-top" topright="mini.aux-lcd-topright" left="mini.aux-lcd-left" middle="mini.aux-lcd-middle" right="mini.aux-lcd-right" bottomleft="mini.aux-lcd-bottomleft" bottom="mini.aux-lcd-bottom" bottomright="mini.aux-lcd-bottomright" x="8" y="30" w="-16" h="-40" relatw="1" relath="1" ghost="1" />
-      <component id="content" x="11" y="33" w="-22" h="-46" relatw="1" relath="1" autoopen="1" autoclose="1" noshowcmdbar="0" param="guid:{F0816D7B-FFFC-4343-80F2-E8199AA15CC3}" font="Lucida Grande" fontsize="11" alpha="235" />
-      <layer id="resize" x="-18" y="-18" relatx="1" relaty="1" image="mini.aux-resize" ghost="1" />
-      <layer id="resize.right" x="-7" y="28" w="7" h="-35" relatx="1" relath="1" resize="right" rectrgn="1" tooltip="Resize width" />
-      <layer id="resize.bottom" x="8" y="-7" w="-15" h="7" relatw="1" relaty="1" resize="bottom" rectrgn="1" tooltip="Resize height" />
+      <layer id="titlebar" x="0" y="0" w="0" h="24" relatw="1" move="1" rectrgn="1" />
+      <text id="title" x="30" y="1" w="-60" h="24" font="Lucida Grande" altfont="Tahoma" fontsize="16" antialias="1" color="0,0,0" align="center" valign="center" alpha="235" ghost="1" default="Video" relatw="1" />
+      <button id="window.close" x="6" y="6" image="mini.close-normal" hoverImage="mini.close-hover" downImage="mini.close-down" action="CLOSE" tooltip="Close window" />
+      <grid id="aux.screen" topleft="mini.aux-lcd-content-topleft" top="mini.aux-lcd-content-top" topright="mini.aux-lcd-content-topright" left="mini.aux-lcd-content-left" middle="mini.aux-lcd-content-middle" right="mini.aux-lcd-content-right" bottomleft="mini.aux-lcd-content-bottomleft" bottom="mini.aux-lcd-content-bottom" bottomright="mini.aux-lcd-content-bottomright" x="12" y="24" w="-24" h="-36" relatw="1" relath="1" ghost="1" />
+      <component id="content" x="15" y="27" w="-31" h="-43" relatw="1" relath="1" autoopen="1" autoclose="1" noshowcmdbar="0" param="guid:{F0816D7B-FFFC-4343-80F2-E8199AA15CC3}" font="Lucida Grande" fontsize="12" alpha="235" />
+      <layer id="resize" x="-16" y="-16" relatx="1" relaty="1" image="mini.aux-resize" ghost="1" />
+      <layer id="resize.corner" x="-16" y="-16" w="16" h="16" relatx="1" relaty="1" resize="bottomright" rectrgn="1" tooltip="Resize window" />
+      <script file="scripts/windowfocus.maki" />
       <script file="scripts/fontchoice.maki" />
     </layout>
   </container>
   <container id="Visualization" name="Visualization" dynamic="1" component="guid:{0000000A-000C-0010-FF7B-01014263450C}" default_visible="0" default_x="100" default_y="170">
-    <layout id="fixed.1x" w="480" h="320" minimum_w="312" minimum_h="150" desktopalpha="1">
+    <layout id="fixed.1x" w="344" h="184" minimum_w="312" minimum_h="150" desktopalpha="1">
       <grid id="aux.chrome" topleft="mini.aux-frame-topleft" top="mini.aux-frame-top" topright="mini.aux-frame-topright" left="mini.aux-frame-left" middle="mini.aux-frame-middle" right="mini.aux-frame-right" bottomleft="mini.aux-frame-bottomleft" bottom="mini.aux-frame-bottom" bottomright="mini.aux-frame-bottomright" x="0" y="0" w="0" h="0" relatw="1" relath="1" ghost="1" />
-      <layer id="titlebar" x="0" y="0" w="0" h="28" relatw="1" move="1" rectrgn="1" />
-      <text id="title" x="30" y="2" w="-60" h="24" font="Lucida Grande" altfont="Tahoma" fontsize="18" antialias="1" color="85,89,94" align="center" valign="center" alpha="235" ghost="1" default="Visualization" relatw="1" />
-      <button id="window.close" x="7" y="7" image="mini.close-normal" hoverImage="mini.close-hover" downImage="mini.close-down" action="CLOSE" tooltip="Close Visualization" />
-      <grid id="aux.screen" topleft="mini.aux-lcd-topleft" top="mini.aux-lcd-top" topright="mini.aux-lcd-topright" left="mini.aux-lcd-left" middle="mini.aux-lcd-middle" right="mini.aux-lcd-right" bottomleft="mini.aux-lcd-bottomleft" bottom="mini.aux-lcd-bottom" bottomright="mini.aux-lcd-bottomright" x="8" y="30" w="-16" h="-40" relatw="1" relath="1" ghost="1" />
-      <component id="content" x="11" y="33" w="-22" h="-46" relatw="1" relath="1" autoopen="1" autoclose="1" noshowcmdbar="0" param="guid:{0000000A-000C-0010-FF7B-01014263450C}" font="Lucida Grande" fontsize="11" alpha="235" />
-      <layer id="resize" x="-18" y="-18" relatx="1" relaty="1" image="mini.aux-resize" ghost="1" />
-      <layer id="resize.right" x="-7" y="28" w="7" h="-35" relatx="1" relath="1" resize="right" rectrgn="1" tooltip="Resize width" />
-      <layer id="resize.bottom" x="8" y="-7" w="-15" h="7" relatw="1" relaty="1" resize="bottom" rectrgn="1" tooltip="Resize height" />
+      <layer id="titlebar" x="0" y="0" w="0" h="24" relatw="1" move="1" rectrgn="1" />
+      <text id="title" x="30" y="1" w="-60" h="24" font="Lucida Grande" altfont="Tahoma" fontsize="16" antialias="1" color="0,0,0" align="center" valign="center" alpha="235" ghost="1" default="Visualization" relatw="1" />
+      <button id="window.close" x="6" y="6" image="mini.close-normal" hoverImage="mini.close-hover" downImage="mini.close-down" action="CLOSE" tooltip="Close window" />
+      <grid id="aux.screen" topleft="mini.aux-lcd-content-topleft" top="mini.aux-lcd-content-top" topright="mini.aux-lcd-content-topright" left="mini.aux-lcd-content-left" middle="mini.aux-lcd-content-middle" right="mini.aux-lcd-content-right" bottomleft="mini.aux-lcd-content-bottomleft" bottom="mini.aux-lcd-content-bottom" bottomright="mini.aux-lcd-content-bottomright" x="12" y="24" w="-24" h="-36" relatw="1" relath="1" ghost="1" />
+      <component id="content" x="15" y="27" w="-31" h="-43" relatw="1" relath="1" autoopen="1" autoclose="1" noshowcmdbar="0" param="guid:{0000000A-000C-0010-FF7B-01014263450C}" font="Lucida Grande" fontsize="12" alpha="235" />
+      <layer id="resize" x="-16" y="-16" relatx="1" relaty="1" image="mini.aux-resize" ghost="1" />
+      <layer id="resize.corner" x="-16" y="-16" w="16" h="16" relatx="1" relaty="1" resize="bottomright" rectrgn="1" tooltip="Resize window" />
+      <script file="scripts/windowfocus.maki" />
       <script file="scripts/fontchoice.maki" />
     </layout>
   </container>
   <container id="Equalizer" name="Equalizer" default_visible="0" default_x="150" default_y="230">
-    <layout id="fixed.1x" w="430" h="246" minimum_w="430" maximum_w="430" minimum_h="246" maximum_h="246" desktopalpha="1">
+    <layout id="fixed.1x" w="344" h="184" minimum_w="344" maximum_w="344" minimum_h="184" maximum_h="184" desktopalpha="1">
       <grid id="aux.chrome" topleft="mini.aux-frame-topleft" top="mini.aux-frame-top" topright="mini.aux-frame-topright" left="mini.aux-frame-left" middle="mini.aux-frame-middle" right="mini.aux-frame-right" bottomleft="mini.aux-frame-bottomleft" bottom="mini.aux-frame-bottom" bottomright="mini.aux-frame-bottomright" x="0" y="0" w="0" h="0" relatw="1" relath="1" ghost="1" />
-      <layer id="titlebar" x="0" y="0" w="0" h="28" relatw="1" move="1" rectrgn="1" />
-      <text id="title" x="30" y="2" w="-60" h="24" font="Lucida Grande" altfont="Tahoma" fontsize="18" antialias="1" color="85,89,94" align="center" valign="center" alpha="235" ghost="1" default="Equalizer" relatw="1" />
-      <button id="window.close" x="7" y="7" image="mini.close-normal" hoverImage="mini.close-hover" downImage="mini.close-down" action="CLOSE" tooltip="Close Equalizer" />
-      <grid id="aux.screen" topleft="mini.aux-lcd-topleft" top="mini.aux-lcd-top" topright="mini.aux-lcd-topright" left="mini.aux-lcd-left" middle="mini.aux-lcd-middle" right="mini.aux-lcd-right" bottomleft="mini.aux-lcd-bottomleft" bottom="mini.aux-lcd-bottom" bottomright="mini.aux-lcd-bottomright" x="8" y="30" w="-16" h="-40" relatw="1" relath="1" ghost="1" />
-      <button id="eq.on" x="17" y="42" image="mini.aux-pill-normal" activeImage="mini.aux-pill-active" action="EQ_TOGGLE" tooltip="Toggle equalizer" />
-      <text id="eq.on.label" x="28" y="44" w="34" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="81,87,80" align="center" valign="center" alpha="235" ghost="1" default="On" />
-      <button id="eq.auto" x="70" y="42" image="mini.aux-pill-normal" activeImage="mini.aux-pill-active" action="EQ_AUTO" tooltip="Toggle automatic EQ presets" />
-      <text id="eq.auto.label" x="81" y="44" w="34" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="81,87,80" align="center" valign="center" alpha="235" ghost="1" default="Auto" />
-      <text id="eq.range" x="145" y="45" w="264" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="88,91,79" align="center" valign="center" alpha="235" ghost="1" default="10-band equalizer · ±12 dB" />
-      <layer id="eq.preamp.track" x="42" y="86" image="mini.aux-eq-track" ghost="1" />
-      <slider id="eq.preamp" x="41" y="83" w="10" h="114" orientation="vertical" action="EQ_PREAMP" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="Preamp" />
-      <text id="eq.preamp.label" x="26" y="204" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="88,91,79" align="center" valign="center" alpha="235" ghost="1" default="Preamp" />
-      <layer id="eq.band.1.track" x="109" y="86" image="mini.aux-eq-track" ghost="1" />
-      <slider id="eq.band.1" x="108" y="83" w="10" h="114" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="60 Hz" param="1" />
-      <text id="eq.band.1.label" x="93" y="204" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="88,91,79" align="center" valign="center" alpha="235" ghost="1" default="60" />
-      <layer id="eq.band.2.track" x="139" y="86" image="mini.aux-eq-track" ghost="1" />
-      <slider id="eq.band.2" x="138" y="83" w="10" h="114" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="170 Hz" param="2" />
-      <text id="eq.band.2.label" x="123" y="204" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="88,91,79" align="center" valign="center" alpha="235" ghost="1" default="170" />
-      <layer id="eq.band.3.track" x="169" y="86" image="mini.aux-eq-track" ghost="1" />
-      <slider id="eq.band.3" x="168" y="83" w="10" h="114" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="310 Hz" param="3" />
-      <text id="eq.band.3.label" x="153" y="204" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="88,91,79" align="center" valign="center" alpha="235" ghost="1" default="310" />
-      <layer id="eq.band.4.track" x="199" y="86" image="mini.aux-eq-track" ghost="1" />
-      <slider id="eq.band.4" x="198" y="83" w="10" h="114" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="600 Hz" param="4" />
-      <text id="eq.band.4.label" x="183" y="204" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="88,91,79" align="center" valign="center" alpha="235" ghost="1" default="600" />
-      <layer id="eq.band.5.track" x="229" y="86" image="mini.aux-eq-track" ghost="1" />
-      <slider id="eq.band.5" x="228" y="83" w="10" h="114" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="1k Hz" param="5" />
-      <text id="eq.band.5.label" x="213" y="204" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="88,91,79" align="center" valign="center" alpha="235" ghost="1" default="1k" />
-      <layer id="eq.band.6.track" x="259" y="86" image="mini.aux-eq-track" ghost="1" />
-      <slider id="eq.band.6" x="258" y="83" w="10" h="114" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="3k Hz" param="6" />
-      <text id="eq.band.6.label" x="243" y="204" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="88,91,79" align="center" valign="center" alpha="235" ghost="1" default="3k" />
-      <layer id="eq.band.7.track" x="289" y="86" image="mini.aux-eq-track" ghost="1" />
-      <slider id="eq.band.7" x="288" y="83" w="10" h="114" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="6k Hz" param="7" />
-      <text id="eq.band.7.label" x="273" y="204" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="88,91,79" align="center" valign="center" alpha="235" ghost="1" default="6k" />
-      <layer id="eq.band.8.track" x="319" y="86" image="mini.aux-eq-track" ghost="1" />
-      <slider id="eq.band.8" x="318" y="83" w="10" h="114" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="12k Hz" param="8" />
-      <text id="eq.band.8.label" x="303" y="204" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="88,91,79" align="center" valign="center" alpha="235" ghost="1" default="12k" />
-      <layer id="eq.band.9.track" x="349" y="86" image="mini.aux-eq-track" ghost="1" />
-      <slider id="eq.band.9" x="348" y="83" w="10" h="114" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="14k Hz" param="9" />
-      <text id="eq.band.9.label" x="333" y="204" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="88,91,79" align="center" valign="center" alpha="235" ghost="1" default="14k" />
-      <layer id="eq.band.10.track" x="379" y="86" image="mini.aux-eq-track" ghost="1" />
-      <slider id="eq.band.10" x="378" y="83" w="10" h="114" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="16k Hz" param="10" />
-      <text id="eq.band.10.label" x="363" y="204" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="11" antialias="1" color="88,91,79" align="center" valign="center" alpha="235" ghost="1" default="16k" />
-      <text id="eq.scale.79" x="11" y="79" w="26" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="9" antialias="1" color="107,114,96" align="center" valign="center" alpha="235" ghost="1" default="+12" />
-      <text id="eq.scale.133" x="11" y="133" w="26" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="9" antialias="1" color="107,114,96" align="center" valign="center" alpha="235" ghost="1" default="0" />
-      <text id="eq.scale.187" x="11" y="187" w="26" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="9" antialias="1" color="107,114,96" align="center" valign="center" alpha="235" ghost="1" default="−12" />
-      <rect id="eq.divider" x="79" y="84" w="1" h="114" color="156,166,142" alpha="100" ghost="1" />
+      <layer id="titlebar" x="0" y="0" w="0" h="24" relatw="1" move="1" rectrgn="1" />
+      <text id="title" x="30" y="1" w="-60" h="24" font="Lucida Grande" altfont="Tahoma" fontsize="16" antialias="1" color="0,0,0" align="center" valign="center" alpha="235" ghost="1" default="Equalizer" relatw="1" />
+      <button id="window.close" x="6" y="6" image="mini.close-normal" hoverImage="mini.close-hover" downImage="mini.close-down" action="CLOSE" tooltip="Close window" />
+      <grid id="aux.screen" topleft="mini.aux-lcd-topleft" top="mini.aux-lcd-top" topright="mini.aux-lcd-topright" left="mini.aux-lcd-left" middle="mini.aux-lcd-middle" right="mini.aux-lcd-right" bottomleft="mini.aux-lcd-bottomleft" bottom="mini.aux-lcd-bottom" bottomright="mini.aux-lcd-bottomright" x="12" y="24" w="-24" h="-36" relatw="1" relath="1" ghost="1" />
+      <script file="scripts/windowfocus.maki" />
+      <button id="eq.on" x="32" y="34" image="mini.aux-pill-normal" activeImage="mini.aux-pill-active" action="EQ_TOGGLE" tooltip="Toggle equalizer" />
+      <text id="eq.on.label" x="32" y="33" w="61" h="20" font="Lucida Grande" altfont="Tahoma" fontsize="12" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="On" />
+      <button id="eq.auto" x="178" y="34" image="mini.aux-pill-normal" activeImage="mini.aux-pill-active" action="EQ_AUTO" tooltip="Toggle automatic EQ presets" />
+      <text id="eq.auto.label" x="178" y="33" w="61" h="20" font="Lucida Grande" altfont="Tahoma" fontsize="12" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="Auto" />
+      <button id="eq.reset" x="105" y="34" image="mini.aux-eq-reset-normal" downImage="mini.aux-eq-reset-down" tooltip="Reset all EQ values to 0 dB" />
+      <text id="eq.reset.label" x="105" y="33" w="61" h="20" font="Lucida Grande" altfont="Tahoma" fontsize="12" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="Reset" />
+      <button id="eq.presets" x="251" y="34" image="mini.aux-eq-presets-normal" downImage="mini.aux-eq-presets-down" tooltip="Choose an EQ preset" />
+      <text id="eq.presets.label" x="254" y="33" w="44" h="20" font="Lucida Grande" altfont="Tahoma" fontsize="12" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="Presets" />
+      <script file="scripts/eqpresets.maki" />
+      <layer id="eq.preamp.track" x="34" y="64" image="mini.aux-eq-track" ghost="1" />
+      <slider id="eq.preamp" x="33" y="61" w="10" h="92" orientation="vertical" action="EQ_PREAMP" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="Preamp" />
+      <script file="scripts/equalizer.maki" param="eq.preamp,-1" />
+      <text id="eq.preamp.label" x="17" y="148" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="Preamp" />
+      <layer id="eq.band.1.track" x="70" y="64" image="mini.aux-eq-track" ghost="1" />
+      <slider id="eq.band.1" x="69" y="61" w="10" h="92" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="60 Hz" param="1" />
+      <script file="scripts/equalizer.maki" param="eq.band.1,0" />
+      <text id="eq.band.1.label" x="53" y="148" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="60" />
+      <layer id="eq.band.2.track" x="96" y="64" image="mini.aux-eq-track" ghost="1" />
+      <slider id="eq.band.2" x="95" y="61" w="10" h="92" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="170 Hz" param="2" />
+      <script file="scripts/equalizer.maki" param="eq.band.2,1" />
+      <text id="eq.band.2.label" x="79" y="148" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="170" />
+      <layer id="eq.band.3.track" x="122" y="64" image="mini.aux-eq-track" ghost="1" />
+      <slider id="eq.band.3" x="121" y="61" w="10" h="92" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="310 Hz" param="3" />
+      <script file="scripts/equalizer.maki" param="eq.band.3,2" />
+      <text id="eq.band.3.label" x="105" y="148" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="310" />
+      <layer id="eq.band.4.track" x="148" y="64" image="mini.aux-eq-track" ghost="1" />
+      <slider id="eq.band.4" x="147" y="61" w="10" h="92" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="600 Hz" param="4" />
+      <script file="scripts/equalizer.maki" param="eq.band.4,3" />
+      <text id="eq.band.4.label" x="131" y="148" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="600" />
+      <layer id="eq.band.5.track" x="174" y="64" image="mini.aux-eq-track" ghost="1" />
+      <slider id="eq.band.5" x="173" y="61" w="10" h="92" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="1k Hz" param="5" />
+      <script file="scripts/equalizer.maki" param="eq.band.5,4" />
+      <text id="eq.band.5.label" x="157" y="148" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="1k" />
+      <layer id="eq.band.6.track" x="199" y="64" image="mini.aux-eq-track" ghost="1" />
+      <slider id="eq.band.6" x="198" y="61" w="10" h="92" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="3k Hz" param="6" />
+      <script file="scripts/equalizer.maki" param="eq.band.6,5" />
+      <text id="eq.band.6.label" x="182" y="148" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="3k" />
+      <layer id="eq.band.7.track" x="225" y="64" image="mini.aux-eq-track" ghost="1" />
+      <slider id="eq.band.7" x="224" y="61" w="10" h="92" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="6k Hz" param="7" />
+      <script file="scripts/equalizer.maki" param="eq.band.7,6" />
+      <text id="eq.band.7.label" x="208" y="148" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="6k" />
+      <layer id="eq.band.8.track" x="251" y="64" image="mini.aux-eq-track" ghost="1" />
+      <slider id="eq.band.8" x="250" y="61" w="10" h="92" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="12k Hz" param="8" />
+      <script file="scripts/equalizer.maki" param="eq.band.8,7" />
+      <text id="eq.band.8.label" x="234" y="148" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="12k" />
+      <layer id="eq.band.9.track" x="277" y="64" image="mini.aux-eq-track" ghost="1" />
+      <slider id="eq.band.9" x="276" y="61" w="10" h="92" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="14k Hz" param="9" />
+      <script file="scripts/equalizer.maki" param="eq.band.9,8" />
+      <text id="eq.band.9.label" x="260" y="148" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="14k" />
+      <layer id="eq.band.10.track" x="303" y="64" image="mini.aux-eq-track" ghost="1" />
+      <slider id="eq.band.10" x="302" y="61" w="10" h="92" orientation="vertical" action="EQ_BAND" thumb="mini.volume-normal" hoverThumb="mini.volume-hover" downThumb="mini.volume-down" tooltip="16k Hz" param="10" />
+      <script file="scripts/equalizer.maki" param="eq.band.10,9" />
+      <text id="eq.band.10.label" x="286" y="148" w="42" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="89,89,89" align="center" valign="center" alpha="235" ghost="1" default="16k" />
+      <text id="eq.scale.60" x="44" y="61" w="23" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="107,114,96" align="center" valign="center" alpha="235" ghost="1" default="+12" />
+      <text id="eq.scale.98" x="44" y="99" w="23" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="107,114,96" align="center" valign="center" alpha="235" ghost="1" default="0" />
+      <text id="eq.scale.135" x="44" y="136" w="23" h="16" font="Lucida Grande" altfont="Tahoma" fontsize="10" antialias="1" color="107,114,96" align="center" valign="center" alpha="235" ghost="1" default="−12" />
+      <rect id="eq.divider.0" x="55" y="79" w="1" h="18" color="156,166,142" alpha="100" ghost="1" />
+      <rect id="eq.divider.1" x="55" y="117" w="1" h="17" color="156,166,142" alpha="100" ghost="1" />
       <script file="scripts/fontchoice.maki" />
     </layout>
   </container>
