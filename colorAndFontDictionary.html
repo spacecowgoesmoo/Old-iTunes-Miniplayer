@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iTunes Miniplayer · Color + font dictionary</title>
+<style>
+
+:root { color-scheme: light; font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #303943; background: #f3f5f7; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 848px; margin: auto; padding: 32px 24px 56px; }
+h1 { margin: 4px 0 12px; font-size: clamp(26px, 5vw, 34px); line-height: 1.2; letter-spacing: -.7px; }
+h2 { margin: 0 0 12px; font-size: 24px; letter-spacing: -.4px; }
+h3 { margin: 0 0 12px; font-size: 18px; }
+h4, p { margin: 0 0 10px; }
+main > section { margin-top: 36px; scroll-margin-top: 20px; }
+.filter-group { margin: 22px 0; }
+.muted, .count, .eyebrow { color: #647180; }
+.eyebrow { margin: 0; font-size: 13px; letter-spacing: 1.4px; text-transform: uppercase; }
+.count { font-size: 13px; font-weight: normal; margin-left: 5px; }
+a { color: #315f90; text-underline-offset: 3px; }
+a:hover { color: #173d66; }
+code, .id { font-family: ui-monospace, Menlo, Consolas, monospace; }
+code { overflow-wrap: anywhere; }
+nav { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 20px 0; }
+label { display: block; font-weight: 600; margin-bottom: 8px; }
+input { width: 100%; padding: 11px 12px; font: inherit; color: inherit; border: 1px solid #b6c2ce; border-radius: 7px; background: white; }
+:focus-visible { outline: 3px solid #3488ea; outline-offset: 3px; }
+#search-status { font-size: 12px; margin-top: 6px; }
+.color-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: start; }
+.color-card, .palette-row, .font-card { border: 1px solid #d9e0e7; border-radius: 8px; background: white; }
+.color-card { min-width: 0; padding: 14px; scroll-margin-top: 20px; }
+.color-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.color-heading h4 { margin: 0; font-size: 16px; }
+.id { font-size: 12px; }
+.swatch { display: inline-block; flex: 0 0 42px; width: 42px; height: 42px; border: 1px solid #9ba6b2; border-radius: 5px; background: var(--swatch); }
+.swatch.small { flex-basis: 16px; width: 16px; height: 16px; border-radius: 3px; }
+.usage, details { font-size: 12px; }
+summary { cursor: pointer; color: #315f90; }
+.references { margin: 8px 0 0; padding-left: 16px; overflow-wrap: anywhere; }
+.references li { margin-bottom: 6px; }
+.palette-rows { display: grid; gap: 8px; }
+.palette-row { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px; padding: 12px; align-items: start; }
+.palette-row p { margin: 4px 0 7px; font-size: 12px; }
+.assignment { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: 12px; max-width: 176px; }
+.unverified { color: #79561e; }
+.font-card { padding: 16px; margin: 10px 0; }
+.font-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.font-heading h3 { margin-bottom: 6px; }
+.sample { font-family: "Lucida Grande", "DejaVu Sans", Tahoma, sans-serif; }
+.notes { padding-left: 20px; }
+.notes li { margin-bottom: 10px; }
+[hidden] { display: none !important; }
+:target { outline: 2px solid #3488ea; outline-offset: 3px; }
+@media (max-width: 680px) { .color-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .palette-row { grid-template-columns: 40px minmax(0, 1fr); } .assignment { grid-column: 2; max-width: none; } }
+@media (max-width: 420px) { main { padding: 24px 16px 40px; } .color-grid { grid-template-columns: 1fr; } }
+@media print { :root { background: white; } main { max-width: none; padding: 0; } nav, #search-control { display: none; } .color-card, .palette-row, .font-card { break-inside: avoid; } }
+
+</style></head><body>
+<main><header><p class="eyebrow">iTunes Miniplayer</p><h1>Color + font dictionary</h1>
+<p class="muted">v1.141 · 34 colors · 4 font sizes</p>
+<p>86 PNG source references · 56 palette entries · 32 UI references</p>
+<p class="muted">Counts describe source definitions at 1x, excluding scaled copies and generated gradient pixels. C = permanent color ID; P = palette slot; NP = NullPlayer.</p>
+<nav aria-label="Dictionary sections"><a href="#colors">Colors</a><a href="#palette">Winamp palette</a><a href="#fonts">Font sizes</a><a href="#notes">Rendering notes</a></nav>
+<div id="search-control" hidden><label for="search">Filter colors, palette slots, fonts or source references</label><input id="search" type="search" placeholder="Try C125, #3488EA, Playlist…" autocomplete="off"><p id="search-status" class="muted" role="status"></p></div></header>
+<section id="colors"><h2>Colors</h2>
+<section class="filter-group"><h3>Neutral / cool metal <span class="count">20</span></h3><div class="color-grid">
+<article class="color-card" id="C139" data-rgb="0,0,0" data-search="C139 #000000 Neutral / cool metal XML palette — elements/wasabi.list.text (α 255) XML palette — elements/wasabi.list.text.alternate (α 255) XML palette — elements/wasabi.list.text.selected.inactive (α 255) XML palette — elements/wasabi.edit.text (α 255) XML palette — elements/wasabi.tree.text (α 255) XML palette — elements/pledit.text (α 255) XML palette — elements/wasabi.text.color (α 255) XML palette — elements/wasabi.popup.text (α 255) XML UI — wasabi.standardframe.static/title (α 235) XML UI — Pledit/title (α 235) XML UI — MLibrary/title (α 235) XML UI — Video/title (α 235) XML UI — Visualization/title (α 235) XML UI — Equalizer/title (α 235)">
+<div class="color-heading"><span class="swatch" style="--swatch:#000000" aria-hidden="true"></span><div><a class="id" href="#C139">C139</a><h4><code>#000000</code></h4></div></div>
+<p class="muted">RGB 0, 0, 0<br>α 235, 255</p>
+<p class="usage">PNG 0 · Palette 8 · UI 6</p>
+<details><summary>Source references</summary><ul class="references"><li>XML palette — elements/wasabi.list.text (α 255)</li><li>XML palette — elements/wasabi.list.text.alternate (α 255)</li><li>XML palette — elements/wasabi.list.text.selected.inactive (α 255)</li><li>XML palette — elements/wasabi.edit.text (α 255)</li><li>XML palette — elements/wasabi.tree.text (α 255)</li><li>XML palette — elements/pledit.text (α 255)</li><li>XML palette — elements/wasabi.text.color (α 255)</li><li>XML palette — elements/wasabi.popup.text (α 255)</li><li>XML UI — wasabi.standardframe.static/title (α 235)</li><li>XML UI — Pledit/title (α 235)</li><li>XML UI — MLibrary/title (α 235)</li><li>XML UI — Video/title (α 235)</li><li>XML UI — Visualization/title (α 235)</li><li>XML UI — Equalizer/title (α 235)</li></ul></details>
+</article>
+<article class="color-card" id="C001" data-rgb="38,38,38" data-search="C001 #262626 Neutral / cool metal source code/build_artwork.py:223:38 — ellipse(knob_shadow, (1, 7.4, 8.2, 10.7), (38, 38, 38, 105)) (α 105)">
+<div class="color-heading"><span class="swatch" style="--swatch:#262626" aria-hidden="true"></span><div><a class="id" href="#C001">C001</a><h4><code>#262626</code></h4></div></div>
+<p class="muted">RGB 38, 38, 38<br>α 105</p>
+<p class="usage">PNG 1 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:223:38 — ellipse(knob_shadow, (1, 7.4, 8.2, 10.7), (38, 38, 38, 105)) (α 105)</li></ul></details>
+</article>
+<article class="color-card" id="C121" data-rgb="78,78,78" data-search="C121 #4E4E4E Neutral / cool metal source code/build_artwork.py:89:3 — c = (78, 78, 78, 255) (α 255) source code/build_artwork.py:160:130 — poly(im, [(cx + k * (ox - 1) * diam / 19, cy - 3 * diam / 19), (cx + k * (ox - 1) * diam / 19, cy + 3 * diam / 19), (cx + k * (ox + 3) * diam / 19, cy)], (78, 78, 78, 255)) (α 255) source code/build_artwork.py:165:62 — poly(im, [(10.5, 7.8), (10.5, 18.7), (19, 13.2)], (78, 78, 78, 255)) (α 255) source code/build_artwork.py:167:83 — fill=(78, 78, 78, 255) (α 255) source code/build_artwork.py:215:71 — (122, 122, 122, 255) if state != &#x27;down&#x27; else (78, 78, 78, 255) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#4E4E4E" aria-hidden="true"></span><div><a class="id" href="#C121">C121</a><h4><code>#4E4E4E</code></h4></div></div>
+<p class="muted">RGB 78, 78, 78<br>Opaque</p>
+<p class="usage">PNG 5 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:89:3 — c = (78, 78, 78, 255) (α 255)</li><li>source code/build_artwork.py:160:130 — poly(im, [(cx + k * (ox - 1) * diam / 19, cy - 3 * diam / 19), (cx + k * (ox - 1) * diam / 19, cy + 3 * diam / 19), (cx + k * (ox + 3) * diam / 19, cy)], (78, 78, 78, 255)) (α 255)</li><li>source code/build_artwork.py:165:62 — poly(im, [(10.5, 7.8), (10.5, 18.7), (19, 13.2)], (78, 78, 78, 255)) (α 255)</li><li>source code/build_artwork.py:167:83 — fill=(78, 78, 78, 255) (α 255)</li><li>source code/build_artwork.py:215:71 — (122, 122, 122, 255) if state != &#x27;down&#x27; else (78, 78, 78, 255) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C147" data-rgb="89,89,89" data-search="C147 #595959 Neutral / cool metal source code/build_artwork.py:83:32 — gradient(chrome, (42, 45, 90, 48.2), (89, 89, 89, 255), (154, 154, 154, 255), 1.6) (α 255) source code/build_artwork.py:214:70 — (111, 111, 111, 255) if state == &#x27;normal&#x27; else (89, 89, 89, 255) (α 255) source code/build_artwork.py:345:42 — lcd_ink((89, 89, 89), 20) (α 255) source code/build_subwindows.py:80:83 — line(button, [(button_width - 12, 8.5), (button_width - 9, 11.5), (button_width - 6, 8.5)], (89, 89, 89, 235), 1.4) (α 235) source code/build_subwindows.py:86:42 — line(resize, [(1.5 + i, 11.5), (11.5, 1.5 + i)], (89, 89, 89, 180), 0.85) (α 180) XML palette — elements/wasabi.window.text (α 255) XML palette — elements/wasabi.list.column.text (α 255) XML palette — elements/wasabi.button.text (α 255) XML UI — track.title.viewport/track.title (α 255) XML UI — track.title.viewport/track.title.repeat (α 255) XML UI — track.detail.viewport/track.detail (α 255) XML UI — track.detail.viewport/track.detail.repeat (α 255) XML UI — mini.lcd/time.elapsed (α 255) XML UI — mini.lcd/time.remaining (α 255) XML UI — Equalizer/eq.on.label (α 235) XML UI — Equalizer/eq.auto.label (α 235) XML UI — Equalizer/eq.reset.label (α 235) XML UI — Equalizer/eq.presets.label (α 235) XML UI — Equalizer/eq.preamp.label (α 235) XML UI — Equalizer/eq.band.1.label (α 235) XML UI — Equalizer/eq.band.2.label (α 235) XML UI — Equalizer/eq.band.3.label (α 235) XML UI — Equalizer/eq.band.4.label (α 235) XML UI — Equalizer/eq.band.5.label (α 235) XML UI — Equalizer/eq.band.6.label (α 235) XML UI — Equalizer/eq.band.7.label (α 235) XML UI — Equalizer/eq.band.8.label (α 235) XML UI — Equalizer/eq.band.9.label (α 235) XML UI — Equalizer/eq.band.10.label (α 235)">
+<div class="color-heading"><span class="swatch" style="--swatch:#595959" aria-hidden="true"></span><div><a class="id" href="#C147">C147</a><h4><code>#595959</code></h4></div></div>
+<p class="muted">RGB 89, 89, 89<br>α 180, 235, 255</p>
+<p class="usage">PNG 5 · Palette 3 · UI 21</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:83:32 — gradient(chrome, (42, 45, 90, 48.2), (89, 89, 89, 255), (154, 154, 154, 255), 1.6) (α 255)</li><li>source code/build_artwork.py:214:70 — (111, 111, 111, 255) if state == &#x27;normal&#x27; else (89, 89, 89, 255) (α 255)</li><li>source code/build_artwork.py:345:42 — lcd_ink((89, 89, 89), 20) (α 255)</li><li>source code/build_subwindows.py:80:83 — line(button, [(button_width - 12, 8.5), (button_width - 9, 11.5), (button_width - 6, 8.5)], (89, 89, 89, 235), 1.4) (α 235)</li><li>source code/build_subwindows.py:86:42 — line(resize, [(1.5 + i, 11.5), (11.5, 1.5 + i)], (89, 89, 89, 180), 0.85) (α 180)</li><li>XML palette — elements/wasabi.window.text (α 255)</li><li>XML palette — elements/wasabi.list.column.text (α 255)</li><li>XML palette — elements/wasabi.button.text (α 255)</li><li>XML UI — track.title.viewport/track.title (α 255)</li><li>XML UI — track.title.viewport/track.title.repeat (α 255)</li><li>XML UI — track.detail.viewport/track.detail (α 255)</li><li>XML UI — track.detail.viewport/track.detail.repeat (α 255)</li><li>XML UI — mini.lcd/time.elapsed (α 255)</li><li>XML UI — mini.lcd/time.remaining (α 255)</li><li>XML UI — Equalizer/eq.on.label (α 235)</li><li>XML UI — Equalizer/eq.auto.label (α 235)</li><li>XML UI — Equalizer/eq.reset.label (α 235)</li><li>XML UI — Equalizer/eq.presets.label (α 235)</li><li>XML UI — Equalizer/eq.preamp.label (α 235)</li><li>XML UI — Equalizer/eq.band.1.label (α 235)</li><li>XML UI — Equalizer/eq.band.2.label (α 235)</li><li>XML UI — Equalizer/eq.band.3.label (α 235)</li><li>XML UI — Equalizer/eq.band.4.label (α 235)</li><li>XML UI — Equalizer/eq.band.5.label (α 235)</li><li>XML UI — Equalizer/eq.band.6.label (α 235)</li><li>XML UI — Equalizer/eq.band.7.label (α 235)</li><li>XML UI — Equalizer/eq.band.8.label (α 235)</li><li>XML UI — Equalizer/eq.band.9.label (α 235)</li><li>XML UI — Equalizer/eq.band.10.label (α 235)</li></ul></details>
+</article>
+<article class="color-card" id="C106" data-rgb="103,103,103" data-search="C106 #676767 Neutral / cool metal source code/build_artwork.py:16:11 — SHADOW_TOP = (103, 103, 103, 255) (α 255) source code/build_artwork.py:82:30 — gradient(chrome, (41, 44, 91, 49), (103, 103, 103, 255), (143, 143, 143, 255), 2.5) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#676767" aria-hidden="true"></span><div><a class="id" href="#C106">C106</a><h4><code>#676767</code></h4></div></div>
+<p class="muted">RGB 103, 103, 103<br>Opaque</p>
+<p class="usage">PNG 2 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:16:11 — SHADOW_TOP = (103, 103, 103, 255) (α 255)</li><li>source code/build_artwork.py:82:30 — gradient(chrome, (41, 44, 91, 49), (103, 103, 103, 255), (143, 143, 143, 255), 2.5) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C016" data-rgb="111,111,111" data-search="C016 #6F6F6F Neutral / cool metal source code/build_artwork.py:214:28 — (111, 111, 111, 255) if state == &#x27;normal&#x27; else (89, 89, 89, 255) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#6F6F6F" aria-hidden="true"></span><div><a class="id" href="#C016">C016</a><h4><code>#6F6F6F</code></h4></div></div>
+<p class="muted">RGB 111, 111, 111<br>Opaque</p>
+<p class="usage">PNG 1 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:214:28 — (111, 111, 111, 255) if state == &#x27;normal&#x27; else (89, 89, 89, 255) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C123" data-rgb="122,122,122" data-search="C123 #7A7A7A Neutral / cool metal source code/build_artwork.py:113:47 — top=(122, 122, 122, 255) (α 255) source code/build_artwork.py:215:28 — (122, 122, 122, 255) if state != &#x27;down&#x27; else (78, 78, 78, 255) (α 255) source code/build_artwork.py:260:27 — line(im, [(3, 1.4), (96, 1.4)], (122, 122, 122, 255), 0.5) (α 255) source code/build_subwindows.py:40:52 — top=(122, 122, 122, 255) (α 255) source code/build_subwindows.py:45:52 — top=(122, 122, 122, 255) (α 255) source code/build_subwindows.py:54:15 — eq_shadow_top = (122, 122, 122, 255) (α 255) XML palette — elements/wasabi.border.sunken (α 255) XML palette — elements/wasabi.objectframe.upperleft (α 255) XML palette — elements/wasabi.window.embedded.upperleft (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#7A7A7A" aria-hidden="true"></span><div><a class="id" href="#C123">C123</a><h4><code>#7A7A7A</code></h4></div></div>
+<p class="muted">RGB 122, 122, 122<br>Opaque</p>
+<p class="usage">PNG 6 · Palette 3 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:113:47 — top=(122, 122, 122, 255) (α 255)</li><li>source code/build_artwork.py:215:28 — (122, 122, 122, 255) if state != &#x27;down&#x27; else (78, 78, 78, 255) (α 255)</li><li>source code/build_artwork.py:260:27 — line(im, [(3, 1.4), (96, 1.4)], (122, 122, 122, 255), 0.5) (α 255)</li><li>source code/build_subwindows.py:40:52 — top=(122, 122, 122, 255) (α 255)</li><li>source code/build_subwindows.py:45:52 — top=(122, 122, 122, 255) (α 255)</li><li>source code/build_subwindows.py:54:15 — eq_shadow_top = (122, 122, 122, 255) (α 255)</li><li>XML palette — elements/wasabi.border.sunken (α 255)</li><li>XML palette — elements/wasabi.objectframe.upperleft (α 255)</li><li>XML palette — elements/wasabi.window.embedded.upperleft (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C095" data-rgb="133,133,133" data-search="C095 #858585 Neutral / cool metal source code/build_artwork.py:80:45 — line(chrome_lighting, [(3, H - 0.65), (W - 4, H - 0.65)], (133, 133, 133, 170), 0.5) (α 170) source code/build_subwindows.py:37:36 — line(frame, [(3, 158.2), (156, 158.2)], (133, 133, 133, 170), 0.5) (α 170) XML palette — elements/wasabi.button.dimmedText (α 255) XML palette — elements/wasabi.popup.dimmedText (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#858585" aria-hidden="true"></span><div><a class="id" href="#C095">C095</a><h4><code>#858585</code></h4></div></div>
+<p class="muted">RGB 133, 133, 133<br>α 170, 255</p>
+<p class="usage">PNG 2 · Palette 2 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:80:45 — line(chrome_lighting, [(3, H - 0.65), (W - 4, H - 0.65)], (133, 133, 133, 170), 0.5) (α 170)</li><li>source code/build_subwindows.py:37:36 — line(frame, [(3, 158.2), (156, 158.2)], (133, 133, 133, 170), 0.5) (α 170)</li><li>XML palette — elements/wasabi.button.dimmedText (α 255)</li><li>XML palette — elements/wasabi.popup.dimmedText (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C124" data-rgb="143,143,143" data-search="C124 #8F8F8F Neutral / cool metal source code/build_artwork.py:71:28 — fill=(143, 143, 143, 255) (α 255) source code/build_artwork.py:76:35 — outline(chrome, (0.4, 0.4, W - 1, H - 1 / S), 4, (143, 143, 143, 255), 0.6) (α 255) source code/build_artwork.py:82:51 — gradient(chrome, (41, 44, 91, 49), (103, 103, 103, 255), (143, 143, 143, 255), 2.5) (α 255) source code/build_artwork.py:226:85 — (0.5, (143, 143, 143)) (α 255) source code/build_artwork.py:258:28 — gradient(im, (0, 0.25, 99, 5.75), (143, 143, 143, 255), (180, 180, 180, 255), 3) (α 255) source code/build_subwindows.py:35:33 — outline(frame, (0.4, 0.4, 159, 159), 4, (143, 143, 143, 255), 0.6) (α 255) XML palette — elements/mini.window.title.inactive (α 255) XML palette — elements/wasabi.list.column.frame.bottom (α 255) XML palette — elements/wasabi.panel.outerrect (α 255) XML palette — elements/wasabi.panel.lowerright (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#8F8F8F" aria-hidden="true"></span><div><a class="id" href="#C124">C124</a><h4><code>#8F8F8F</code></h4></div></div>
+<p class="muted">RGB 143, 143, 143<br>Opaque</p>
+<p class="usage">PNG 6 · Palette 4 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:71:28 — fill=(143, 143, 143, 255) (α 255)</li><li>source code/build_artwork.py:76:35 — outline(chrome, (0.4, 0.4, W - 1, H - 1 / S), 4, (143, 143, 143, 255), 0.6) (α 255)</li><li>source code/build_artwork.py:82:51 — gradient(chrome, (41, 44, 91, 49), (103, 103, 103, 255), (143, 143, 143, 255), 2.5) (α 255)</li><li>source code/build_artwork.py:226:85 — (0.5, (143, 143, 143)) (α 255)</li><li>source code/build_artwork.py:258:28 — gradient(im, (0, 0.25, 99, 5.75), (143, 143, 143, 255), (180, 180, 180, 255), 3) (α 255)</li><li>source code/build_subwindows.py:35:33 — outline(frame, (0.4, 0.4, 159, 159), 4, (143, 143, 143, 255), 0.6) (α 255)</li><li>XML palette — elements/mini.window.title.inactive (α 255)</li><li>XML palette — elements/wasabi.list.column.frame.bottom (α 255)</li><li>XML palette — elements/wasabi.panel.outerrect (α 255)</li><li>XML palette — elements/wasabi.panel.lowerright (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C029" data-rgb="154,154,154" data-search="C029 #9A9A9A Neutral / cool metal source code/build_artwork.py:73:68 — fill=(154, 154, 154, 255) (α 255) source code/build_artwork.py:75:53 — gradient(chrome, (0.4, 0.4, W - 1, H - 1), (209, 209, 209, 255), (154, 154, 154, 255), 4, 0.5) (α 255) source code/build_artwork.py:83:50 — gradient(chrome, (42, 45, 90, 48.2), (89, 89, 89, 255), (154, 154, 154, 255), 1.6) (α 255) source code/build_artwork.py:259:31 — gradient(im, (1.2, 1.5, 97.8, 4.5), (154, 154, 154, 255), (198, 198, 198, 255), 1.5) (α 255) source code/build_subwindows.py:34:53 — gradient(frame, (0.4, 0.4, 159, 159), (209, 209, 209, 255), (154, 154, 154, 255), 4, 0.5) (α 255) source code/build_subwindows.py:50:27 — gradient(track, (1, 0, 6, 85), (154, 154, 154, 255), (154, 154, 154, 255), 2.5) (α 255) source code/build_subwindows.py:50:48 — gradient(track, (1, 0, 6, 85), (154, 154, 154, 255), (154, 154, 154, 255), 2.5) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#9A9A9A" aria-hidden="true"></span><div><a class="id" href="#C029">C029</a><h4><code>#9A9A9A</code></h4></div></div>
+<p class="muted">RGB 154, 154, 154<br>Opaque</p>
+<p class="usage">PNG 7 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:73:68 — fill=(154, 154, 154, 255) (α 255)</li><li>source code/build_artwork.py:75:53 — gradient(chrome, (0.4, 0.4, W - 1, H - 1), (209, 209, 209, 255), (154, 154, 154, 255), 4, 0.5) (α 255)</li><li>source code/build_artwork.py:83:50 — gradient(chrome, (42, 45, 90, 48.2), (89, 89, 89, 255), (154, 154, 154, 255), 1.6) (α 255)</li><li>source code/build_artwork.py:259:31 — gradient(im, (1.2, 1.5, 97.8, 4.5), (154, 154, 154, 255), (198, 198, 198, 255), 1.5) (α 255)</li><li>source code/build_subwindows.py:34:53 — gradient(frame, (0.4, 0.4, 159, 159), (209, 209, 209, 255), (154, 154, 154, 255), 4, 0.5) (α 255)</li><li>source code/build_subwindows.py:50:27 — gradient(track, (1, 0, 6, 85), (154, 154, 154, 255), (154, 154, 154, 255), 2.5) (α 255)</li><li>source code/build_subwindows.py:50:48 — gradient(track, (1, 0, 6, 85), (154, 154, 154, 255), (154, 154, 154, 255), 2.5) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C125" data-rgb="170,170,170" data-search="C125 #AAAAAA Neutral / cool metal source code/build_artwork.py:17:14 — SHADOW_BOTTOM = (170, 170, 170, 255) (α 255) source code/build_artwork.py:199:47 — top=(170, 170, 170, 255) (α 255) source code/build_artwork.py:226:157 — (1, (170, 170, 170)) (α 255) source code/build_subwindows.py:60:31 — ((209, 209, 209, 255), (170, 170, 170, 255)) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#AAAAAA" aria-hidden="true"></span><div><a class="id" href="#C125">C125</a><h4><code>#AAAAAA</code></h4></div></div>
+<p class="muted">RGB 170, 170, 170<br>Opaque</p>
+<p class="usage">PNG 4 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:17:14 — SHADOW_BOTTOM = (170, 170, 170, 255) (α 255)</li><li>source code/build_artwork.py:199:47 — top=(170, 170, 170, 255) (α 255)</li><li>source code/build_artwork.py:226:157 — (1, (170, 170, 170)) (α 255)</li><li>source code/build_subwindows.py:60:31 — ((209, 209, 209, 255), (170, 170, 170, 255)) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C126" data-rgb="180,180,180" data-search="C126 #B4B4B4 Neutral / cool metal source code/build_artwork.py:258:49 — gradient(im, (0, 0.25, 99, 5.75), (143, 143, 143, 255), (180, 180, 180, 255), 3) (α 255) source code/build_subwindows.py:58:33 — ((237, 237, 237, 255), (180, 180, 180, 255)) (α 255) XML palette — elements/wasabi.list.column.frame.middle (α 255) XML palette — elements/wasabi.list.column.separator (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#B4B4B4" aria-hidden="true"></span><div><a class="id" href="#C126">C126</a><h4><code>#B4B4B4</code></h4></div></div>
+<p class="muted">RGB 180, 180, 180<br>Opaque</p>
+<p class="usage">PNG 2 · Palette 2 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:258:49 — gradient(im, (0, 0.25, 99, 5.75), (143, 143, 143, 255), (180, 180, 180, 255), 3) (α 255)</li><li>source code/build_subwindows.py:58:33 — ((237, 237, 237, 255), (180, 180, 180, 255)) (α 255)</li><li>XML palette — elements/wasabi.list.column.frame.middle (α 255)</li><li>XML palette — elements/wasabi.list.column.separator (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C036" data-rgb="189,189,189" data-search="C036 #BDBDBD Neutral / cool metal XML palette — elements/wasabi.window.background (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#BDBDBD" aria-hidden="true"></span><div><a class="id" href="#C036">C036</a><h4><code>#BDBDBD</code></h4></div></div>
+<p class="muted">RGB 189, 189, 189<br>Opaque</p>
+<p class="usage">PNG 0 · Palette 1 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>XML palette — elements/wasabi.window.background (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C143" data-rgb="192,192,192" data-search="C143 #C0C0C0 Neutral / cool metal XML palette — elements/wasabi.list.text.selected.background.inactive (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#C0C0C0" aria-hidden="true"></span><div><a class="id" href="#C143">C143</a><h4><code>#C0C0C0</code></h4></div></div>
+<p class="muted">RGB 192, 192, 192<br>Opaque</p>
+<p class="usage">PNG 0 · Palette 1 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>XML palette — elements/wasabi.list.text.selected.background.inactive (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C037" data-rgb="198,198,198" data-search="C037 #C6C6C6 Neutral / cool metal source code/build_artwork.py:198:14 — inactive_base = (198, 198, 198) (α 255) source code/build_artwork.py:226:110 — (0.62, (198, 198, 198)) (α 255) source code/build_artwork.py:259:52 — gradient(im, (1.2, 1.5, 97.8, 4.5), (154, 154, 154, 255), (198, 198, 198, 255), 1.5) (α 255) source code/build_subwindows.py:59:32 — ((250, 250, 250, 255), (198, 198, 198, 255)) (α 255) XML palette — elements/wasabi.list.column.background (α 255) XML palette — elements/wasabi.list.column.empty (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#C6C6C6" aria-hidden="true"></span><div><a class="id" href="#C037">C037</a><h4><code>#C6C6C6</code></h4></div></div>
+<p class="muted">RGB 198, 198, 198<br>Opaque</p>
+<p class="usage">PNG 4 · Palette 2 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:198:14 — inactive_base = (198, 198, 198) (α 255)</li><li>source code/build_artwork.py:226:110 — (0.62, (198, 198, 198)) (α 255)</li><li>source code/build_artwork.py:259:52 — gradient(im, (1.2, 1.5, 97.8, 4.5), (154, 154, 154, 255), (198, 198, 198, 255), 1.5) (α 255)</li><li>source code/build_subwindows.py:59:32 — ((250, 250, 250, 255), (198, 198, 198, 255)) (α 255)</li><li>XML palette — elements/wasabi.list.column.background (α 255)</li><li>XML palette — elements/wasabi.list.column.empty (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C128" data-rgb="209,209,209" data-search="C128 #D1D1D1 Neutral / cool metal source code/build_artwork.py:75:32 — gradient(chrome, (0.4, 0.4, W - 1, H - 1), (209, 209, 209, 255), (154, 154, 154, 255), 4, 0.5) (α 255) source code/build_artwork.py:226:61 — (0.36, (209, 209, 209)) (α 255) source code/build_subwindows.py:34:32 — gradient(frame, (0.4, 0.4, 159, 159), (209, 209, 209, 255), (154, 154, 154, 255), 4, 0.5) (α 255) source code/build_subwindows.py:60:10 — ((209, 209, 209, 255), (170, 170, 170, 255)) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#D1D1D1" aria-hidden="true"></span><div><a class="id" href="#C128">C128</a><h4><code>#D1D1D1</code></h4></div></div>
+<p class="muted">RGB 209, 209, 209<br>Opaque</p>
+<p class="usage">PNG 4 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:75:32 — gradient(chrome, (0.4, 0.4, W - 1, H - 1), (209, 209, 209, 255), (154, 154, 154, 255), 4, 0.5) (α 255)</li><li>source code/build_artwork.py:226:61 — (0.36, (209, 209, 209)) (α 255)</li><li>source code/build_subwindows.py:34:32 — gradient(frame, (0.4, 0.4, 159, 159), (209, 209, 209, 255), (154, 154, 154, 255), 4, 0.5) (α 255)</li><li>source code/build_subwindows.py:60:10 — ((209, 209, 209, 255), (170, 170, 170, 255)) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C111" data-rgb="221,221,221" data-search="C111 #DDDDDD Neutral / cool metal source code/build_artwork.py:58:84 — {&#x27;seek-normal&#x27;: (237, 237, 237), &#x27;seek-hover&#x27;: (237, 237, 237), &#x27;seek-down&#x27;: (221, 221, 221)} (α 255) source code/build_artwork.py:141:121 — (1, (221, 221, 221)) (α 255) source code/build_artwork.py:254:86 — (237, 237, 237) if state == &#x27;hover&#x27; else (221, 221, 221) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#DDDDDD" aria-hidden="true"></span><div><a class="id" href="#C111">C111</a><h4><code>#DDDDDD</code></h4></div></div>
+<p class="muted">RGB 221, 221, 221<br>Opaque</p>
+<p class="usage">PNG 3 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:58:84 — {&#x27;seek-normal&#x27;: (237, 237, 237), &#x27;seek-hover&#x27;: (237, 237, 237), &#x27;seek-down&#x27;: (221, 221, 221)} (α 255)</li><li>source code/build_artwork.py:141:121 — (1, (221, 221, 221)) (α 255)</li><li>source code/build_artwork.py:254:86 — (237, 237, 237) if state == &#x27;hover&#x27; else (221, 221, 221) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C129" data-rgb="237,237,237" data-search="C129 #EDEDED Neutral / cool metal source code/build_artwork.py:58:23 — {&#x27;seek-normal&#x27;: (237, 237, 237), &#x27;seek-hover&#x27;: (237, 237, 237), &#x27;seek-down&#x27;: (221, 221, 221)} (α 255) source code/build_artwork.py:58:54 — {&#x27;seek-normal&#x27;: (237, 237, 237), &#x27;seek-hover&#x27;: (237, 237, 237), &#x27;seek-down&#x27;: (221, 221, 221)} (α 255) source code/build_artwork.py:79:41 — line(chrome_lighting, [(3, 1.1), (W - 4, 1.1)], (237, 237, 237, 220), 0.7) (α 220) source code/build_artwork.py:141:34 — (0.42, (237, 237, 237)) (α 255) source code/build_artwork.py:141:56 — (0.49, (237, 237, 237)) (α 255) source code/build_artwork.py:216:39 — poly(im, [(3.3, 2.3), (3.3, 6.3), (6, 4.3)], (237, 237, 237, 255)) (α 255) source code/build_artwork.py:226:135 — (0.84, (237, 237, 237)) (α 255) source code/build_artwork.py:254:6 — (237, 237, 237) if state == &#x27;normal&#x27; else (237, 237, 237) if state == &#x27;hover&#x27; else (221, 221, 221) (α 255) source code/build_artwork.py:254:47 — (237, 237, 237) if state == &#x27;hover&#x27; else (221, 221, 221) (α 255) source code/build_subwindows.py:36:32 — line(frame, [(3, 1.1), (156, 1.1)], (237, 237, 237, 220), 0.7) (α 220) source code/build_subwindows.py:58:12 — ((237, 237, 237, 255), (180, 180, 180, 255)) (α 255) source code/build_subwindows.py:87:42 — line(resize, [(2.1 + i, 12.1), (12.1, 2.1 + i)], (237, 237, 237, 180), 0.7) (α 180) XML palette — elements/wasabi.list.column.frame.top (α 255) XML palette — elements/wasabi.panel.upperleft (α 255) XML palette — elements/wasabi.objectframe.lowerright (α 255) XML palette — elements/wasabi.window.embedded.lowerright (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#EDEDED" aria-hidden="true"></span><div><a class="id" href="#C129">C129</a><h4><code>#EDEDED</code></h4></div></div>
+<p class="muted">RGB 237, 237, 237<br>α 180, 220, 255</p>
+<p class="usage">PNG 12 · Palette 4 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:58:23 — {&#x27;seek-normal&#x27;: (237, 237, 237), &#x27;seek-hover&#x27;: (237, 237, 237), &#x27;seek-down&#x27;: (221, 221, 221)} (α 255)</li><li>source code/build_artwork.py:58:54 — {&#x27;seek-normal&#x27;: (237, 237, 237), &#x27;seek-hover&#x27;: (237, 237, 237), &#x27;seek-down&#x27;: (221, 221, 221)} (α 255)</li><li>source code/build_artwork.py:79:41 — line(chrome_lighting, [(3, 1.1), (W - 4, 1.1)], (237, 237, 237, 220), 0.7) (α 220)</li><li>source code/build_artwork.py:141:34 — (0.42, (237, 237, 237)) (α 255)</li><li>source code/build_artwork.py:141:56 — (0.49, (237, 237, 237)) (α 255)</li><li>source code/build_artwork.py:216:39 — poly(im, [(3.3, 2.3), (3.3, 6.3), (6, 4.3)], (237, 237, 237, 255)) (α 255)</li><li>source code/build_artwork.py:226:135 — (0.84, (237, 237, 237)) (α 255)</li><li>source code/build_artwork.py:254:6 — (237, 237, 237) if state == &#x27;normal&#x27; else (237, 237, 237) if state == &#x27;hover&#x27; else (221, 221, 221) (α 255)</li><li>source code/build_artwork.py:254:47 — (237, 237, 237) if state == &#x27;hover&#x27; else (221, 221, 221) (α 255)</li><li>source code/build_subwindows.py:36:32 — line(frame, [(3, 1.1), (156, 1.1)], (237, 237, 237, 220), 0.7) (α 220)</li><li>source code/build_subwindows.py:58:12 — ((237, 237, 237, 255), (180, 180, 180, 255)) (α 255)</li><li>source code/build_subwindows.py:87:42 — line(resize, [(2.1 + i, 12.1), (12.1, 2.1 + i)], (237, 237, 237, 180), 0.7) (α 180)</li><li>XML palette — elements/wasabi.list.column.frame.top (α 255)</li><li>XML palette — elements/wasabi.panel.upperleft (α 255)</li><li>XML palette — elements/wasabi.objectframe.lowerright (α 255)</li><li>XML palette — elements/wasabi.window.embedded.lowerright (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C131" data-rgb="250,250,250" data-search="C131 #FAFAFA Neutral / cool metal source code/build_artwork.py:86:44 — line(volume_glint, [(42.5, 49.3), (89.5, 49.3)], (250, 250, 250, 131), 1) (α 131) source code/build_artwork.py:141:12 — (0, (250, 250, 250)) (α 255) source code/build_artwork.py:141:79 — (0.515, (250, 250, 250)) (α 255) source code/build_artwork.py:141:101 — (0.6, (250, 250, 250)) (α 255) source code/build_artwork.py:156:72 — fill=(250, 250, 250, 220) (α 220) source code/build_artwork.py:226:12 — (0, (250, 250, 250)) (α 255) source code/build_artwork.py:226:36 — (0.2, (250, 250, 250)) (α 255) source code/build_subwindows.py:59:11 — ((250, 250, 250, 255), (198, 198, 198, 255)) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#FAFAFA" aria-hidden="true"></span><div><a class="id" href="#C131">C131</a><h4><code>#FAFAFA</code></h4></div></div>
+<p class="muted">RGB 250, 250, 250<br>α 131, 220, 255</p>
+<p class="usage">PNG 8 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:86:44 — line(volume_glint, [(42.5, 49.3), (89.5, 49.3)], (250, 250, 250, 131), 1) (α 131)</li><li>source code/build_artwork.py:141:12 — (0, (250, 250, 250)) (α 255)</li><li>source code/build_artwork.py:141:79 — (0.515, (250, 250, 250)) (α 255)</li><li>source code/build_artwork.py:141:101 — (0.6, (250, 250, 250)) (α 255)</li><li>source code/build_artwork.py:156:72 — fill=(250, 250, 250, 220) (α 220)</li><li>source code/build_artwork.py:226:12 — (0, (250, 250, 250)) (α 255)</li><li>source code/build_artwork.py:226:36 — (0.2, (250, 250, 250)) (α 255)</li><li>source code/build_subwindows.py:59:11 — ((250, 250, 250, 255), (198, 198, 198, 255)) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C061" data-rgb="255,255,255" data-search="C061 #FFFFFF Neutral / cool metal XML palette — elements/wasabi.list.text.selected (α 255) XML palette — elements/wasabi.button.hiliteText (α 255) XML palette — elements/wasabi.text.color.inverse (α 255) XML palette — elements/wasabi.popup.hiliteText (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#FFFFFF" aria-hidden="true"></span><div><a class="id" href="#C061">C061</a><h4><code>#FFFFFF</code></h4></div></div>
+<p class="muted">RGB 255, 255, 255<br>Opaque</p>
+<p class="usage">PNG 0 · Palette 4 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>XML palette — elements/wasabi.list.text.selected (α 255)</li><li>XML palette — elements/wasabi.button.hiliteText (α 255)</li><li>XML palette — elements/wasabi.text.color.inverse (α 255)</li><li>XML palette — elements/wasabi.popup.hiliteText (α 255)</li></ul></details>
+</article>
+</div></section>
+<section class="filter-group"><h3>Red <span class="count">1</span></h3><div class="color-grid">
+<article class="color-card" id="C062" data-rgb="204,42,25" data-search="C062 #CC2A19 Red source code/build_artwork.py:171:32 — (&#x27;close&#x27;, (204, 42, 25), &#x27;x&#x27;) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#CC2A19" aria-hidden="true"></span><div><a class="id" href="#C062">C062</a><h4><code>#CC2A19</code></h4></div></div>
+<p class="muted">RGB 204, 42, 25<br>Opaque</p>
+<p class="usage">PNG 1 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:171:32 — (&#x27;close&#x27;, (204, 42, 25), &#x27;x&#x27;) (α 255)</li></ul></details>
+</article>
+</div></section>
+<section class="filter-group"><h3>Amber / gold <span class="count">2</span></h3><div class="color-grid">
+<article class="color-card" id="C063" data-rgb="68,60,39" data-search="C063 #443C27 Amber / gold source code/build_artwork.py:188:5 — c = (68, 60, 39, 255) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#443C27" aria-hidden="true"></span><div><a class="id" href="#C063">C063</a><h4><code>#443C27</code></h4></div></div>
+<p class="muted">RGB 68, 60, 39<br>Opaque</p>
+<p class="usage">PNG 1 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:188:5 — c = (68, 60, 39, 255) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C064" data-rgb="213,160,30" data-search="C064 #D5A01E Amber / gold source code/build_artwork.py:171:61 — (&#x27;minimize&#x27;, (213, 160, 30), &#x27;-&#x27;) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#D5A01E" aria-hidden="true"></span><div><a class="id" href="#C064">C064</a><h4><code>#D5A01E</code></h4></div></div>
+<p class="muted">RGB 213, 160, 30<br>Opaque</p>
+<p class="usage">PNG 1 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:171:61 — (&#x27;minimize&#x27;, (213, 160, 30), &#x27;-&#x27;) (α 255)</li></ul></details>
+</article>
+</div></section>
+<section class="filter-group"><h3>Yellow-green / olive / LCD <span class="count">6</span></h3><div class="color-grid">
+<article class="color-card" id="C066" data-rgb="112,156,47" data-search="C066 #709C2F Yellow-green / olive / LCD source code/build_artwork.py:171:90 — (&#x27;library&#x27;, (112, 156, 47), &#x27;+&#x27;) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#709C2F" aria-hidden="true"></span><div><a class="id" href="#C066">C066</a><h4><code>#709C2F</code></h4></div></div>
+<p class="muted">RGB 112, 156, 47<br>Opaque</p>
+<p class="usage">PNG 1 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:171:90 — (&#x27;library&#x27;, (112, 156, 47), &#x27;+&#x27;) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C067" data-rgb="107,114,96" data-search="C067 #6B7260 Yellow-green / olive / LCD XML UI — Equalizer/eq.scale.60 (α 235) XML UI — Equalizer/eq.scale.98 (α 235) XML UI — Equalizer/eq.scale.135 (α 235)">
+<div class="color-heading"><span class="swatch" style="--swatch:#6B7260" aria-hidden="true"></span><div><a class="id" href="#C067">C067</a><h4><code>#6B7260</code></h4></div></div>
+<p class="muted">RGB 107, 114, 96<br>α 235</p>
+<p class="usage">PNG 0 · Palette 0 · UI 3</p>
+<details><summary>Source references</summary><ul class="references"><li>XML UI — Equalizer/eq.scale.60 (α 235)</li><li>XML UI — Equalizer/eq.scale.98 (α 235)</li><li>XML UI — Equalizer/eq.scale.135 (α 235)</li></ul></details>
+</article>
+<article class="color-card" id="C068" data-rgb="156,166,142" data-search="C068 #9CA68E Yellow-green / olive / LCD XML UI — Equalizer/eq.divider.0 (α 100) XML UI — Equalizer/eq.divider.1 (α 100)">
+<div class="color-heading"><span class="swatch" style="--swatch:#9CA68E" aria-hidden="true"></span><div><a class="id" href="#C068">C068</a><h4><code>#9CA68E</code></h4></div></div>
+<p class="muted">RGB 156, 166, 142<br>α 100</p>
+<p class="usage">PNG 0 · Palette 0 · UI 2</p>
+<details><summary>Source references</summary><ul class="references"><li>XML UI — Equalizer/eq.divider.0 (α 100)</li><li>XML UI — Equalizer/eq.divider.1 (α 100)</li></ul></details>
+</article>
+<article class="color-card" id="C069" data-rgb="178,188,164" data-search="C069 #B2BCA4 Yellow-green / olive / LCD source code/build_subwindows.py:51:27 — gradient(track, (2, 1, 5, 84), (178, 188, 164, 255), (178, 188, 164, 255), 1.5) (α 255) source code/build_subwindows.py:51:45 — gradient(track, (2, 1, 5, 84), (178, 188, 164, 255), (178, 188, 164, 255), 1.5) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#B2BCA4" aria-hidden="true"></span><div><a class="id" href="#C069">C069</a><h4><code>#B2BCA4</code></h4></div></div>
+<p class="muted">RGB 178, 188, 164<br>Opaque</p>
+<p class="usage">PNG 2 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_subwindows.py:51:27 — gradient(track, (2, 1, 5, 84), (178, 188, 164, 255), (178, 188, 164, 255), 1.5) (α 255)</li><li>source code/build_subwindows.py:51:45 — gradient(track, (2, 1, 5, 84), (178, 188, 164, 255), (178, 188, 164, 255), 1.5) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C116" data-rgb="209,220,189" data-search="C116 #D1DCBD Yellow-green / olive / LCD source code/build_artwork.py:114:55 — gradient(lcd, (1.3, 1.5, 187.8, 37.5), (235, 239, 221, 255), (209, 220, 189, 255), 2) (α 255) source code/build_subwindows.py:41:60 — gradient(screen, (1.3, 1.5, 157.8, 157.5), (235, 239, 221, 255), (209, 220, 189, 255), 2) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#D1DCBD" aria-hidden="true"></span><div><a class="id" href="#C116">C116</a><h4><code>#D1DCBD</code></h4></div></div>
+<p class="muted">RGB 209, 220, 189<br>Opaque</p>
+<p class="usage">PNG 2 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:114:55 — gradient(lcd, (1.3, 1.5, 187.8, 37.5), (235, 239, 221, 255), (209, 220, 189, 255), 2) (α 255)</li><li>source code/build_subwindows.py:41:60 — gradient(screen, (1.3, 1.5, 157.8, 157.5), (235, 239, 221, 255), (209, 220, 189, 255), 2) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C133" data-rgb="235,239,221" data-search="C133 #EBEFDD Yellow-green / olive / LCD source code/build_artwork.py:114:34 — gradient(lcd, (1.3, 1.5, 187.8, 37.5), (235, 239, 221, 255), (209, 220, 189, 255), 2) (α 255) source code/build_subwindows.py:41:39 — gradient(screen, (1.3, 1.5, 157.8, 157.5), (235, 239, 221, 255), (209, 220, 189, 255), 2) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#EBEFDD" aria-hidden="true"></span><div><a class="id" href="#C133">C133</a><h4><code>#EBEFDD</code></h4></div></div>
+<p class="muted">RGB 235, 239, 221<br>Opaque</p>
+<p class="usage">PNG 2 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_artwork.py:114:34 — gradient(lcd, (1.3, 1.5, 187.8, 37.5), (235, 239, 221, 255), (209, 220, 189, 255), 2) (α 255)</li><li>source code/build_subwindows.py:41:39 — gradient(screen, (1.3, 1.5, 157.8, 157.5), (235, 239, 221, 255), (209, 220, 189, 255), 2) (α 255)</li></ul></details>
+</article>
+</div></section>
+<section class="filter-group"><h3>Blue / Aqua <span class="count">5</span></h3><div class="color-grid">
+<article class="color-card" id="C140" data-rgb="99,125,159" data-search="C140 #637D9F Blue / Aqua XML palette — elements/wasabi.list.text.current (α 255) XML palette — elements/pledit.current (α 255) XML palette — elements/wasabi.itemlist.outline.current (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#637D9F" aria-hidden="true"></span><div><a class="id" href="#C140">C140</a><h4><code>#637D9F</code></h4></div></div>
+<p class="muted">RGB 99, 125, 159<br>Opaque</p>
+<p class="usage">PNG 0 · Palette 3 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>XML palette — elements/wasabi.list.text.current (α 255)</li><li>XML palette — elements/pledit.current (α 255)</li><li>XML palette — elements/wasabi.itemlist.outline.current (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C135" data-rgb="52,136,234" data-search="C135 #3488EA Blue / Aqua XML palette — elements/wasabi.list.text.selected.background (α 255) XML palette — elements/studio.list.item.selected (α 255) XML palette — elements/studio.list.item.focused (α 255) XML palette — elements/wasabi.scrollbar.foreground (α 255) XML palette — elements/wasabi.scrollbar.background.inverted (α 255) XML palette — elements/wasabi.tree.selected (α 255) XML palette — elements/pledit.selected (α 255) XML palette — elements/wasabi.tree.hiliteddrop (α 255) XML palette — elements/wasabi.itemlist.outline.focus (α 255) XML palette — elements/wasabi.itemlist.selborder (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#3488EA" aria-hidden="true"></span><div><a class="id" href="#C135">C135</a><h4><code>#3488EA</code></h4></div></div>
+<p class="muted">RGB 52, 136, 234<br>Opaque</p>
+<p class="usage">PNG 0 · Palette 10 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>XML palette — elements/wasabi.list.text.selected.background (α 255)</li><li>XML palette — elements/studio.list.item.selected (α 255)</li><li>XML palette — elements/studio.list.item.focused (α 255)</li><li>XML palette — elements/wasabi.scrollbar.foreground (α 255)</li><li>XML palette — elements/wasabi.scrollbar.background.inverted (α 255)</li><li>XML palette — elements/wasabi.tree.selected (α 255)</li><li>XML palette — elements/pledit.selected (α 255)</li><li>XML palette — elements/wasabi.tree.hiliteddrop (α 255)</li><li>XML palette — elements/wasabi.itemlist.outline.focus (α 255)</li><li>XML palette — elements/wasabi.itemlist.selborder (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C085" data-rgb="139,180,216" data-search="C085 #8BB4D8 Blue / Aqua source code/build_subwindows.py:61:30 — ((214, 232, 247, 255), (139, 180, 216, 255)) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#8BB4D8" aria-hidden="true"></span><div><a class="id" href="#C085">C085</a><h4><code>#8BB4D8</code></h4></div></div>
+<p class="muted">RGB 139, 180, 216<br>Opaque</p>
+<p class="usage">PNG 1 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_subwindows.py:61:30 — ((214, 232, 247, 255), (139, 180, 216, 255)) (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C136" data-rgb="212,218,230" data-search="C136 #D4DAE6 Blue / Aqua source code/build_subwindows.py:46:39 — gradient(screen, (1.3, 1.5, 157.8, 157.5), (212, 218, 230, 255), (212, 218, 230, 255), 2) (α 255) source code/build_subwindows.py:46:57 — gradient(screen, (1.3, 1.5, 157.8, 157.5), (212, 218, 230, 255), (212, 218, 230, 255), 2) (α 255) XML palette — elements/wasabi.list.background (α 255) XML palette — elements/wasabi.list.background.alternate (α 255) XML palette — elements/wasabi.scrollbar.background (α 255) XML palette — elements/wasabi.scrollbar.foreground.inverted (α 255) XML palette — elements/wasabi.edit.background (α 255) XML palette — elements/wasabi.tree.background (α 255) XML palette — elements/pledit.background (α 255) XML palette — elements/wasabi.objectframe.inside (α 255) XML palette — elements/wasabi.window.embedded.inside (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#D4DAE6" aria-hidden="true"></span><div><a class="id" href="#C136">C136</a><h4><code>#D4DAE6</code></h4></div></div>
+<p class="muted">RGB 212, 218, 230<br>Opaque</p>
+<p class="usage">PNG 2 · Palette 9 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_subwindows.py:46:39 — gradient(screen, (1.3, 1.5, 157.8, 157.5), (212, 218, 230, 255), (212, 218, 230, 255), 2) (α 255)</li><li>source code/build_subwindows.py:46:57 — gradient(screen, (1.3, 1.5, 157.8, 157.5), (212, 218, 230, 255), (212, 218, 230, 255), 2) (α 255)</li><li>XML palette — elements/wasabi.list.background (α 255)</li><li>XML palette — elements/wasabi.list.background.alternate (α 255)</li><li>XML palette — elements/wasabi.scrollbar.background (α 255)</li><li>XML palette — elements/wasabi.scrollbar.foreground.inverted (α 255)</li><li>XML palette — elements/wasabi.edit.background (α 255)</li><li>XML palette — elements/wasabi.tree.background (α 255)</li><li>XML palette — elements/pledit.background (α 255)</li><li>XML palette — elements/wasabi.objectframe.inside (α 255)</li><li>XML palette — elements/wasabi.window.embedded.inside (α 255)</li></ul></details>
+</article>
+<article class="color-card" id="C091" data-rgb="214,232,247" data-search="C091 #D6E8F7 Blue / Aqua source code/build_subwindows.py:61:12 — ((214, 232, 247, 255), (139, 180, 216, 255)) (α 255)">
+<div class="color-heading"><span class="swatch" style="--swatch:#D6E8F7" aria-hidden="true"></span><div><a class="id" href="#C091">C091</a><h4><code>#D6E8F7</code></h4></div></div>
+<p class="muted">RGB 214, 232, 247<br>Opaque</p>
+<p class="usage">PNG 1 · Palette 0 · UI 0</p>
+<details><summary>Source references</summary><ul class="references"><li>source code/build_subwindows.py:61:12 — ((214, 232, 247, 255), (139, 180, 216, 255)) (α 255)</li></ul></details>
+</article>
+</div></section>
+</section><section id="palette"><h2>Winamp palette</h2>
+<p class="muted">47 slots · 47 assigned · 0 unassigned. Unverified names come from iPlay; assignment does not establish host support.</p>
+<section class="filter-group"><h3>Text</h3><div class="palette-rows">
+<article class="palette-row" id="P001" data-palette-role="wasabi.text.color" data-verified="true" data-declared="true" data-search="P001 wasabi.text.color General foreground text  C139 #000000">
+<a class="id" href="#P001">P001</a><div class="role">
+<code>wasabi.text.color</code>
+<p class="muted">General foreground text</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>General foreground text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#000000" aria-hidden="true"></span><a href="#C139">C139</a> <code>#000000</code>
+</div></article>
+<article class="palette-row" id="P002" data-palette-role="wasabi.text.color.inverse" data-verified="true" data-declared="true" data-search="P002 wasabi.text.color.inverse Inverse foreground text  C061 #FFFFFF">
+<a class="id" href="#P002">P002</a><div class="role">
+<code>wasabi.text.color.inverse</code>
+<p class="muted">Inverse foreground text</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Inverse foreground text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#FFFFFF" aria-hidden="true"></span><a href="#C061">C061</a> <code>#FFFFFF</code>
+</div></article>
+</div></section>
+<section class="filter-group"><h3>Trees</h3><div class="palette-rows">
+<article class="palette-row" id="P003" data-palette-role="wasabi.tree.text" data-verified="true" data-declared="true" data-search="P003 wasabi.tree.text Tree item labels  C139 #000000">
+<a class="id" href="#P003">P003</a><div class="role">
+<code>wasabi.tree.text</code>
+<p class="muted">Tree item labels</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Tree item labels</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#000000" aria-hidden="true"></span><a href="#C139">C139</a> <code>#000000</code>
+</div></article>
+<article class="palette-row" id="P004" data-palette-role="wasabi.tree.selected" data-verified="true" data-declared="true" data-search="P004 wasabi.tree.selected Tree selection fill  C135 #3488EA">
+<a class="id" href="#P004">P004</a><div class="role">
+<code>wasabi.tree.selected</code>
+<p class="muted">Tree selection fill</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Tree selection fill</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#3488EA" aria-hidden="true"></span><a href="#C135">C135</a> <code>#3488EA</code>
+</div></article>
+<article class="palette-row" id="P005" data-palette-role="wasabi.tree.hiliteddrop" data-verified="true" data-declared="true" data-search="P005 wasabi.tree.hiliteddrop Tree drag-and-drop marker  C135 #3488EA">
+<a class="id" href="#P005">P005</a><div class="role">
+<code>wasabi.tree.hiliteddrop</code>
+<p class="muted">Tree drag-and-drop marker</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Tree drag-and-drop marker</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#3488EA" aria-hidden="true"></span><a href="#C135">C135</a> <code>#3488EA</code>
+</div></article>
+</div></section>
+<section class="filter-group"><h3>Lists</h3><div class="palette-rows">
+<article class="palette-row" id="P006" data-palette-role="wasabi.list.text" data-verified="true" data-declared="true" data-search="P006 wasabi.list.text Normal row text NP list/tree text C139 #000000">
+<a class="id" href="#P006">P006</a><div class="role">
+<code>wasabi.list.text</code>
+<p class="muted">NP list/tree text</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Normal row text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#000000" aria-hidden="true"></span><a href="#C139">C139</a> <code>#000000</code>
+</div></article>
+<article class="palette-row" id="P007" data-palette-role="wasabi.list.background" data-verified="true" data-declared="true" data-search="P007 wasabi.list.background List content fill NP Library / EQ Studio fill C136 #D4DAE6">
+<a class="id" href="#P007">P007</a><div class="role">
+<code>wasabi.list.background</code>
+<p class="muted">NP Library / EQ Studio fill</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>List content fill</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#D4DAE6" aria-hidden="true"></span><a href="#C136">C136</a> <code>#D4DAE6</code>
+</div></article>
+<article class="palette-row" id="P008" data-palette-role="wasabi.list.text.selected" data-verified="true" data-declared="true" data-search="P008 wasabi.list.text.selected Selected row text NP selected-text candidate C061 #FFFFFF">
+<a class="id" href="#P008">P008</a><div class="role">
+<code>wasabi.list.text.selected</code>
+<p class="muted">NP selected-text candidate</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Selected row text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#FFFFFF" aria-hidden="true"></span><a href="#C061">C061</a> <code>#FFFFFF</code>
+</div></article>
+<article class="palette-row" id="P009" data-palette-role="wasabi.list.text.selected.background" data-verified="true" data-declared="true" data-search="P009 wasabi.list.text.selected.background Selected row fill  C135 #3488EA">
+<a class="id" href="#P009">P009</a><div class="role">
+<code>wasabi.list.text.selected.background</code>
+<p class="muted">Selected row fill</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Selected row fill</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#3488EA" aria-hidden="true"></span><a href="#C135">C135</a> <code>#3488EA</code>
+</div></article>
+<article class="palette-row" id="P010" data-palette-role="studio.list.item.selected" data-verified="true" data-declared="true" data-search="P010 studio.list.item.selected Legacy selection fill NP selection / tree fill C135 #3488EA">
+<a class="id" href="#P010">P010</a><div class="role">
+<code>studio.list.item.selected</code>
+<p class="muted">NP selection / tree fill</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Legacy selection fill</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#3488EA" aria-hidden="true"></span><a href="#C135">C135</a> <code>#3488EA</code>
+</div></article>
+<article class="palette-row" id="P011" data-palette-role="studio.list.item.focused" data-verified="true" data-declared="true" data-search="P011 studio.list.item.focused Legacy focused-row fill  C135 #3488EA">
+<a class="id" href="#P011">P011</a><div class="role">
+<code>studio.list.item.focused</code>
+<p class="muted">Legacy focused-row fill</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Legacy focused-row fill</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#3488EA" aria-hidden="true"></span><a href="#C135">C135</a> <code>#3488EA</code>
+</div></article>
+<article class="palette-row" id="P012" data-palette-role="wasabi.list.text.current" data-verified="true" data-declared="true" data-search="P012 wasabi.list.text.current Current / playing row text NP labels / playing row C140 #637D9F">
+<a class="id" href="#P012">P012</a><div class="role">
+<code>wasabi.list.text.current</code>
+<p class="muted">NP labels / playing row</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Current / playing row text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#637D9F" aria-hidden="true"></span><a href="#C140">C140</a> <code>#637D9F</code>
+</div></article>
+<article class="palette-row" id="P013" data-palette-role="wasabi.list.text.selected.inactive" data-verified="true" data-declared="true" data-search="P013 wasabi.list.text.selected.inactive Inactive selected-row text  C139 #000000">
+<a class="id" href="#P013">P013</a><div class="role">
+<code>wasabi.list.text.selected.inactive</code>
+<p class="muted">Inactive selected-row text</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Inactive selected-row text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#000000" aria-hidden="true"></span><a href="#C139">C139</a> <code>#000000</code>
+</div></article>
+<article class="palette-row" id="P014" data-palette-role="wasabi.list.text.selected.background.inactive" data-verified="true" data-declared="true" data-search="P014 wasabi.list.text.selected.background.inactive Inactive selected-row fill  C143 #C0C0C0">
+<a class="id" href="#P014">P014</a><div class="role">
+<code>wasabi.list.text.selected.background.inactive</code>
+<p class="muted">Inactive selected-row fill</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Inactive selected-row fill</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#C0C0C0" aria-hidden="true"></span><a href="#C143">C143</a> <code>#C0C0C0</code>
+</div></article>
+<article class="palette-row" id="P015" data-palette-role="wasabi.list.column.background" data-verified="true" data-declared="true" data-search="P015 wasabi.list.column.background Column header fill  C037 #C6C6C6">
+<a class="id" href="#P015">P015</a><div class="role">
+<code>wasabi.list.column.background</code>
+<p class="muted">Column header fill</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Column header fill</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#C6C6C6" aria-hidden="true"></span><a href="#C037">C037</a> <code>#C6C6C6</code>
+</div></article>
+<article class="palette-row" id="P016" data-palette-role="wasabi.list.column.text" data-verified="true" data-declared="true" data-search="P016 wasabi.list.column.text Column header text  C147 #595959">
+<a class="id" href="#P016">P016</a><div class="role">
+<code>wasabi.list.column.text</code>
+<p class="muted">Column header text</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Column header text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#595959" aria-hidden="true"></span><a href="#C147">C147</a> <code>#595959</code>
+</div></article>
+<article class="palette-row" id="P017" data-palette-role="wasabi.list.column.frame.top" data-verified="true" data-declared="true" data-search="P017 wasabi.list.column.frame.top Header top edge  C129 #EDEDED">
+<a class="id" href="#P017">P017</a><div class="role">
+<code>wasabi.list.column.frame.top</code>
+<p class="muted">Header top edge</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Header top edge</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#EDEDED" aria-hidden="true"></span><a href="#C129">C129</a> <code>#EDEDED</code>
+</div></article>
+<article class="palette-row" id="P018" data-palette-role="wasabi.list.column.frame.middle" data-verified="true" data-declared="true" data-search="P018 wasabi.list.column.frame.middle Header middle edge  C126 #B4B4B4">
+<a class="id" href="#P018">P018</a><div class="role">
+<code>wasabi.list.column.frame.middle</code>
+<p class="muted">Header middle edge</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Header middle edge</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#B4B4B4" aria-hidden="true"></span><a href="#C126">C126</a> <code>#B4B4B4</code>
+</div></article>
+<article class="palette-row" id="P019" data-palette-role="wasabi.list.column.frame.bottom" data-verified="true" data-declared="true" data-search="P019 wasabi.list.column.frame.bottom Header bottom edge  C124 #8F8F8F">
+<a class="id" href="#P019">P019</a><div class="role">
+<code>wasabi.list.column.frame.bottom</code>
+<p class="muted">Header bottom edge</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Header bottom edge</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#8F8F8F" aria-hidden="true"></span><a href="#C124">C124</a> <code>#8F8F8F</code>
+</div></article>
+<article class="palette-row" id="P020" data-palette-role="wasabi.list.column.empty" data-verified="true" data-declared="true" data-search="P020 wasabi.list.column.empty Unused header area  C037 #C6C6C6">
+<a class="id" href="#P020">P020</a><div class="role">
+<code>wasabi.list.column.empty</code>
+<p class="muted">Unused header area</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Unused header area</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#C6C6C6" aria-hidden="true"></span><a href="#C037">C037</a> <code>#C6C6C6</code>
+</div></article>
+<article class="palette-row" id="P021" data-palette-role="wasabi.list.column.separator" data-verified="true" data-declared="true" data-search="P021 wasabi.list.column.separator Column separator line  C126 #B4B4B4">
+<a class="id" href="#P021">P021</a><div class="role">
+<code>wasabi.list.column.separator</code>
+<p class="muted">Column separator line</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Column separator line</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#B4B4B4" aria-hidden="true"></span><a href="#C126">C126</a> <code>#B4B4B4</code>
+</div></article>
+</div></section>
+<section class="filter-group"><h3>Item outlines</h3><div class="palette-rows">
+<article class="palette-row" id="P022" data-palette-role="wasabi.itemlist.outline.current" data-verified="true" data-declared="true" data-search="P022 wasabi.itemlist.outline.current Current-item outline  C140 #637D9F">
+<a class="id" href="#P022">P022</a><div class="role">
+<code>wasabi.itemlist.outline.current</code>
+<p class="muted">Current-item outline</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Current-item outline</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#637D9F" aria-hidden="true"></span><a href="#C140">C140</a> <code>#637D9F</code>
+</div></article>
+<article class="palette-row" id="P023" data-palette-role="wasabi.itemlist.outline.focus" data-verified="true" data-declared="true" data-search="P023 wasabi.itemlist.outline.focus Keyboard-focus outline  C135 #3488EA">
+<a class="id" href="#P023">P023</a><div class="role">
+<code>wasabi.itemlist.outline.focus</code>
+<p class="muted">Keyboard-focus outline</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Keyboard-focus outline</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#3488EA" aria-hidden="true"></span><a href="#C135">C135</a> <code>#3488EA</code>
+</div></article>
+<article class="palette-row" id="P024" data-palette-role="wasabi.itemlist.selborder" data-verified="true" data-declared="true" data-search="P024 wasabi.itemlist.selborder Selection border  C135 #3488EA">
+<a class="id" href="#P024">P024</a><div class="role">
+<code>wasabi.itemlist.selborder</code>
+<p class="muted">Selection border</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Selection border</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#3488EA" aria-hidden="true"></span><a href="#C135">C135</a> <code>#3488EA</code>
+</div></article>
+</div></section>
+<section class="filter-group"><h3>Windows / scrollbars</h3><div class="palette-rows">
+<article class="palette-row" id="P025" data-palette-role="wasabi.window.background" data-verified="true" data-declared="true" data-search="P025 wasabi.window.background General window fill  C036 #BDBDBD">
+<a class="id" href="#P025">P025</a><div class="role">
+<code>wasabi.window.background</code>
+<p class="muted">General window fill</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>General window fill</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#BDBDBD" aria-hidden="true"></span><a href="#C036">C036</a> <code>#BDBDBD</code>
+</div></article>
+<article class="palette-row" id="P026" data-palette-role="wasabi.window.text" data-verified="true" data-declared="true" data-search="P026 wasabi.window.text General window text  C147 #595959">
+<a class="id" href="#P026">P026</a><div class="role">
+<code>wasabi.window.text</code>
+<p class="muted">General window text</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>General window text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#595959" aria-hidden="true"></span><a href="#C147">C147</a> <code>#595959</code>
+</div></article>
+<article class="palette-row" id="P027" data-palette-role="wasabi.border.sunken" data-verified="true" data-declared="true" data-search="P027 wasabi.border.sunken Recessed divider color  C123 #7A7A7A">
+<a class="id" href="#P027">P027</a><div class="role">
+<code>wasabi.border.sunken</code>
+<p class="muted">Recessed divider color</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Recessed divider color</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#7A7A7A" aria-hidden="true"></span><a href="#C123">C123</a> <code>#7A7A7A</code>
+</div></article>
+<article class="palette-row" id="P028" data-palette-role="wasabi.scrollbar.foreground" data-verified="true" data-declared="true" data-search="P028 wasabi.scrollbar.foreground Scrollbar foreground  C135 #3488EA">
+<a class="id" href="#P028">P028</a><div class="role">
+<code>wasabi.scrollbar.foreground</code>
+<p class="muted">Scrollbar foreground</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Scrollbar foreground</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#3488EA" aria-hidden="true"></span><a href="#C135">C135</a> <code>#3488EA</code>
+</div></article>
+<article class="palette-row" id="P029" data-palette-role="wasabi.scrollbar.background" data-verified="true" data-declared="true" data-search="P029 wasabi.scrollbar.background Scrollbar background  C136 #D4DAE6">
+<a class="id" href="#P029">P029</a><div class="role">
+<code>wasabi.scrollbar.background</code>
+<p class="muted">Scrollbar background</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Scrollbar background</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#D4DAE6" aria-hidden="true"></span><a href="#C136">C136</a> <code>#D4DAE6</code>
+</div></article>
+<article class="palette-row" id="P030" data-palette-role="wasabi.scrollbar.foreground.inverted" data-verified="true" data-declared="true" data-search="P030 wasabi.scrollbar.foreground.inverted Inverted scrollbar foreground  C136 #D4DAE6">
+<a class="id" href="#P030">P030</a><div class="role">
+<code>wasabi.scrollbar.foreground.inverted</code>
+<p class="muted">Inverted scrollbar foreground</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Inverted scrollbar foreground</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#D4DAE6" aria-hidden="true"></span><a href="#C136">C136</a> <code>#D4DAE6</code>
+</div></article>
+<article class="palette-row" id="P031" data-palette-role="wasabi.scrollbar.background.inverted" data-verified="true" data-declared="true" data-search="P031 wasabi.scrollbar.background.inverted Inverted scrollbar background  C135 #3488EA">
+<a class="id" href="#P031">P031</a><div class="role">
+<code>wasabi.scrollbar.background.inverted</code>
+<p class="muted">Inverted scrollbar background</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Inverted scrollbar background</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#3488EA" aria-hidden="true"></span><a href="#C135">C135</a> <code>#3488EA</code>
+</div></article>
+<article class="palette-row" id="P047" data-palette-role="wasabi.edit.background" data-verified="true" data-declared="true" data-search="P047 wasabi.edit.background Edit-field fill NP text-field fill C136 #D4DAE6">
+<a class="id" href="#P047">P047</a><div class="role">
+<code>wasabi.edit.background</code>
+<p class="muted">NP text-field fill</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Edit-field fill</li><li>Previous dictionary / NullPlayer edit-field mapping</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#D4DAE6" aria-hidden="true"></span><a href="#C136">C136</a> <code>#D4DAE6</code>
+</div></article>
+</div></section>
+<section class="filter-group"><h3>Buttons</h3><div class="palette-rows">
+<article class="palette-row" id="P032" data-palette-role="wasabi.button.text" data-verified="true" data-declared="true" data-search="P032 wasabi.button.text Normal button text  C147 #595959">
+<a class="id" href="#P032">P032</a><div class="role">
+<code>wasabi.button.text</code>
+<p class="muted">Normal button text</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Normal button text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#595959" aria-hidden="true"></span><a href="#C147">C147</a> <code>#595959</code>
+</div></article>
+<article class="palette-row" id="P033" data-palette-role="wasabi.button.hiliteText" data-verified="true" data-declared="true" data-search="P033 wasabi.button.hiliteText Highlighted button / tab text  C061 #FFFFFF">
+<a class="id" href="#P033">P033</a><div class="role">
+<code>wasabi.button.hiliteText</code>
+<p class="muted">Highlighted button / tab text</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Highlighted button / tab text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#FFFFFF" aria-hidden="true"></span><a href="#C061">C061</a> <code>#FFFFFF</code>
+</div></article>
+<article class="palette-row" id="P034" data-palette-role="wasabi.button.dimmedText" data-verified="true" data-declared="true" data-search="P034 wasabi.button.dimmedText Disabled button text  C095 #858585">
+<a class="id" href="#P034">P034</a><div class="role">
+<code>wasabi.button.dimmedText</code>
+<p class="muted">Disabled button text</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Disabled button text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#858585" aria-hidden="true"></span><a href="#C095">C095</a> <code>#858585</code>
+</div></article>
+</div></section>
+<section class="filter-group"><h3>Popup menus</h3><div class="palette-rows">
+<article class="palette-row" id="P035" data-palette-role="wasabi.popup.text" data-verified="true" data-declared="true" data-search="P035 wasabi.popup.text Normal popup item text  C139 #000000">
+<a class="id" href="#P035">P035</a><div class="role">
+<code>wasabi.popup.text</code>
+<p class="muted">Normal popup item text</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Normal popup item text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#000000" aria-hidden="true"></span><a href="#C139">C139</a> <code>#000000</code>
+</div></article>
+<article class="palette-row" id="P036" data-palette-role="wasabi.popup.hiliteText" data-verified="true" data-declared="true" data-search="P036 wasabi.popup.hiliteText Highlighted popup item text  C061 #FFFFFF">
+<a class="id" href="#P036">P036</a><div class="role">
+<code>wasabi.popup.hiliteText</code>
+<p class="muted">Highlighted popup item text</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Highlighted popup item text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#FFFFFF" aria-hidden="true"></span><a href="#C061">C061</a> <code>#FFFFFF</code>
+</div></article>
+<article class="palette-row" id="P037" data-palette-role="wasabi.popup.dimmedText" data-verified="true" data-declared="true" data-search="P037 wasabi.popup.dimmedText Disabled popup item text  C095 #858585">
+<a class="id" href="#P037">P037</a><div class="role">
+<code>wasabi.popup.dimmedText</code>
+<p class="muted">Disabled popup item text</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Disabled popup item text</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Verified against pinned Winamp color definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#858585" aria-hidden="true"></span><a href="#C095">C095</a> <code>#858585</code>
+</div></article>
+</div></section>
+<section class="filter-group"><h3>Panel Bevels</h3><div class="palette-rows">
+<article class="palette-row" id="P038" data-palette-role="wasabi.panel.outerrect" data-verified="false" data-declared="true" data-search="P038 wasabi.panel.outerrect Panel outer outline (unverified)  C124 #8F8F8F">
+<a class="id" href="#P038">P038</a><div class="role">
+<code>wasabi.panel.outerrect</code>
+<p class="muted">Panel outer outline</p>
+<p class="unverified">Unverified name</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Panel outer outline (unverified)</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Not verified in the checked official definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#8F8F8F" aria-hidden="true"></span><a href="#C124">C124</a> <code>#8F8F8F</code>
+</div></article>
+<article class="palette-row" id="P039" data-palette-role="wasabi.panel.upperleft" data-verified="false" data-declared="true" data-search="P039 wasabi.panel.upperleft Panel upper-left bevel (unverified)  C129 #EDEDED">
+<a class="id" href="#P039">P039</a><div class="role">
+<code>wasabi.panel.upperleft</code>
+<p class="muted">Panel upper-left bevel</p>
+<p class="unverified">Unverified name</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Panel upper-left bevel (unverified)</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Not verified in the checked official definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#EDEDED" aria-hidden="true"></span><a href="#C129">C129</a> <code>#EDEDED</code>
+</div></article>
+<article class="palette-row" id="P040" data-palette-role="wasabi.panel.lowerright" data-verified="false" data-declared="true" data-search="P040 wasabi.panel.lowerright Panel lower-right bevel (unverified)  C124 #8F8F8F">
+<a class="id" href="#P040">P040</a><div class="role">
+<code>wasabi.panel.lowerright</code>
+<p class="muted">Panel lower-right bevel</p>
+<p class="unverified">Unverified name</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Panel lower-right bevel (unverified)</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Not verified in the checked official definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#8F8F8F" aria-hidden="true"></span><a href="#C124">C124</a> <code>#8F8F8F</code>
+</div></article>
+</div></section>
+<section class="filter-group"><h3>Object Frame</h3><div class="palette-rows">
+<article class="palette-row" id="P041" data-palette-role="wasabi.objectframe.upperleft" data-verified="false" data-declared="true" data-search="P041 wasabi.objectframe.upperleft Object-frame upper-left (unverified)  C123 #7A7A7A">
+<a class="id" href="#P041">P041</a><div class="role">
+<code>wasabi.objectframe.upperleft</code>
+<p class="muted">Object-frame upper-left</p>
+<p class="unverified">Unverified name</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Object-frame upper-left (unverified)</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Not verified in the checked official definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#7A7A7A" aria-hidden="true"></span><a href="#C123">C123</a> <code>#7A7A7A</code>
+</div></article>
+<article class="palette-row" id="P042" data-palette-role="wasabi.objectframe.lowerright" data-verified="false" data-declared="true" data-search="P042 wasabi.objectframe.lowerright Object-frame lower-right (unverified)  C129 #EDEDED">
+<a class="id" href="#P042">P042</a><div class="role">
+<code>wasabi.objectframe.lowerright</code>
+<p class="muted">Object-frame lower-right</p>
+<p class="unverified">Unverified name</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Object-frame lower-right (unverified)</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Not verified in the checked official definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#EDEDED" aria-hidden="true"></span><a href="#C129">C129</a> <code>#EDEDED</code>
+</div></article>
+<article class="palette-row" id="P043" data-palette-role="wasabi.objectframe.inside" data-verified="false" data-declared="true" data-search="P043 wasabi.objectframe.inside Object-frame interior (unverified)  C136 #D4DAE6">
+<a class="id" href="#P043">P043</a><div class="role">
+<code>wasabi.objectframe.inside</code>
+<p class="muted">Object-frame interior</p>
+<p class="unverified">Unverified name</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Object-frame interior (unverified)</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Not verified in the checked official definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#D4DAE6" aria-hidden="true"></span><a href="#C136">C136</a> <code>#D4DAE6</code>
+</div></article>
+</div></section>
+<section class="filter-group"><h3>Embedded Window</h3><div class="palette-rows">
+<article class="palette-row" id="P044" data-palette-role="wasabi.window.embedded.upperleft" data-verified="false" data-declared="true" data-search="P044 wasabi.window.embedded.upperleft Embedded upper-left edge (unverified)  C123 #7A7A7A">
+<a class="id" href="#P044">P044</a><div class="role">
+<code>wasabi.window.embedded.upperleft</code>
+<p class="muted">Embedded upper-left edge</p>
+<p class="unverified">Unverified name</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Embedded upper-left edge (unverified)</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Not verified in the checked official definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#7A7A7A" aria-hidden="true"></span><a href="#C123">C123</a> <code>#7A7A7A</code>
+</div></article>
+<article class="palette-row" id="P045" data-palette-role="wasabi.window.embedded.lowerright" data-verified="false" data-declared="true" data-search="P045 wasabi.window.embedded.lowerright Embedded lower-right edge (unverified)  C129 #EDEDED">
+<a class="id" href="#P045">P045</a><div class="role">
+<code>wasabi.window.embedded.lowerright</code>
+<p class="muted">Embedded lower-right edge</p>
+<p class="unverified">Unverified name</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Embedded lower-right edge (unverified)</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Not verified in the checked official definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#EDEDED" aria-hidden="true"></span><a href="#C129">C129</a> <code>#EDEDED</code>
+</div></article>
+<article class="palette-row" id="P046" data-palette-role="wasabi.window.embedded.inside" data-verified="false" data-declared="true" data-search="P046 wasabi.window.embedded.inside Embedded interior (unverified)  C136 #D4DAE6">
+<a class="id" href="#P046">P046</a><div class="role">
+<code>wasabi.window.embedded.inside</code>
+<p class="muted">Embedded interior</p>
+<p class="unverified">Unverified name</p>
+<details><summary>Definition / provenance</summary><ul class="references"><li>Embedded interior (unverified)</li><li>iPlay.wal / xml/elements-colors.xml</li><li>Not verified in the checked official definitions.</li></ul></details>
+</div><div class="assignment">
+<span class="swatch small" style="--swatch:#D4DAE6" aria-hidden="true"></span><a href="#C136">C136</a> <code>#D4DAE6</code>
+</div></article>
+</div></section>
+</section><section id="fonts"><h2>Font sizes</h2><p class="muted">Logical pixels. Main text scales 1–4x; subwindows stay 1x. Samples use locally available fonts.</p>
+<article class="font-card" data-search="10px Elapsed / remaining · EQ XML mini.lcd/time.elapsed (Regular; Lucida Grande) XML mini.lcd/time.remaining (Regular; Lucida Grande) XML Equalizer/eq.preamp.label (Regular; Lucida Grande) XML Equalizer/eq.band.1.label (Regular; Lucida Grande) XML Equalizer/eq.band.2.label (Regular; Lucida Grande) XML Equalizer/eq.band.3.label (Regular; Lucida Grande) XML Equalizer/eq.band.4.label (Regular; Lucida Grande) XML Equalizer/eq.band.5.label (Regular; Lucida Grande) XML Equalizer/eq.band.6.label (Regular; Lucida Grande) XML Equalizer/eq.band.7.label (Regular; Lucida Grande) XML Equalizer/eq.band.8.label (Regular; Lucida Grande) XML Equalizer/eq.band.9.label (Regular; Lucida Grande) XML Equalizer/eq.band.10.label (Regular; Lucida Grande) XML Equalizer/eq.scale.60 (Regular; Lucida Grande) XML Equalizer/eq.scale.98 (Regular; Lucida Grande) XML Equalizer/eq.scale.135 (Regular; Lucida Grande)"><div class="font-heading"><h3>10px</h3><span class="sample" style="font-size:10px">Ag 2:10</span></div>
+<p>PNG 0 · UI 16 · Host clients 0</p><p class="muted">Elapsed / remaining · EQ</p>
+<details><summary>Source references</summary><ul class="references"><li>XML mini.lcd/time.elapsed (Regular; Lucida Grande)</li><li>XML mini.lcd/time.remaining (Regular; Lucida Grande)</li><li>XML Equalizer/eq.preamp.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.band.1.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.band.2.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.band.3.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.band.4.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.band.5.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.band.6.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.band.7.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.band.8.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.band.9.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.band.10.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.scale.60 (Regular; Lucida Grande)</li><li>XML Equalizer/eq.scale.98 (Regular; Lucida Grande)</li><li>XML Equalizer/eq.scale.135 (Regular; Lucida Grande)</li></ul></details>
+</article>
+<article class="font-card" data-search="12px Title / artist / album · EQ · Subwindow content · Regular + bold XML track.title.viewport/track.title (Bold; Lucida Grande) XML track.title.viewport/track.title.repeat (Bold; Lucida Grande) XML track.detail.viewport/track.detail (Regular; Lucida Grande) XML track.detail.viewport/track.detail.repeat (Regular; Lucida Grande) XML Equalizer/eq.on.label (Regular; Lucida Grande) XML Equalizer/eq.auto.label (Regular; Lucida Grande) XML Equalizer/eq.reset.label (Regular; Lucida Grande) XML Equalizer/eq.presets.label (Regular; Lucida Grande) XML Pledit/content (Regular; Lucida Grande) XML MLibrary/content (Regular; Lucida Grande) XML Video/content (Regular; Lucida Grande) XML Visualization/content (Regular; Lucida Grande)"><div class="font-heading"><h3>12px</h3><span class="sample" style="font-size:12px">Ag 2:10</span></div>
+<p>PNG 0 · UI 8 · Host clients 4</p><p class="muted">Title / artist / album · EQ · Subwindow content · Regular + bold</p>
+<details><summary>Source references</summary><ul class="references"><li>XML track.title.viewport/track.title (Bold; Lucida Grande)</li><li>XML track.title.viewport/track.title.repeat (Bold; Lucida Grande)</li><li>XML track.detail.viewport/track.detail (Regular; Lucida Grande)</li><li>XML track.detail.viewport/track.detail.repeat (Regular; Lucida Grande)</li><li>XML Equalizer/eq.on.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.auto.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.reset.label (Regular; Lucida Grande)</li><li>XML Equalizer/eq.presets.label (Regular; Lucida Grande)</li><li>XML Pledit/content (Regular; Lucida Grande)</li><li>XML MLibrary/content (Regular; Lucida Grande)</li><li>XML Video/content (Regular; Lucida Grande)</li><li>XML Visualization/content (Regular; Lucida Grande)</li></ul></details>
+</article>
+<article class="font-card" data-search="16px Window headers XML wasabi.standardframe.static/title (Regular; Lucida Grande) XML Pledit/title (Regular; Lucida Grande) XML MLibrary/title (Regular; Lucida Grande) XML Video/title (Regular; Lucida Grande) XML Visualization/title (Regular; Lucida Grande) XML Equalizer/title (Regular; Lucida Grande)"><div class="font-heading"><h3>16px</h3><span class="sample" style="font-size:16px">Ag 2:10</span></div>
+<p>PNG 0 · UI 6 · Host clients 0</p><p class="muted">Window headers</p>
+<details><summary>Source references</summary><ul class="references"><li>XML wasabi.standardframe.static/title (Regular; Lucida Grande)</li><li>XML Pledit/title (Regular; Lucida Grande)</li><li>XML MLibrary/title (Regular; Lucida Grande)</li><li>XML Video/title (Regular; Lucida Grande)</li><li>XML Visualization/title (Regular; Lucida Grande)</li><li>XML Equalizer/title (Regular; Lucida Grande)</li></ul></details>
+</article>
+<article class="font-card" data-search="32px Logo input → 19×22px artwork PNG build_artwork.py:338 — Apple logo glyph (Regular)"><div class="font-heading"><h3>32px</h3><span class="sample" style="font-size:32px">&#63743;</span></div>
+<p>PNG 1 · UI 0 · Host clients 0</p><p class="muted">Logo input → 19×22px artwork</p>
+<details><summary>Source references</summary><ul class="references"><li>PNG build_artwork.py:338 — Apple logo glyph (Regular)</li></ul></details>
+</article>
+<p class="muted">Lucida Grande (default), DejaVu Sans Regular/Bold (bundled), Tahoma (altfont). Native content may choose its own font. Font files are not embedded in this document.</p></section>
+<section id="notes"><h2>Rendering notes</h2><ul class="notes">
+<li>NP: bars / borders / dividers blend 10 / 28 / 18% toward text; dim text 40% toward content; pressed fill 55% toward selection.</li>
+<li>EQ Studio: wells darken content 40%, then slots another 40%. Meter colors are host-owned. Theme, contrast guards and user overrides can change the result.</li>
+<li>The host requests studio.tree.*; our wasabi.tree.* roles fall back to list/selection colors.</li>
+<li>EQ Studio does not use wasabi.window.background.</li>
+<li>Gradients, antialiasing, noise, state shading, chrome tint and the 8% LCD ink blend create uncounted derived pixels.</li>
+<li>Artist-supplied PNGs are not generated or counted as font/color source references; the logo glyph uses a 32px input.</li>
+</ul><p><a href="https://github.com/ad-repo/nullplayer/blob/ea2545a8332a4fa669d0d237cd0decd079f7e0b9/Sources/NullPlayer/WinampModern/WasabiPalette.swift">NullPlayer palette source</a> · <a href="https://github.com/ad-repo/nullplayer/blob/ea2545a8332a4fa669d0d237cd0decd079f7e0b9/Sources/NullPlayer/Windows/EqualizerStudio/StudioFaceplate.swift">EQ Studio rendering source</a></p><p class="muted">Host notes describe the pinned source revision, not a guarantee for every app version.</p><p class="muted">Regenerate: <code>python3 &quot;source code/build_dictionary.py&quot;</code></p></section>
+<p id="no-results" hidden>No matching colors, palette slots or font sizes.</p></main>
+<script type="application/json" id="inventory-data">{"colors": [{"code": [{"alpha": 255, "id": "wasabi.list.text", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.list.text.alternate", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.list.text.selected.inactive", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.edit.text", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.tree.text", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "pledit.text", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.text.color", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.popup.text", "kind": "palette", "owner": "elements"}, {"alpha": 235, "id": "title", "kind": "UI", "owner": "wasabi.standardframe.static"}, {"alpha": 235, "id": "title", "kind": "UI", "owner": "Pledit"}, {"alpha": 235, "id": "title", "kind": "UI", "owner": "MLibrary"}, {"alpha": 235, "id": "title", "kind": "UI", "owner": "Video"}, {"alpha": 235, "id": "title", "kind": "UI", "owner": "Visualization"}, {"alpha": 235, "id": "title", "kind": "UI", "owner": "Equalizer"}], "id": "C139", "png": [], "rgb": [0, 0, 0]}, {"code": [], "id": "C001", "png": [{"alpha": 105, "column": 38, "derived": false, "detail": "ellipse(knob_shadow, (1, 7.4, 8.2, 10.7), (38, 38, 38, 105))", "line": 223, "rgb": [38, 38, 38], "source": "source code/build_artwork.py"}], "rgb": [38, 38, 38]}, {"code": [{"alpha": 255, "id": "wasabi.list.text.selected.background", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "studio.list.item.selected", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "studio.list.item.focused", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.scrollbar.foreground", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.scrollbar.background.inverted", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.tree.selected", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "pledit.selected", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.tree.hiliteddrop", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.itemlist.outline.focus", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.itemlist.selborder", "kind": "palette", "owner": "elements"}], "id": "C135", "png": [], "rgb": [52, 136, 234]}, {"code": [], "id": "C063", "png": [{"alpha": 255, "column": 5, "derived": false, "detail": "c = (68, 60, 39, 255)", "line": 188, "rgb": [68, 60, 39], "source": "source code/build_artwork.py"}], "rgb": [68, 60, 39]}, {"code": [], "id": "C121", "png": [{"alpha": 255, "column": 3, "derived": false, "detail": "c = (78, 78, 78, 255)", "line": 89, "rgb": [78, 78, 78], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 130, "derived": false, "detail": "poly(im, [(cx + k * (ox - 1) * diam / 19, cy - 3 * diam / 19), (cx + k * (ox - 1) * diam / 19, cy + 3 * diam / 19), (cx + k * (ox + 3) * diam / 19, cy)], (78, 78, 78, 255))", "line": 160, "rgb": [78, 78, 78], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 62, "derived": false, "detail": "poly(im, [(10.5, 7.8), (10.5, 18.7), (19, 13.2)], (78, 78, 78, 255))", "line": 165, "rgb": [78, 78, 78], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 83, "derived": false, "detail": "fill=(78, 78, 78, 255)", "line": 167, "rgb": [78, 78, 78], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 71, "derived": false, "detail": "(122, 122, 122, 255) if state != 'down' else (78, 78, 78, 255)", "line": 215, "rgb": [78, 78, 78], "source": "source code/build_artwork.py"}], "rgb": [78, 78, 78]}, {"code": [{"alpha": 255, "id": "wasabi.window.text", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.list.column.text", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.button.text", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "track.title", "kind": "UI", "owner": "track.title.viewport"}, {"alpha": 255, "id": "track.title.repeat", "kind": "UI", "owner": "track.title.viewport"}, {"alpha": 255, "id": "track.detail", "kind": "UI", "owner": "track.detail.viewport"}, {"alpha": 255, "id": "track.detail.repeat", "kind": "UI", "owner": "track.detail.viewport"}, {"alpha": 255, "id": "time.elapsed", "kind": "UI", "owner": "mini.lcd"}, {"alpha": 255, "id": "time.remaining", "kind": "UI", "owner": "mini.lcd"}, {"alpha": 235, "id": "eq.on.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.auto.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.reset.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.presets.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.preamp.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.band.1.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.band.2.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.band.3.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.band.4.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.band.5.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.band.6.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.band.7.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.band.8.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.band.9.label", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.band.10.label", "kind": "UI", "owner": "Equalizer"}], "id": "C147", "png": [{"alpha": 255, "column": 32, "derived": false, "detail": "gradient(chrome, (42, 45, 90, 48.2), (89, 89, 89, 255), (154, 154, 154, 255), 1.6)", "line": 83, "rgb": [89, 89, 89], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 70, "derived": false, "detail": "(111, 111, 111, 255) if state == 'normal' else (89, 89, 89, 255)", "line": 214, "rgb": [89, 89, 89], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 42, "derived": false, "detail": "lcd_ink((89, 89, 89), 20)", "line": 345, "rgb": [89, 89, 89], "source": "source code/build_artwork.py"}, {"alpha": 235, "column": 83, "derived": false, "detail": "line(button, [(button_width - 12, 8.5), (button_width - 9, 11.5), (button_width - 6, 8.5)], (89, 89, 89, 235), 1.4)", "line": 80, "rgb": [89, 89, 89], "source": "source code/build_subwindows.py"}, {"alpha": 180, "column": 42, "derived": false, "detail": "line(resize, [(1.5 + i, 11.5), (11.5, 1.5 + i)], (89, 89, 89, 180), 0.85)", "line": 86, "rgb": [89, 89, 89], "source": "source code/build_subwindows.py"}], "rgb": [89, 89, 89]}, {"code": [{"alpha": 255, "id": "wasabi.list.text.current", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "pledit.current", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.itemlist.outline.current", "kind": "palette", "owner": "elements"}], "id": "C140", "png": [], "rgb": [99, 125, 159]}, {"code": [], "id": "C106", "png": [{"alpha": 255, "column": 11, "derived": false, "detail": "SHADOW_TOP = (103, 103, 103, 255)", "line": 16, "rgb": [103, 103, 103], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 30, "derived": false, "detail": "gradient(chrome, (41, 44, 91, 49), (103, 103, 103, 255), (143, 143, 143, 255), 2.5)", "line": 82, "rgb": [103, 103, 103], "source": "source code/build_artwork.py"}], "rgb": [103, 103, 103]}, {"code": [{"alpha": 235, "id": "eq.scale.60", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.scale.98", "kind": "UI", "owner": "Equalizer"}, {"alpha": 235, "id": "eq.scale.135", "kind": "UI", "owner": "Equalizer"}], "id": "C067", "png": [], "rgb": [107, 114, 96]}, {"code": [], "id": "C016", "png": [{"alpha": 255, "column": 28, "derived": false, "detail": "(111, 111, 111, 255) if state == 'normal' else (89, 89, 89, 255)", "line": 214, "rgb": [111, 111, 111], "source": "source code/build_artwork.py"}], "rgb": [111, 111, 111]}, {"code": [], "id": "C066", "png": [{"alpha": 255, "column": 90, "derived": false, "detail": "('library', (112, 156, 47), '+')", "line": 171, "rgb": [112, 156, 47], "source": "source code/build_artwork.py"}], "rgb": [112, 156, 47]}, {"code": [{"alpha": 255, "id": "wasabi.border.sunken", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.objectframe.upperleft", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.window.embedded.upperleft", "kind": "palette", "owner": "elements"}], "id": "C123", "png": [{"alpha": 255, "column": 47, "derived": false, "detail": "top=(122, 122, 122, 255)", "line": 113, "rgb": [122, 122, 122], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 28, "derived": false, "detail": "(122, 122, 122, 255) if state != 'down' else (78, 78, 78, 255)", "line": 215, "rgb": [122, 122, 122], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 27, "derived": false, "detail": "line(im, [(3, 1.4), (96, 1.4)], (122, 122, 122, 255), 0.5)", "line": 260, "rgb": [122, 122, 122], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 52, "derived": false, "detail": "top=(122, 122, 122, 255)", "line": 40, "rgb": [122, 122, 122], "source": "source code/build_subwindows.py"}, {"alpha": 255, "column": 52, "derived": false, "detail": "top=(122, 122, 122, 255)", "line": 45, "rgb": [122, 122, 122], "source": "source code/build_subwindows.py"}, {"alpha": 255, "column": 15, "derived": false, "detail": "eq_shadow_top = (122, 122, 122, 255)", "line": 54, "rgb": [122, 122, 122], "source": "source code/build_subwindows.py"}], "rgb": [122, 122, 122]}, {"code": [{"alpha": 255, "id": "wasabi.button.dimmedText", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.popup.dimmedText", "kind": "palette", "owner": "elements"}], "id": "C095", "png": [{"alpha": 170, "column": 45, "derived": false, "detail": "line(chrome_lighting, [(3, H - 0.65), (W - 4, H - 0.65)], (133, 133, 133, 170), 0.5)", "line": 80, "rgb": [133, 133, 133], "source": "source code/build_artwork.py"}, {"alpha": 170, "column": 36, "derived": false, "detail": "line(frame, [(3, 158.2), (156, 158.2)], (133, 133, 133, 170), 0.5)", "line": 37, "rgb": [133, 133, 133], "source": "source code/build_subwindows.py"}], "rgb": [133, 133, 133]}, {"code": [], "id": "C085", "png": [{"alpha": 255, "column": 30, "derived": false, "detail": "((214, 232, 247, 255), (139, 180, 216, 255))", "line": 61, "rgb": [139, 180, 216], "source": "source code/build_subwindows.py"}], "rgb": [139, 180, 216]}, {"code": [{"alpha": 255, "id": "mini.window.title.inactive", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.list.column.frame.bottom", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.panel.outerrect", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.panel.lowerright", "kind": "palette", "owner": "elements"}], "id": "C124", "png": [{"alpha": 255, "column": 28, "derived": false, "detail": "fill=(143, 143, 143, 255)", "line": 71, "rgb": [143, 143, 143], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 35, "derived": false, "detail": "outline(chrome, (0.4, 0.4, W - 1, H - 1 / S), 4, (143, 143, 143, 255), 0.6)", "line": 76, "rgb": [143, 143, 143], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 51, "derived": false, "detail": "gradient(chrome, (41, 44, 91, 49), (103, 103, 103, 255), (143, 143, 143, 255), 2.5)", "line": 82, "rgb": [143, 143, 143], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 85, "derived": false, "detail": "(0.5, (143, 143, 143))", "line": 226, "rgb": [143, 143, 143], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 28, "derived": false, "detail": "gradient(im, (0, 0.25, 99, 5.75), (143, 143, 143, 255), (180, 180, 180, 255), 3)", "line": 258, "rgb": [143, 143, 143], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 33, "derived": false, "detail": "outline(frame, (0.4, 0.4, 159, 159), 4, (143, 143, 143, 255), 0.6)", "line": 35, "rgb": [143, 143, 143], "source": "source code/build_subwindows.py"}], "rgb": [143, 143, 143]}, {"code": [], "id": "C029", "png": [{"alpha": 255, "column": 68, "derived": false, "detail": "fill=(154, 154, 154, 255)", "line": 73, "rgb": [154, 154, 154], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 53, "derived": false, "detail": "gradient(chrome, (0.4, 0.4, W - 1, H - 1), (209, 209, 209, 255), (154, 154, 154, 255), 4, 0.5)", "line": 75, "rgb": [154, 154, 154], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 50, "derived": false, "detail": "gradient(chrome, (42, 45, 90, 48.2), (89, 89, 89, 255), (154, 154, 154, 255), 1.6)", "line": 83, "rgb": [154, 154, 154], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 31, "derived": false, "detail": "gradient(im, (1.2, 1.5, 97.8, 4.5), (154, 154, 154, 255), (198, 198, 198, 255), 1.5)", "line": 259, "rgb": [154, 154, 154], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 53, "derived": false, "detail": "gradient(frame, (0.4, 0.4, 159, 159), (209, 209, 209, 255), (154, 154, 154, 255), 4, 0.5)", "line": 34, "rgb": [154, 154, 154], "source": "source code/build_subwindows.py"}, {"alpha": 255, "column": 27, "derived": false, "detail": "gradient(track, (1, 0, 6, 85), (154, 154, 154, 255), (154, 154, 154, 255), 2.5)", "line": 50, "rgb": [154, 154, 154], "source": "source code/build_subwindows.py"}, {"alpha": 255, "column": 48, "derived": false, "detail": "gradient(track, (1, 0, 6, 85), (154, 154, 154, 255), (154, 154, 154, 255), 2.5)", "line": 50, "rgb": [154, 154, 154], "source": "source code/build_subwindows.py"}], "rgb": [154, 154, 154]}, {"code": [{"alpha": 100, "id": "eq.divider.0", "kind": "UI", "owner": "Equalizer"}, {"alpha": 100, "id": "eq.divider.1", "kind": "UI", "owner": "Equalizer"}], "id": "C068", "png": [], "rgb": [156, 166, 142]}, {"code": [], "id": "C125", "png": [{"alpha": 255, "column": 14, "derived": false, "detail": "SHADOW_BOTTOM = (170, 170, 170, 255)", "line": 17, "rgb": [170, 170, 170], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 47, "derived": false, "detail": "top=(170, 170, 170, 255)", "line": 199, "rgb": [170, 170, 170], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 157, "derived": false, "detail": "(1, (170, 170, 170))", "line": 226, "rgb": [170, 170, 170], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 31, "derived": false, "detail": "((209, 209, 209, 255), (170, 170, 170, 255))", "line": 60, "rgb": [170, 170, 170], "source": "source code/build_subwindows.py"}], "rgb": [170, 170, 170]}, {"code": [], "id": "C069", "png": [{"alpha": 255, "column": 27, "derived": false, "detail": "gradient(track, (2, 1, 5, 84), (178, 188, 164, 255), (178, 188, 164, 255), 1.5)", "line": 51, "rgb": [178, 188, 164], "source": "source code/build_subwindows.py"}, {"alpha": 255, "column": 45, "derived": false, "detail": "gradient(track, (2, 1, 5, 84), (178, 188, 164, 255), (178, 188, 164, 255), 1.5)", "line": 51, "rgb": [178, 188, 164], "source": "source code/build_subwindows.py"}], "rgb": [178, 188, 164]}, {"code": [{"alpha": 255, "id": "wasabi.list.column.frame.middle", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.list.column.separator", "kind": "palette", "owner": "elements"}], "id": "C126", "png": [{"alpha": 255, "column": 49, "derived": false, "detail": "gradient(im, (0, 0.25, 99, 5.75), (143, 143, 143, 255), (180, 180, 180, 255), 3)", "line": 258, "rgb": [180, 180, 180], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 33, "derived": false, "detail": "((237, 237, 237, 255), (180, 180, 180, 255))", "line": 58, "rgb": [180, 180, 180], "source": "source code/build_subwindows.py"}], "rgb": [180, 180, 180]}, {"code": [{"alpha": 255, "id": "wasabi.window.background", "kind": "palette", "owner": "elements"}], "id": "C036", "png": [], "rgb": [189, 189, 189]}, {"code": [{"alpha": 255, "id": "wasabi.list.text.selected.background.inactive", "kind": "palette", "owner": "elements"}], "id": "C143", "png": [], "rgb": [192, 192, 192]}, {"code": [{"alpha": 255, "id": "wasabi.list.column.background", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.list.column.empty", "kind": "palette", "owner": "elements"}], "id": "C037", "png": [{"alpha": 255, "column": 14, "derived": false, "detail": "inactive_base = (198, 198, 198)", "line": 198, "rgb": [198, 198, 198], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 110, "derived": false, "detail": "(0.62, (198, 198, 198))", "line": 226, "rgb": [198, 198, 198], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 52, "derived": false, "detail": "gradient(im, (1.2, 1.5, 97.8, 4.5), (154, 154, 154, 255), (198, 198, 198, 255), 1.5)", "line": 259, "rgb": [198, 198, 198], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 32, "derived": false, "detail": "((250, 250, 250, 255), (198, 198, 198, 255))", "line": 59, "rgb": [198, 198, 198], "source": "source code/build_subwindows.py"}], "rgb": [198, 198, 198]}, {"code": [], "id": "C062", "png": [{"alpha": 255, "column": 32, "derived": false, "detail": "('close', (204, 42, 25), 'x')", "line": 171, "rgb": [204, 42, 25], "source": "source code/build_artwork.py"}], "rgb": [204, 42, 25]}, {"code": [], "id": "C128", "png": [{"alpha": 255, "column": 32, "derived": false, "detail": "gradient(chrome, (0.4, 0.4, W - 1, H - 1), (209, 209, 209, 255), (154, 154, 154, 255), 4, 0.5)", "line": 75, "rgb": [209, 209, 209], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 61, "derived": false, "detail": "(0.36, (209, 209, 209))", "line": 226, "rgb": [209, 209, 209], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 32, "derived": false, "detail": "gradient(frame, (0.4, 0.4, 159, 159), (209, 209, 209, 255), (154, 154, 154, 255), 4, 0.5)", "line": 34, "rgb": [209, 209, 209], "source": "source code/build_subwindows.py"}, {"alpha": 255, "column": 10, "derived": false, "detail": "((209, 209, 209, 255), (170, 170, 170, 255))", "line": 60, "rgb": [209, 209, 209], "source": "source code/build_subwindows.py"}], "rgb": [209, 209, 209]}, {"code": [], "id": "C116", "png": [{"alpha": 255, "column": 55, "derived": false, "detail": "gradient(lcd, (1.3, 1.5, 187.8, 37.5), (235, 239, 221, 255), (209, 220, 189, 255), 2)", "line": 114, "rgb": [209, 220, 189], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 60, "derived": false, "detail": "gradient(screen, (1.3, 1.5, 157.8, 157.5), (235, 239, 221, 255), (209, 220, 189, 255), 2)", "line": 41, "rgb": [209, 220, 189], "source": "source code/build_subwindows.py"}], "rgb": [209, 220, 189]}, {"code": [{"alpha": 255, "id": "wasabi.list.background", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.list.background.alternate", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.scrollbar.background", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.scrollbar.foreground.inverted", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.edit.background", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.tree.background", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "pledit.background", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.objectframe.inside", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.window.embedded.inside", "kind": "palette", "owner": "elements"}], "id": "C136", "png": [{"alpha": 255, "column": 39, "derived": false, "detail": "gradient(screen, (1.3, 1.5, 157.8, 157.5), (212, 218, 230, 255), (212, 218, 230, 255), 2)", "line": 46, "rgb": [212, 218, 230], "source": "source code/build_subwindows.py"}, {"alpha": 255, "column": 57, "derived": false, "detail": "gradient(screen, (1.3, 1.5, 157.8, 157.5), (212, 218, 230, 255), (212, 218, 230, 255), 2)", "line": 46, "rgb": [212, 218, 230], "source": "source code/build_subwindows.py"}], "rgb": [212, 218, 230]}, {"code": [], "id": "C064", "png": [{"alpha": 255, "column": 61, "derived": false, "detail": "('minimize', (213, 160, 30), '-')", "line": 171, "rgb": [213, 160, 30], "source": "source code/build_artwork.py"}], "rgb": [213, 160, 30]}, {"code": [], "id": "C091", "png": [{"alpha": 255, "column": 12, "derived": false, "detail": "((214, 232, 247, 255), (139, 180, 216, 255))", "line": 61, "rgb": [214, 232, 247], "source": "source code/build_subwindows.py"}], "rgb": [214, 232, 247]}, {"code": [], "id": "C111", "png": [{"alpha": 255, "column": 84, "derived": false, "detail": "{'seek-normal': (237, 237, 237), 'seek-hover': (237, 237, 237), 'seek-down': (221, 221, 221)}", "line": 58, "rgb": [221, 221, 221], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 121, "derived": false, "detail": "(1, (221, 221, 221))", "line": 141, "rgb": [221, 221, 221], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 86, "derived": false, "detail": "(237, 237, 237) if state == 'hover' else (221, 221, 221)", "line": 254, "rgb": [221, 221, 221], "source": "source code/build_artwork.py"}], "rgb": [221, 221, 221]}, {"code": [], "id": "C133", "png": [{"alpha": 255, "column": 34, "derived": false, "detail": "gradient(lcd, (1.3, 1.5, 187.8, 37.5), (235, 239, 221, 255), (209, 220, 189, 255), 2)", "line": 114, "rgb": [235, 239, 221], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 39, "derived": false, "detail": "gradient(screen, (1.3, 1.5, 157.8, 157.5), (235, 239, 221, 255), (209, 220, 189, 255), 2)", "line": 41, "rgb": [235, 239, 221], "source": "source code/build_subwindows.py"}], "rgb": [235, 239, 221]}, {"code": [{"alpha": 255, "id": "wasabi.list.column.frame.top", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.panel.upperleft", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.objectframe.lowerright", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.window.embedded.lowerright", "kind": "palette", "owner": "elements"}], "id": "C129", "png": [{"alpha": 255, "column": 23, "derived": false, "detail": "{'seek-normal': (237, 237, 237), 'seek-hover': (237, 237, 237), 'seek-down': (221, 221, 221)}", "line": 58, "rgb": [237, 237, 237], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 54, "derived": false, "detail": "{'seek-normal': (237, 237, 237), 'seek-hover': (237, 237, 237), 'seek-down': (221, 221, 221)}", "line": 58, "rgb": [237, 237, 237], "source": "source code/build_artwork.py"}, {"alpha": 220, "column": 41, "derived": false, "detail": "line(chrome_lighting, [(3, 1.1), (W - 4, 1.1)], (237, 237, 237, 220), 0.7)", "line": 79, "rgb": [237, 237, 237], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 34, "derived": false, "detail": "(0.42, (237, 237, 237))", "line": 141, "rgb": [237, 237, 237], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 56, "derived": false, "detail": "(0.49, (237, 237, 237))", "line": 141, "rgb": [237, 237, 237], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 39, "derived": false, "detail": "poly(im, [(3.3, 2.3), (3.3, 6.3), (6, 4.3)], (237, 237, 237, 255))", "line": 216, "rgb": [237, 237, 237], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 135, "derived": false, "detail": "(0.84, (237, 237, 237))", "line": 226, "rgb": [237, 237, 237], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 6, "derived": false, "detail": "(237, 237, 237) if state == 'normal' else (237, 237, 237) if state == 'hover' else (221, 221, 221)", "line": 254, "rgb": [237, 237, 237], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 47, "derived": false, "detail": "(237, 237, 237) if state == 'hover' else (221, 221, 221)", "line": 254, "rgb": [237, 237, 237], "source": "source code/build_artwork.py"}, {"alpha": 220, "column": 32, "derived": false, "detail": "line(frame, [(3, 1.1), (156, 1.1)], (237, 237, 237, 220), 0.7)", "line": 36, "rgb": [237, 237, 237], "source": "source code/build_subwindows.py"}, {"alpha": 255, "column": 12, "derived": false, "detail": "((237, 237, 237, 255), (180, 180, 180, 255))", "line": 58, "rgb": [237, 237, 237], "source": "source code/build_subwindows.py"}, {"alpha": 180, "column": 42, "derived": false, "detail": "line(resize, [(2.1 + i, 12.1), (12.1, 2.1 + i)], (237, 237, 237, 180), 0.7)", "line": 87, "rgb": [237, 237, 237], "source": "source code/build_subwindows.py"}], "rgb": [237, 237, 237]}, {"code": [], "id": "C131", "png": [{"alpha": 131, "column": 44, "derived": false, "detail": "line(volume_glint, [(42.5, 49.3), (89.5, 49.3)], (250, 250, 250, 131), 1)", "line": 86, "rgb": [250, 250, 250], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 12, "derived": false, "detail": "(0, (250, 250, 250))", "line": 141, "rgb": [250, 250, 250], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 79, "derived": false, "detail": "(0.515, (250, 250, 250))", "line": 141, "rgb": [250, 250, 250], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 101, "derived": false, "detail": "(0.6, (250, 250, 250))", "line": 141, "rgb": [250, 250, 250], "source": "source code/build_artwork.py"}, {"alpha": 220, "column": 72, "derived": false, "detail": "fill=(250, 250, 250, 220)", "line": 156, "rgb": [250, 250, 250], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 12, "derived": false, "detail": "(0, (250, 250, 250))", "line": 226, "rgb": [250, 250, 250], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 36, "derived": false, "detail": "(0.2, (250, 250, 250))", "line": 226, "rgb": [250, 250, 250], "source": "source code/build_artwork.py"}, {"alpha": 255, "column": 11, "derived": false, "detail": "((250, 250, 250, 255), (198, 198, 198, 255))", "line": 59, "rgb": [250, 250, 250], "source": "source code/build_subwindows.py"}], "rgb": [250, 250, 250]}, {"code": [{"alpha": 255, "id": "wasabi.list.text.selected", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.button.hiliteText", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.text.color.inverse", "kind": "palette", "owner": "elements"}, {"alpha": 255, "id": "wasabi.popup.hiliteText", "kind": "palette", "owner": "elements"}], "id": "C061", "png": [], "rgb": [255, 255, 255]}], "fonts": [{"clients": [], "png": [], "size": 10.0, "text": [{"family": "Lucida Grande", "id": "time.elapsed", "owner": "mini.lcd", "weight": "Regular"}, {"family": "Lucida Grande", "id": "time.remaining", "owner": "mini.lcd", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.preamp.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.band.1.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.band.2.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.band.3.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.band.4.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.band.5.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.band.6.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.band.7.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.band.8.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.band.9.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.band.10.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.scale.60", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.scale.98", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.scale.135", "owner": "Equalizer", "weight": "Regular"}]}, {"clients": [{"family": "Lucida Grande", "id": "content", "owner": "Pledit", "weight": "Regular"}, {"family": "Lucida Grande", "id": "content", "owner": "MLibrary", "weight": "Regular"}, {"family": "Lucida Grande", "id": "content", "owner": "Video", "weight": "Regular"}, {"family": "Lucida Grande", "id": "content", "owner": "Visualization", "weight": "Regular"}], "png": [], "size": 12.0, "text": [{"family": "Lucida Grande", "id": "track.title", "owner": "track.title.viewport", "weight": "Bold"}, {"family": "Lucida Grande", "id": "track.title.repeat", "owner": "track.title.viewport", "weight": "Bold"}, {"family": "Lucida Grande", "id": "track.detail", "owner": "track.detail.viewport", "weight": "Regular"}, {"family": "Lucida Grande", "id": "track.detail.repeat", "owner": "track.detail.viewport", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.on.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.auto.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.reset.label", "owner": "Equalizer", "weight": "Regular"}, {"family": "Lucida Grande", "id": "eq.presets.label", "owner": "Equalizer", "weight": "Regular"}]}, {"clients": [], "png": [], "size": 16.0, "text": [{"family": "Lucida Grande", "id": "title", "owner": "wasabi.standardframe.static", "weight": "Regular"}, {"family": "Lucida Grande", "id": "title", "owner": "Pledit", "weight": "Regular"}, {"family": "Lucida Grande", "id": "title", "owner": "MLibrary", "weight": "Regular"}, {"family": "Lucida Grande", "id": "title", "owner": "Video", "weight": "Regular"}, {"family": "Lucida Grande", "id": "title", "owner": "Visualization", "weight": "Regular"}, {"family": "Lucida Grande", "id": "title", "owner": "Equalizer", "weight": "Regular"}]}, {"clients": [], "png": [{"line": 338, "role": "Apple logo glyph", "weight": "Regular"}], "size": 32, "text": []}], "version": "1.141"}</script>
+<script type="application/json" id="palette-slot-data">{"official_commit": "0954e03b3acbc11b6c90298598db6b6469568d72", "roles": [{"description": "General foreground text", "group": "Wasabi text", "name": "wasabi.text.color", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [0, 0, 0], "slot": "P001", "source": null, "verified": true}, {"description": "Inverse foreground text", "group": "Wasabi text", "name": "wasabi.text.color.inverse", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [255, 255, 255], "slot": "P002", "source": null, "verified": true}, {"description": "Tree item labels", "group": "Generic Trees", "name": "wasabi.tree.text", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [0, 0, 0], "slot": "P003", "source": null, "verified": true}, {"description": "Tree selection fill", "group": "Generic Trees", "name": "wasabi.tree.selected", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [52, 136, 234], "slot": "P004", "source": null, "verified": true}, {"description": "Tree drag-and-drop marker", "group": "Generic Trees", "name": "wasabi.tree.hiliteddrop", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [52, 136, 234], "slot": "P005", "source": null, "verified": true}, {"description": "Normal row text", "group": "Generic Lists", "name": "wasabi.list.text", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [0, 0, 0], "slot": "P006", "source": null, "verified": true}, {"description": "List content fill", "group": "Generic Lists", "name": "wasabi.list.background", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [212, 218, 230], "slot": "P007", "source": null, "verified": true}, {"description": "Selected row text", "group": "Generic Lists", "name": "wasabi.list.text.selected", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [255, 255, 255], "slot": "P008", "source": null, "verified": true}, {"description": "Selected row fill", "group": "Generic Lists", "name": "wasabi.list.text.selected.background", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [52, 136, 234], "slot": "P009", "source": null, "verified": true}, {"description": "Legacy selection fill", "group": "Generic Lists", "name": "studio.list.item.selected", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [52, 136, 234], "slot": "P010", "source": null, "verified": true}, {"description": "Legacy focused-row fill", "group": "Generic Lists", "name": "studio.list.item.focused", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [52, 136, 234], "slot": "P011", "source": null, "verified": true}, {"description": "Current / playing row text", "group": "Generic Lists", "name": "wasabi.list.text.current", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [99, 125, 159], "slot": "P012", "source": null, "verified": true}, {"description": "Inactive selected-row text", "group": "Generic Lists", "name": "wasabi.list.text.selected.inactive", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [0, 0, 0], "slot": "P013", "source": null, "verified": true}, {"description": "Inactive selected-row fill", "group": "Generic Lists", "name": "wasabi.list.text.selected.background.inactive", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [192, 192, 192], "slot": "P014", "source": null, "verified": true}, {"description": "Column header fill", "group": "Generic Lists", "name": "wasabi.list.column.background", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [198, 198, 198], "slot": "P015", "source": null, "verified": true}, {"description": "Column header text", "group": "Generic Lists", "name": "wasabi.list.column.text", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [89, 89, 89], "slot": "P016", "source": null, "verified": true}, {"description": "Header top edge", "group": "Generic Lists", "name": "wasabi.list.column.frame.top", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [237, 237, 237], "slot": "P017", "source": null, "verified": true}, {"description": "Header middle edge", "group": "Generic Lists", "name": "wasabi.list.column.frame.middle", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [180, 180, 180], "slot": "P018", "source": null, "verified": true}, {"description": "Header bottom edge", "group": "Generic Lists", "name": "wasabi.list.column.frame.bottom", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [143, 143, 143], "slot": "P019", "source": null, "verified": true}, {"description": "Unused header area", "group": "Generic Lists", "name": "wasabi.list.column.empty", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [198, 198, 198], "slot": "P020", "source": null, "verified": true}, {"description": "Column separator line", "group": "Generic Lists", "name": "wasabi.list.column.separator", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [180, 180, 180], "slot": "P021", "source": null, "verified": true}, {"description": "Current-item outline", "group": "Item Lists, Lists with playable items", "name": "wasabi.itemlist.outline.current", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [99, 125, 159], "slot": "P022", "source": null, "verified": true}, {"description": "Keyboard-focus outline", "group": "Item Lists, Lists with playable items", "name": "wasabi.itemlist.outline.focus", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [52, 136, 234], "slot": "P023", "source": null, "verified": true}, {"description": "Selection border", "group": "Item Lists, Lists with playable items", "name": "wasabi.itemlist.selborder", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [52, 136, 234], "slot": "P024", "source": null, "verified": true}, {"description": "General window fill", "group": "edit wnds", "name": "wasabi.window.background", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [189, 189, 189], "slot": "P025", "source": null, "verified": true}, {"description": "General window text", "group": "edit wnds", "name": "wasabi.window.text", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [89, 89, 89], "slot": "P026", "source": null, "verified": true}, {"description": "Recessed divider color", "group": "edit wnds", "name": "wasabi.border.sunken", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [122, 122, 122], "slot": "P027", "source": null, "verified": true}, {"description": "Scrollbar foreground", "group": "edit wnds", "name": "wasabi.scrollbar.foreground", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [52, 136, 234], "slot": "P028", "source": null, "verified": true}, {"description": "Scrollbar background", "group": "edit wnds", "name": "wasabi.scrollbar.background", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [212, 218, 230], "slot": "P029", "source": null, "verified": true}, {"description": "Inverted scrollbar foreground", "group": "edit wnds", "name": "wasabi.scrollbar.foreground.inverted", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [212, 218, 230], "slot": "P030", "source": null, "verified": true}, {"description": "Inverted scrollbar background", "group": "edit wnds", "name": "wasabi.scrollbar.background.inverted", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [52, 136, 234], "slot": "P031", "source": null, "verified": true}, {"description": "Normal button text", "group": "Buttons", "name": "wasabi.button.text", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [89, 89, 89], "slot": "P032", "source": null, "verified": true}, {"description": "Highlighted button / tab text", "group": "Buttons", "name": "wasabi.button.hiliteText", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [255, 255, 255], "slot": "P033", "source": null, "verified": true}, {"description": "Disabled button text", "group": "Buttons", "name": "wasabi.button.dimmedText", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [133, 133, 133], "slot": "P034", "source": null, "verified": true}, {"description": "Normal popup item text", "group": "Popup menus", "name": "wasabi.popup.text", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [0, 0, 0], "slot": "P035", "source": null, "verified": true}, {"description": "Highlighted popup item text", "group": "Popup menus", "name": "wasabi.popup.hiliteText", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [255, 255, 255], "slot": "P036", "source": null, "verified": true}, {"description": "Disabled popup item text", "group": "Popup menus", "name": "wasabi.popup.dimmedText", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [133, 133, 133], "slot": "P037", "source": null, "verified": true}, {"description": "Panel outer outline (unverified)", "group": "Panel Bevels", "name": "wasabi.panel.outerrect", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [143, 143, 143], "slot": "P038", "source": null, "verified": false}, {"description": "Panel upper-left bevel (unverified)", "group": "Panel Bevels", "name": "wasabi.panel.upperleft", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [237, 237, 237], "slot": "P039", "source": null, "verified": false}, {"description": "Panel lower-right bevel (unverified)", "group": "Panel Bevels", "name": "wasabi.panel.lowerright", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [143, 143, 143], "slot": "P040", "source": null, "verified": false}, {"description": "Object-frame upper-left (unverified)", "group": "Object Frame", "name": "wasabi.objectframe.upperleft", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [122, 122, 122], "slot": "P041", "source": null, "verified": false}, {"description": "Object-frame lower-right (unverified)", "group": "Object Frame", "name": "wasabi.objectframe.lowerright", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [237, 237, 237], "slot": "P042", "source": null, "verified": false}, {"description": "Object-frame interior (unverified)", "group": "Object Frame", "name": "wasabi.objectframe.inside", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [212, 218, 230], "slot": "P043", "source": null, "verified": false}, {"description": "Embedded upper-left edge (unverified)", "group": "Embedded Window", "name": "wasabi.window.embedded.upperleft", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [122, 122, 122], "slot": "P044", "source": null, "verified": false}, {"description": "Embedded lower-right edge (unverified)", "group": "Embedded Window", "name": "wasabi.window.embedded.lowerright", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [237, 237, 237], "slot": "P045", "source": null, "verified": false}, {"description": "Embedded interior (unverified)", "group": "Embedded Window", "name": "wasabi.window.embedded.inside", "reference": "iPlay.wal / xml/elements-colors.xml", "rgb": [212, 218, 230], "slot": "P046", "source": null, "verified": false}, {"description": "Edit-field fill", "group": "edit wnds", "name": "wasabi.edit.background", "reference": "Previous dictionary / NullPlayer edit-field mapping", "rgb": [212, 218, 230], "slot": "P047", "source": null, "verified": true}], "scope": "All 46 color roles from iPlay plus the edit-background role from the merged NullPlayer table; not an exhaustive Winamp catalog.", "verification": "Verified means declared in the pinned Winamp Wasabi or Winamp Modern system-colors.xml. Other names remain reference-only."}</script>
+<script type="application/json" id="host-role-data">{"studio.list.item.selected": "NP selection / tree fill", "wasabi.edit.background": "NP text-field fill", "wasabi.list.background": "NP Library / EQ Studio fill", "wasabi.list.text": "NP list/tree text", "wasabi.list.text.current": "NP labels / playing row", "wasabi.list.text.selected": "NP selected-text candidate"}</script>
+<script type="application/json" id="rendering-notes">{"eq_background": "EQ Studio does not use wasabi.window.background.", "host_commit": "ea2545a8332a4fa669d0d237cd0decd079f7e0b9", "raster": "Gradients, antialiasing, noise, state shading, chrome tint and the 8% LCD ink blend create uncounted derived pixels.", "regenerate": "python3 \"source code/build_dictionary.py\"", "screenshots": "Artist-supplied PNGs are not generated or counted as font/color source references; the logo glyph uses a 32px input.", "sources": ["https://github.com/ad-repo/nullplayer/blob/ea2545a8332a4fa669d0d237cd0decd079f7e0b9/Sources/NullPlayer/WinampModern/WasabiPalette.swift", "https://github.com/ad-repo/nullplayer/blob/ea2545a8332a4fa669d0d237cd0decd079f7e0b9/Sources/NullPlayer/WinampModern/WinampModernSurfaceStyle.swift", "https://github.com/ad-repo/nullplayer/blob/ea2545a8332a4fa669d0d237cd0decd079f7e0b9/Sources/NullPlayer/App/Skinning/SkinnedSurfaceStyle.swift", "https://github.com/ad-repo/nullplayer/blob/ea2545a8332a4fa669d0d237cd0decd079f7e0b9/Sources/NullPlayer/Windows/EqualizerStudio/EqualizerStudioView.swift", "https://github.com/ad-repo/nullplayer/blob/ea2545a8332a4fa669d0d237cd0decd079f7e0b9/Sources/NullPlayer/Windows/EqualizerStudio/StudioFaceplate.swift"], "tree_fallback": "The host requests studio.tree.*; our wasabi.tree.* roles fall back to list/selection colors."}</script>
+<script>
+const input = document.getElementById('search');
+const entries = [...document.querySelectorAll('[data-search]')];
+document.getElementById('search-control').hidden = false;
+input.addEventListener('input', () => {
+  const terms = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  let matches = 0;
+  for (const entry of entries) {
+    entry.hidden = !terms.every(term => entry.dataset.search.toLowerCase().includes(term));
+    if (!entry.hidden) matches++;
+  }
+  for (const group of document.querySelectorAll('.filter-group')) {
+    group.hidden = !group.querySelector('[data-search]:not([hidden])');
+  }
+  document.getElementById('no-results').hidden = matches !== 0;
+  document.getElementById('search-status').textContent = terms.length ? `${matches} matching entries` : '';
+});
+</script></body></html>
